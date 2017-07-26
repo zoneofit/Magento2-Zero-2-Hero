@@ -1,2 +1,2 @@
-# Magento2-Zero-2-Hero
+# Magento2 from Zero to Hero
 Magento 2 Tutorials.
