@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="checkout" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>       
+        <referenceContainer name="checkout.header.container">
+        	<container name="checkout.header.wrapper.content" htmlClass="header-wrapper-content sticky-menu" htmlTag="div">	           
+			</container>
+        </referenceContainer>      
+        <referenceContainer name="checkout.header.wrapper">
+			<container htmlClass="col-sm-10 col-md-7" htmlTag="div">
+				<container name="header.wrapper.left" htmlClass="header-wrapper-left" htmlTag="div" >
+					<container name="logo.left" htmlClass="logo-left" htmlTag="div" />
+					</container>
+			</container>				
+		</referenceContainer>   
+		<move element="checkout.header.wrapper" destination="checkout.header.wrapper.content"/>         
+        <move element="logo" destination="logo.left"/>
+    </body>
+</page>

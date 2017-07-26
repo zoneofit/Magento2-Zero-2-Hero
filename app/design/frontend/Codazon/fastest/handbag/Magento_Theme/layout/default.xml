@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<referenceContainer name="sidebar.main">
+		<block class="Magento\Catalog\Block\Navigation" name="catalog.leftnav" before="-" template="Magento_Catalog::navigation/left.phtml"/>
+	</referenceContainer>
+	<referenceBlock name="logo">
+		<arguments>
+			<argument name="logo_img_width" xsi:type="number">150</argument>
+			<argument name="logo_img_height" xsi:type="number">60</argument>
+		</arguments>
+	</referenceBlock>
+	<!--<referenceContainer name="header.panel">
+		<container name="header.panel.left" htmlClass="pull-left col-sm-12" htmlTag="div" />
+		<container name="header.panel.center" htmlClass="cdz-center col-sm-8" htmlTag="div" />
+		<container name="header.panel.right" htmlClass="pull-right col-sm-12" htmlTag="div" />
+	</referenceContainer>-->
+	<!--<move element="header.panel" destination="panel.wrapper.top" />
+	<move element="header.links" destination="header.panel.right" />
+	<move element="store_switcher" destination="header.panel.left" before="-" />
+	<move element="store_language" destination="header.panel.left" after="store_switcher" />
+	<move element="currency" destination="header.panel.left" after="-" />-->
+	<move element="logo" destination="header-wrapper" />
+
+	<move element="minicart" destination="header.bottom.content" />	
+	
+	<referenceBlock name="footer_links" display="true" />
+	<move element="footer_links" destination="footer.content.bottom" before="-" />
+	<move element="copyright" destination="footer.content.bottom" after="footer_links" />
+	<!--<referenceContainer name="header.panel.store" remove="true" />-->
+</page>

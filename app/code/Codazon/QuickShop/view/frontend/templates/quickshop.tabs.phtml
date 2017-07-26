@@ -1,0 +1,33 @@
+<?php if($quickshopGroup = $block->getGroupChildNames('quickshop_tabs', 'getChildHtml')): ?>
+<?php $sqLayout = $block->getLayout(); ?>
+<?php $groupNum = count($quickshopGroup) ?>
+<div class="product data items"
+	<?php if($groupNum > 1): ?>
+		data-mage-init='{"tabs":{"openedState":"active","content":".qs-tab-content","header":".qs-title",
+"collapsibleElement":".qs-title"}}'
+	<?php endif ?>
+>
+	<?php foreach ($quickshopGroup as $name):?>
+    <?php
+		$html = $sqLayout->renderElement($name);
+		if (!trim($html)) {
+			continue;
+		}
+		$alias = $sqLayout->getElementAlias($name);
+		$contentId = $block->getChildData($alias,'html_id');
+		$contentClass = $block->getChildData($alias,'html_class');
+		$label = $block->getChildData($alias, 'title');
+	?>
+	<?php if($groupNum > 1): ?>
+    <div class="data item title qs-title" aria-labeledby="tab-label-<?php echo $contentId;?>-title">
+        <a class="data switch" tabindex="-1" data-role="trigger" href="#<?php echo $contentId; ?>" id="tab-label-<?php echo $contentId;?>-title" data-toggle="switch">
+            <?php echo $label; ?>
+        </a>
+    </div>
+	<?php endif ?>
+    <div class="data item content qs-tab-content <?php echo $contentClass ?>" id="<?php echo $contentId; ?>">
+    	<?php echo $html; ?>
+    </div>
+    <?php endforeach ?>
+</div>
+<?php endif ?>

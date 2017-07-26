@@ -1,0 +1,10 @@
+.quickshop-wrapper .quickshop-tabs{width:60%;float:right;}
+.quickshop-wrapper .quickshop-tabs .qs-content{width:100%;}
+.quickshop-wrapper .quickshop-media.product.media{width:35%}
+.quickshop-wrapper .bundle-options-container .product-add-form{display:block;}
+@media (min-width: 0px) and (max-width: 767px){
+	.quickshop-wrapper .quickshop-media.product.media {width: 100%;}
+	.quickshop-wrapper .quickshop-tabs {width:100%;}
+	.quickshop-wrapper  .product.data.items{display: inline;}
+	.quickshop-wrapper  .product.info.detailed .data.item.title {background: #F7F7F7;}
+}

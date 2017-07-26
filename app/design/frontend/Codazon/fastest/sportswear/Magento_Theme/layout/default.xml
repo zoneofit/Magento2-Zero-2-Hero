@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+	<referenceContainer name="header.wrapper.content">
+		<container name="" htmlClass="header content" htmlTag="div">
+			<container htmlClass="col-sm-10 col-md-7" htmlTag="div">
+				<container name="header.wrapper.left" htmlClass="header-wrapper-left" htmlTag="div" >
+					<container name="logo.left" htmlClass="logo-left" htmlTag="div" />
+					</container>
+			</container>
+			<container htmlClass="col-sm-8 col-md-10" htmlTag="div">
+				<container name="header.wrapper.center" htmlClass="header-wrapper-center" htmlTag="div" />
+			</container>
+			<container htmlClass="col-sm-6 col-md-7" htmlTag="div">
+				<container name="header.wrapper.right" htmlClass="header-wrapper-right" htmlTag="div" />
+			</container>
+		</container>
+	</referenceContainer>
+	<!--<move element="header.panel" destination="panel.wrapper.top" />
+	<move element="header.links" destination="header.panel.right" />
+	<move element="store_switcher" destination="header.panel.left" before="-" />
+	<move element="store_language" destination="header.panel.left" after="store_switcher" />
+	<move element="currency" destination="header.panel.left" after="-" />-->
+	<move element="logo" destination="logo.left" />
+	<move element="minicart" destination="header.wrapper.right" />
+	</body>
+</page>

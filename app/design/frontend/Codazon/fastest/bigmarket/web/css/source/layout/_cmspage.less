@@ -1,0 +1,377 @@
+.cmspage-block-title(){
+	display:block;
+	.lib-css(font, @f_h1);
+	border-width:0;
+	text-align:center;
+	padding-bottom:15px;
+	strong{
+		padding:0;
+		border-width:0;
+		.lib-css(font, @f_h1);
+		.lib-css(color, @main_title_text);
+		text-transform:uppercase;
+	}
+	.field.note{
+		.lib-css(font, @f_note);
+		text-transform:initial;
+	}
+}
+.cmspage-block(){
+	.lib-css(background-color, @main_block_background);
+	padding:30px;
+	max-width:540px;
+	.abs-boxshadow(@box-shadow);
+	.abs-borderradius(@border-radius);
+	.field {
+		.label{display:none}
+		&.choice{
+			.label{display:inline}
+		}
+	}
+	
+	#remember-me-box label{
+		display:inline
+	}
+}
+
+//Login, register, forgot password///////////
+.customer-account-forgotpassword,
+.customer-account-login,
+.customer-account-create{
+	.page-title-wrapper{display:none;}
+}
+.customer-account-forgotpassword .page-main,
+.login-container,
+#register-form-now{
+	width:100%;margin:40px auto;
+}
+.customer-account-forgotpassword{
+	.forgot-title{
+		.cmspage-block-title();
+	}
+	.form.password.forget{
+		.cmspage-block();
+	}
+}
+.block-register-account{
+	.block-title{
+		.cmspage-block-title();
+	}
+	.block-content-register{
+		.cmspage-block();
+	}
+	.actions-toolbar{
+		margin-top:20px;
+	}
+}
+.customer-account-login .page-main .block-customer-login{
+	.block-title{
+		.cmspage-block-title();
+	}
+	.block-content{
+		.cmspage-block();
+	}
+}
+.block-new-customer{
+	.block-title{
+		.cmspage-block-title();
+	}
+	.block-content{
+		text-align:center;
+		.actions-toolbar a.primary{
+			.abs-cssall(@btn_default_text, @btn_default_border, @btn_default_background, @btn_default_font);
+			&:hover{
+				.abs-cssall(@btn_hover_text, @btn_hover_border, @btn_hover_background);
+			}
+		}
+		
+	}
+}
+//
+//  Desktop
+//  ---------------------------------------------
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	.customer-account-forgotpassword .page-main,
+	.block-new-customer,
+	.login-container,
+	#register-form-now {
+		width:520px;
+		.actions-toolbar{
+			text-align:center;
+			> div.primary{
+				width:100%;
+				.primary{
+					width:60%;
+					margin:0 20%;
+				}
+				a.primary{
+					margin-top:10px;
+				}
+			}
+			> div.secondary{
+				clear:both;
+			}
+		}
+	}
+}
+
+
+
+//////404 Page //////////
+.cmspage-custom,
+.pagenotfound{
+	width:100%;margin:40px auto;
+	.block.block-cmspage,
+	.block.block-pagenotfound{
+		.block-title{
+			.cmspage-block-title();
+		}
+		.block-content{
+			.cmspage-block();
+		}
+		.block-content{
+			padding:30px 30px 10px!important;
+			.group-link{
+				padding-top:15px;
+				text-align:center;
+				a{margin:0 5px;}
+			}
+		}
+	}
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	.cmspage-custom,
+	.pagenotfound{
+		width:540px;
+	}
+}
+
+///
+.page-layout-1column{
+	.columns{
+		margin-bottom:40px;
+		.lib-css(background-color, @main_block_background);
+		padding:20px 10px;
+		.abs-boxshadow(@box-shadow);
+		.abs-borderradius(@border-radius);
+		margin-left:0;
+		margin-right:0;
+		.column.main{
+			padding-bottom:0;
+		}
+	}
+	&.cms-index-index,
+	&.checkout-index-index,
+	&.checkout-cart-index,
+	&.cms-no-route,
+	&.catalog-product-view,
+	&.catalog-category-view,
+	&.customer-account-forgotpassword,
+	&.customer-account-login,
+	&.cms-home,
+	&.customer-account-create{
+		.columns{
+			margin-bottom:0;
+			.lib-css(background-color, transparent);
+			padding:0;
+			.abs-borderradius(0);
+			.abs-boxshadow(none);
+			margin-left:-10px;
+			margin-right:-10px;
+		}
+	}
+}
+
+//Contact
+.form.contact{ margin-bottom:20px;}
+#map_canvas{ width:100% !important}
+
+//About us
+.cms-about-us .wrapper-breadcrums{ display:none;}
+.aboutus-page{
+	.aboutus-box{
+		margin-bottom:60px;
+	}
+	.box-img{
+		border:1px solid #e1e1e1;
+		padding:10px;
+	}
+	.aboutus-title{
+		text-transform:uppercase;
+	}
+	.aboutus-titlesmall{
+		position:relative;
+		margin-bottom:15px;
+		&:after{
+			content:'';
+			position:absolute;
+			left:0;
+			width:100%;
+			height:1px;
+			top:50%;
+			border-top:1px solid #e1e1e1;
+		}
+		h3{
+			text-transform: uppercase;
+			margin: 0;
+			display: inline-block;
+			background: #fff;
+			padding-right: 20px;
+			position:relative;
+			z-index:1;
+		}
+		
+	}
+	.cls-features{
+		h5{
+			text-transform:uppercase;
+			font-weight:600;
+			margin-bottom:20px;
+			&:before{
+				.abs-iconfont('\f0c5', 14px);
+				.abs-borderradius(100%);
+				border:1px solid #e1e1e1;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				margin-right:10px;
+				text-align: center;
+			}
+			&.title-2{
+				&:before{
+					content:'\f260';
+				}
+			}
+			&.title-3{
+				&:before{
+					content:'\f26c';
+				}
+			}
+		}
+		.items{
+			li{ 
+				margin:0; 
+				padding:7px 0;
+				&:before{
+					.abs-iconfont('\f067', 12px);
+					padding-right:10px;
+				}
+			}
+		}
+	}
+}
+
+//Checkout success
+.checkout-success{
+	text-align:center;
+	font-size:18px;
+	.success-title{
+		font-size:48px;
+		color:#fc7070;
+		padding-top:60px;
+		span{ display:inline-block; clear:both; margin-bottom:0; vertical-align:top;}
+		span.success-title-icon{
+			font-size:0;
+			width:95px;
+			height:95px;
+			line-height:95px;
+			text-align:center;
+			.abs-borderradius(100%);
+			border:2px solid #fc7070;
+			&:before{
+				.abs-iconfont('\f00c', 48px);
+				line-height:95px;
+			}
+		}
+	}
+	p{ margin-bottom:1.5rem}
+	.order-id{
+		.abs-link(#fc7070, #fc7070);
+		&:hover{
+			text-decoration:underline;
+		}
+	}
+	.success-bottom{
+		font-size:14px;
+		padding-top:60px;
+		padding-bottom:60px;
+	}
+	div.primary{ padding-top:15px;}
+}
+
+
+//
+#password-strength-meter-container{
+	overflow: hidden;
+	height: 20px;
+	margin-bottom: 20px;
+	background-color: #f5f5f5;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+	font-size:0;
+	width:100%;
+	margin:10px 0;
+	#password-strength-meter{
+		float: left;
+		height: 100%;
+		font-size: 12px;
+		font-size:0;
+		line-height: 20px;
+		color: #fff;
+		text-align: center;
+		background-color: #959292;
+		-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+		box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+		-webkit-transition: width .6s ease;
+		-o-transition: width .6s ease;
+		transition: width .6s ease;
+		
+		background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px;
+	
+	-webkit-animation: progress-bar-stripes 2s linear infinite;
+    -o-animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite;
+	}
+	#password-strength-meter-label{
+		font-size: 12px;
+		line-height: 20px;
+		color: #fff;
+		padding:0 5px;
+	}
+	&.password-strength-meter-1{
+		#password-strength-meter{
+			width:25%;
+			background-color:#d9534f;
+		}
+	}
+	&.password-strength-meter-2{
+		#password-strength-meter{
+			width:50%;
+			background-color:#f0ad4e;
+		}
+	}
+	&.password-strength-meter-3{
+		#password-strength-meter{
+			width:75%;
+			background-color:#337ab7;
+		}
+	}
+	&.password-strength-meter-4{
+		#password-strength-meter{
+			width:100%;
+			background-color:#5cb85c;
+		}
+	}
+}
+@-webkit-keyframes progress-bar-stripes{from{background-position:40px 0}to{background-position:0 0}}
+@-o-keyframes progress-bar-stripes{from{background-position:40px 0}to{background-position:0 0}}
+@keyframes progress-bar-stripes{from{background-position:40px 0}to{background-position:0 0}}
+
+
+

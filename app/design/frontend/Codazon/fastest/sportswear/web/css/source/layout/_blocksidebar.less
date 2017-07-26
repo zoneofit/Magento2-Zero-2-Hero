@@ -1,0 +1,224 @@
+/* ============================================ *
+ * Codazon_BlockSidebar
+ * ============================================ */
+//block sidebar
+@block__background: @main_block_background;
+@block_text: @main_text;
+@block__border: @main_border;
+@block__radius: 0;
+
+@block-title__background:@main_block_title_background;
+@block-title__text: @main_title_text;
+@block-title__border: @main_title_border;
+@block-title__font: @f_h3;
+
+
+// widget product
+@widget__background: @main_background;
+@widget__text: @main_text;
+
+
+
+
+& when (@media-common = true){
+	.cdz-block-title{
+		margin-bottom:0;
+		.b-title{
+			margin-bottom:0;
+			padding:(@indent__base - 5) @indent__base; position:relative; text-transform:uppercase !important;
+			.lib-css(border-bottom, 1px solid @block__border);
+			.abs-csscbf(@block-title__text, @block-title__background, @f_special);
+			strong{font-size:100%;}
+			.lastcolor{
+				.lib-css(color,@main_hover_text);
+			}
+		}
+		.view-all{
+			float:right; 
+			font:@f_default;
+			text-transform:capitalize;
+			font-style:italic;
+			margin-top:6px;
+			&:after{
+				.abs-iconfont('\f178', 12px); 
+				margin-left:@indent__xs;
+			}
+			.rtl-layout &{
+				float:left; 
+				&:after{
+					content:'\f177';
+					margin-left:0;
+					margin-right:@indent__xs;
+				}
+			}
+		}
+	}
+	
+	
+	/*Block Sidebar*/
+	.block.crosssell,
+	.block.upsell,
+	.block.related,
+	.page-main .sidebar .block{
+		&:not(.block-static-block){
+			margin-bottom:2rem;
+			.abs-borderradius(@block__radius);
+			.block-collapsible-nav-title,
+			.block-title{
+				.abs-csscbf(@block-title__text, @block-title__background, @block-title__font);
+				text-transform:uppercase;
+				position:relative;
+				padding:15px 20px;
+				margin-bottom:0;
+				min-width:100%;
+				.abs-borderradius(@block__radius @block__radius 0 0);
+				.lib-css(border-bottom, 1px solid @block__border);
+				&:before{ display:none;}
+				strong{
+					.lib-css(font, @block-title__font);
+					.lib-css(border, 0);
+					margin-top:0;
+					margin-bottom:0;
+					display:inline-block;
+					vertical-align:top;
+				}
+			}
+			.block-content{
+				//padding:15px 20px;
+				//.lib-css(background, @block__background);
+				.abs-borderradius( 0 0 @block__radius @block__radius);
+				
+				border-top:0;
+				text-align:left;
+				.rtl-layout &{
+					text-align:right;
+				}
+				.empty{
+					padding:0;
+					border:0;
+				}
+				&.filter-content{padding-top:0;}
+			}
+			> .empty{
+				.abs-borderradius( 0 0 @block__radius @block__radius);
+				padding:15px 20px;
+				
+				border-top:0;
+				//.lib-css(background, @block__background);
+			}
+		}
+	}
+	
+	.page-main .sidebar .block{
+		&:not(.block-static-block){
+			margin-bottom:2rem;
+			.lib-css(background, @block__background);
+			> .empty,
+			.block-content{
+				padding:15px 20px;
+				.empty{
+					padding:0;
+					border:0;
+				}
+			}
+		}
+	}
+	
+}
+
+
+.block.review-add{
+	.block-content{
+		padding-top:0 !important;
+	}
+}
+/////////////Mobile////////////////
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	/*.cdz-block-title03,
+	.cdz-block-title{
+		margin-bottom:@indent__base;
+		.b-title{
+			padding:0 0 (@indent__s + 5) ; min-width:0;
+			.lib-css(font, @f_h3);
+			font-weight:600;
+			strong{font-size:100%;}
+		}
+	}
+	.page-main .sidebar .block{
+		&:not(.block-static-block){
+			.actions-toolbar > .secondary{
+				text-align:center;
+			}
+		}
+	}*/
+}
+
+
+//
+//Detail No Tab
+.product.info.detailed.without_tab{
+	.product.data.items{
+		display:inline-block;
+		width:100%;
+		vertical-align:top;
+		text-align:left;
+		> .item.title {
+			float:none;
+			display:inline-block;
+			vertical-align:top;
+			.lib-css(border-bottom, 1px solid @block__border);
+			.abs-csscbf(@block-title__text, @block-title__background, @block-title__font);
+			width:100%;
+			height: inherit;
+			> .switch:before{
+				display:none;
+			}
+			&.active{
+				> .switch{
+					float:left;
+					min-width:0;
+					.lib-css(border, 0);
+					
+					.abs-csscbf(@block-title__text, @block-title__background, @block-title__font);
+					text-transform:uppercase;
+					position:relative;
+					padding:15px 20px;
+					margin-bottom:0;
+					.abs-borderradius(@block__radius @block__radius 0 0);
+					height: inherit;
+					
+				}
+			}
+		}
+		> .content{
+			margin-top:0;
+			.abs-boxshadow(none);
+			.abs-borderradius(0);
+			padding:15px 20px;
+			margin-bottom:@indent__base;
+			text-align:left;
+			.lib-css(background, @block__background);
+			.rtl-layout &{
+				text-align:right;
+			}
+		}
+	}
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	.product.info.detailed.without_tab{
+		.product.data.items{
+			> .item.title {
+				> .switch:after{
+					display:none;
+				}
+				&.active{
+					> .switch{
+						//border:0;
+						
+					}
+				}
+			}
+		}
+	}
+}	

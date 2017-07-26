@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+		 <referenceBlock name="head.additional">
+            <block class="Magento\Framework\View\Element\Template" name="head_custom_options" template="Magento_Theme::html/head_options.phtml" />           
+        </referenceBlock> 
+        <referenceContainer name="header.panel">
+			<block class="Magento\Framework\View\Element\Html\Links" name="header.links">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">header links</argument>
+                </arguments>
+            </block>
+			<container name="header.panel.store" label="Page Header Store" htmlTag="div" htmlClass="header-stores" >
+				<block class="Magento\Store\Block\Switcher" name="store_language" as="store_language" template="switch/languages.phtml"/>
+				<block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="-" template="switch/stores.phtml"/>
+			</container>
+        </referenceContainer>
+		
+		<referenceBlock name="top.links" display="false" />
+		<referenceBlock name="head.components">
+			<block class="Magento\Framework\View\Element\Js\Components" name="default_page_head_components" after='-' template="Magento_Theme::html/js_components.phtml" />
+		</referenceBlock>
+		
+		<move element="store_switcher" destination="header.panel.store" />
+		<!--MOVE COMPARE - WISHLIST-->
+		<move element="catalog.compare.link" destination="header.links" before="authorization-link-login" />
+		<move element="wish-list-link" destination="header.links" before="catalog.compare.link" />
+		<referenceContainer name="compare-link-wrapper" remove="true" />
+		
+		<!--END MOVE COMPARE - WISHLIST-->
+		
+		<referenceContainer name="header.container">
+			<container name="header.wrapper.content" htmlTag="div" htmlClass="header-wrapper-content sticky-menu" after="-">
+			<container name="header.wrapper.bottom" htmlTag="div" htmlClass="header-wrapper-bottom" after="-">
+				<container name="header.bottom.content" htmlTag="div" htmlClass="header content" before="-" label="Header Bottom Content" >
+					<container name="main.menu" htmlTag="div" htmlClass="header-main-menu" after="-" />
+					<container name="menu.container" htmlTag="div" htmlClass="menu-container" label="Header Main Menu" />					
+				</container>
+			</container>
+			</container>
+		</referenceContainer>
+		
+		<move element="header-wrapper" destination="header.wrapper.content" before="-" />
+		<move element="navigation.sections" destination="main.menu" />
+		<move element="menu.container" destination="store.menu" />
+		<move element="top.search" destination="header.bottom.content" />
+		<!--move element="minicart" destination="header.bottom.right" /-->
+		
+		
+		
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_img_width" xsi:type="number">200</argument>
+                <argument name="logo_img_height" xsi:type="number">58</argument>
+            </arguments>
+        </referenceBlock>
+		 
+		 <referenceBlock name="store.settings">
+		 	<block class="Magento\Store\Block\Switcher" name="store.settings.switcher" before="-" template="switch/stores.phtml">
+		 		<arguments>
+		 			<argument name="id_modifier" xsi:type="string">nav</argument>
+                </arguments>
+		 	</block>
+		 </referenceBlock>
+		 <move element="content.top" destination="main" before="content" />
+        <referenceContainer name="page.wrapper">        	
+        	<container name="header.slideshow.full" as="header_slideshow_full" before="main.content.top" label="Before Main Content Full" htmlTag="div" htmlClass="full-slideshow-wrapper" />
+            <container name="main.content.top" as="main_content_top" before="main.content" label="Before Main Content" htmlTag="div" htmlId="topcontent" htmlClass="top-main-wrapper" />
+			<container name="main.content.bottom" as="main_content_bottom" after="main.content" label="After Main Content" htmlTag="div" htmlId="bottomcontent" htmlClass="bottom-main-wrapper" /> 			
+        </referenceContainer>
+        <referenceContainer name="footer-container">
+            <container name="footer.container.top" before="-" htmlTag="div" htmlId="topfooter" htmlClass="top-footer-wrapper" label="Footer Container Top Full">
+				 <container name="footer.content.top" htmlTag="div" htmlClass="footer content footer-content-top" label="Footer Container Top" after="-"/>
+			</container>
+			<container name="footer.container.wrapper" label="Footer Container Wrapper" after="footer.container.top" htmlTag="div" htmlClass="footer content footer-container-wrapper" />
+            <container name="footer.container.bottom" label="Footer Container Bottom" after="footer.container.wrapper" htmlTag="div" htmlId="bottomfooter" htmlClass="bottom-footer-wrapper">
+                <container name="footer.content.bottom" htmlTag="div" htmlClass="footer content" >
+                    <container name="footer.custom.block" htmlTag="div" htmlClass="footer-custom-block" label="Footer Custom Block" after="copyright" />
+                </container>
+            </container>
+        </referenceContainer>
+        <referenceBlock name="footer_links" display="false" />
+        <move element="footer" destination="footer.container.top" before="-" />
+        <referenceBlock name="report.bugs" remove="true"/>
+        <move element="copyright" destination="footer.content.bottom" before="-" />
+		
+		<referenceContainer name="page.wrapper">
+			<container name="backtop" after="footer-container">
+				<block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/back_to_top.phtml" />
+			</container>
+		</referenceContainer>
+        <referenceContainer name="before.body.end">
+		<block class="Magento\Framework\View\Element\Template" name="popup_block" template="Magento_Theme::html/popup_content.phtml" after="-">	         
+			<container name="block.popup.container" label="Block Popup Content" htmlTag="div" htmlClass="block-popup-content" />
+			<container name="newsletter.popup.container" htmlTag="div" htmlClass="newsletter-popup-container">
+				<block class="Magento\Newsletter\Block\Subscribe" name="popup.subscribe" before="-" template="popup_subscribe.phtml" />
+			</container>
+		</block>
+        </referenceContainer>
+    </body>
+</page>
+

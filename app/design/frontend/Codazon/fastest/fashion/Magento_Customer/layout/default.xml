@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="header.links">
+            <block class="Magento\Customer\Block\Account\Customer" name="customer" template="account/customer.phtml" before="authorization-link-login" />
+            <block class="Magento\Customer\Block\Account\AuthorizationLink" name="authorization-link-login" template="account/link/authorization.phtml" before="register-link" >
+				<block class="Codazon\ThemeOptions\Block\Loginmini" template="Magento_Customer::form/login.mini.phtml" name="customer_form_login_mini" />
+			</block>
+        </referenceBlock>
+        <block class="Magento\Theme\Block\Html\Header" name="header" as="header">
+            <arguments>
+                <argument name="show_part" xsi:type="string">welcome</argument>
+            </arguments>
+        </block>
+        <move element="header" destination="header.links" before="-"/>
+        <move element="register-link" destination="header.links" after="-"/>
+        <move element="my-account-link" destination="customer"/>
+        <move element="authorization-link" destination="top.links" after="-"/>
+        <referenceBlock name="authorization-link" display="false" />
+        
+        <referenceBlock name="my-account-link">
+        	<arguments>
+                    <argument name="class" xsi:type="string" translate="false">my-account</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="register-link">
+        	<arguments>
+                    <argument name="class" xsi:type="string" translate="false">register-link</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

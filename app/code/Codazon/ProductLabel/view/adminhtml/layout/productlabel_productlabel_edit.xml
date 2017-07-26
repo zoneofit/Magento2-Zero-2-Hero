@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+        <css src="jquery/fileUploader/css/jquery.fileupload-ui.css"/>
+    </head>
+    <body>
+		<referenceContainer name="page.main.actions">
+            <block class="Magento\Backend\Block\Store\Switcher" name="store_switcher">
+                <action method="setUseConfirm">
+                    <argument name="params" xsi:type="string">1</argument>
+                </action>
+            </block>
+        </referenceContainer>
+		<referenceContainer name="left">
+			<block class="Codazon\ProductLabel\Block\Adminhtml\ProductLabel\Edit\Tabs" name="product_label_edit_tabs">
+				
+				<block class="Codazon\ProductLabel\Block\Adminhtml\ProductLabel\Edit\Tab\Main" name="product_label_edit_tab_main"/>
+				<block class="Codazon\ProductLabel\Block\Adminhtml\ProductLabel\Edit\Tab\Conditions" name="product_label_edit_tab_conditions"/>
+				<action method="addTab">
+					<argument name="name" xsi:type="string">main_section</argument>
+					<argument name="block" xsi:type="string">product_label_edit_tab_main</argument>
+				</action>
+				<action method="addTab">
+                    <argument name="name" xsi:type="string">conditions_section</argument>
+                    <argument name="block" xsi:type="string">product_label_edit_tab_conditions</argument>
+                </action>
+			</block>
+		</referenceContainer>
+		<referenceContainer name="content">
+			<block class="Codazon\ProductLabel\Block\Adminhtml\ProductLabel\Edit" name="product_label_edit"/>
+        </referenceContainer>
+		<referenceContainer name="js">
+            <block class="Codazon\ProductLabel\Block\Adminhtml\ProductLabel\Edit\Js" template="productlabel/js.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

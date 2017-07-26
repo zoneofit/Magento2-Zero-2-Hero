@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="editor"/>
+	<head>
+        <css src="jquery/fileUploader/css/jquery.fileupload-ui.css"/>
+		<css src="Codazon_MegaMenu::css/menu.css"/>
+		<css src="Codazon_MegaMenu::css/demo_menu.css"/>
+		<css src="Codazon_MegaMenu::css/font-awesome/font-awesome.min.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+			<block class="Codazon\MegaMenu\Block\Adminhtml\Index\Edit\Js" template="megamenu/js.phtml"/>
+			<block class="Codazon\MegaMenu\Block\Adminhtml\Index\Edit\Fields\MenuItems\Types" template="megamenu/fields/menu_items/container.phtml" name="menu_items_container">
+				<block class="Codazon\MegaMenu\Block\Adminhtml\Index\Edit" name="megamenu_edit"/>
+				<block class="Codazon\MegaMenu\Block\Adminhtml\Index\Edit\Fields\MenuItems\Types" name="menu_item_types" template="megamenu/fields/menu_items/types.phtml" />
+				<block class="Codazon\MegaMenu\Block\Adminhtml\Index\Edit\Fields\MenuItems\Types" name="menu_items_layout" template="megamenu/fields/menu_items/layout.phtml" />
+				<block class="Codazon\MegaMenu\Block\Adminhtml\Index\Edit\Fields\MenuItems\Types" name="menu_items_icons_panel" template="megamenu/fields/menu_items/icons.phtml" />
+				<block class="Codazon\MegaMenu\Block\Adminhtml\Index\Edit\Fields\MenuItems\Types" name="menu_col_templates_panel" template="megamenu/fields/menu_items/col_templates.phtml" />
+			</block>
+        </referenceContainer>
+		<referenceContainer name="js">
+            
+        </referenceContainer>
+    </body>
+</page>

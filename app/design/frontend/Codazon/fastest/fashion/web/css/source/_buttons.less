@@ -1,0 +1,387 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//    Common
+//--------------------------------------
+
+& when (@media-common = true) {
+
+//
+//    Using buttons mixins
+//--------------------------------------
+button,
+a.action.primary {
+    .lib-css(border-radius, @button__border-radius);
+	margin-bottom:5px;
+}
+
+button {
+    &:not(.primary) {
+        //.lib-css(box-shadow, @button__shadow);
+        &:active {
+            //.lib-css(box-shadow, @button__shadow-active);
+        }
+    }
+}
+
+body {
+    &:not(._keyfocus) {
+        button {
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+}
+a.action.continue,
+a.action.primary {
+    .lib-link-as-button();
+	text-transform:uppercase;
+	vertical-align:top;
+	margin-bottom:5px;
+}
+.action.button,
+.action.continue{
+	 .lib-button();
+	 .lib-css(font, @btn_default_font);
+	 vertical-align:top;
+	 margin-bottom:5px;
+	 text-transform:uppercase;
+}
+
+.action.primary {
+    .lib-button-primary();
+	.lib-css(font, @btn_primary_font);
+	vertical-align:top;
+	margin-bottom:5px;
+}
+
+}
+
+
+/////////////////Custom button theme ///////////////////
+
+a.action.primary,
+.qs-button,
+button{
+	text-transform:uppercase;
+	.abs-transition();
+	
+}
+button{
+	.abs-cssall(@btn_default_text, @btn_default_border, @btn_default_background, @btn_default_font);
+	&:hover{
+		.abs-cssall(@btn_hover_text, @btn_hover_border, @btn_hover_background);
+	}	
+}
+
+button.primary{
+	.abs-cssall(@btn_primary_text, @btn_primary_border, @btn_primary_background);
+	
+	&:hover{
+		.abs-cssall(@btn_default_text, @btn_default_border, @btn_default_background);
+	}	
+}
+.action.multicheckout{
+	.lib-css(font-size, 110%);
+}
+
+/////////////////Custom button theme  icon///////////////////
+.btn-showicon(@_w, @_h, @_p, @_m, @_font, @_fontsize){
+	width: @_w;
+	height: @_h;
+	padding: @_p;
+	margin: @_m;
+	line-height: @_h;
+	font-size:0;
+	text-align:center;
+	display:inline-block;
+	vertical-align:top;
+	border:@_btnline solid;
+	.abs-borderradius(@button__border-radius);
+	min-width:0;
+	.abs-transition();
+	.abs-borderradius(@_btn-icon-radius);
+	&:before{
+		.abs-iconfont(@_font, @_fontsize);
+		line-height: (@_h - (@_btnline * 2));
+	}
+	.abs-cssall(@btn_productitem_text, @btn_productitem_border, @btn_productitem_background);
+	&:hover{
+		.abs-cssall(@btn_hover_text, @btn_hover_border, @btn_hover_background);
+	}	
+}
+//add to cart in product image
+.cdz-buttons-container{
+	form{ display:inline-block; vertical-align:top;}
+	button.tocart.primary{
+		.btn-showicon(@_btnwidth, @_btnheight, 0, 0, "\f291", 16px);
+		span:before{
+			display:none;
+		}
+	}
+}
+.sidebar .block-wishlist .action.tocart{
+	.btn-showicon(@_btnwidth, @_btnheight, 0, 0, "\f291", 16px);
+	span:before{
+		display:none;
+	}
+}
+
+//quickshop
+.qs-button{
+	.lib-button-primary();
+	//.abs-borderradius(100%);
+	display:inline-block;
+	margin-bottom:@indent__s;
+	.btn-showicon(@_btnwidth, @_btnheight, 0, 0, "\f06e", 16px);
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	.qs-button{
+		display:none !important;
+	}
+	
+	.product-style07 .product-buttons-inner{
+		form{ display:inline-block; vertical-align:top;}
+		button.tocart.primary{
+			.btn-showicon(@_btnwidth, @_btnheight, 0, 0, "\f291", 16px);
+			span:before{
+				display:none;
+			}
+		}
+	}
+}
+//Button when hover box
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	.isotope .cdz-buttons-container{
+		.qs-button,
+		.action,
+		button.primary{
+			.abs-cssall(@btn_productitem_background, @btn_productitem_background, transparent);
+			&:hover{
+				.abs-cssall(@btn_hover_text, @btn_hover_border, @btn_hover_background);
+			}
+		}
+	}
+}
+//Button in product list
+.products-list .product-item-details{
+	.qs-button,
+	.cdz-buttons-container .action,
+	.cdz-buttons-container button.tocart.primary{
+		.abs-cssall(@btn_default_text, @btn_default_border, @btn_default_background);
+		&:hover{
+			.abs-cssall(@btn_default_background, @btn_default_border, @btn_default_text);
+		}
+	}
+}
+
+///Wishlist/Compare 
+.add-to-link(){
+	.action{
+		.btn-showicon(@_btnwidth, @_btnheight, 0, 0, "\f012", 16px);
+		&.towishlist:before{
+			content:"\f004";
+		}
+	}
+}
+.actions-secondary{
+	&:not(.cdz-product-wishlist &){
+		.add-to-link();
+	}
+}
+.product-buttons-inner .actions-secondary,
+.cdz-buttons-container,
+.addto-hover-container{
+	.add-to-link();
+}
+.table-comparison .action.towishlist{
+	&:extend(.actions-secondary .action all);
+}
+
+
+//add to link detail
+.product-addto-links{
+	.action{
+		float:left;
+		width:50%;
+		text-align:center;
+		.abs-link(@main_text, @btn_hover_background);
+		.lib-css(font, @f_h6);
+		.abs-transition();
+		span{
+			.abs-transition();
+			padding:11px 20px;
+			.lib-css(border, 1px solid @main_border);
+			float:left;
+			width:96.5%;
+			text-transform: uppercase;
+			&:before{display:none;}
+		}
+		&.tocompare span{
+			float:right;
+		}
+		&:hover{
+			span{
+				.abs-cssall(@btn_hover_background, @btn_hover_border, transparent);
+			}
+		}
+		span:before{
+			//.abs-iconfont("\f079", 14px);
+			//margin-right:@indent__xs;
+		}
+		&.towishlist span:before{
+			//content:"\f004";
+		}			
+	}
+}
+
+//button product style 01
+.cdz-product-wishlist{ 
+	position: absolute; left: 15px; top: 15px; z-index:3;
+	.rtl-layout &{
+		left: auto;
+		right: 15px;
+	}
+	a.action.tocompare{ display:none;}
+	a.action.towishlist{
+		position:relative;
+		&:before{ .abs-iconfont("\f08a", 18px); width:20px; text-align: center;}
+		.abs-link(@main_text, @main_hover_text);
+		span{position:absolute; top:30px; left:50%; color:#fff; background:#000; padding:3px 5px; border-radius:3px; white-space: nowrap; display:none;}
+		&:hover{
+			color:@main_hover_text;
+			&:before{ .abs-iconfont("\f004", 18px);}
+			
+		}
+		&.in-wishlist{
+			color:#fc7070 !important;
+			&:before{
+				content:'\f004';
+			}
+		}
+	}
+}
+.product-item-info:hover .cdz-product-wishlist{
+	a.action.towishlist{
+		.lib-css(color, @main_hover_text);
+		//&:before{ .abs-iconfont("\f004", 18px);}
+	}
+}
+
+.ui-tooltip.cdz-tooltip {
+    border: 0;
+    background: #000;
+    padding: 2px 10px;
+    color: #fff;
+    border-radius: 5px;
+	&:before{ 
+		.abs-iconfont("\f0d7", 20px);
+		position:absolute;
+		bottom:-12px;
+		left:42%;
+		color:#000;
+	}
+}
+
+
+
+//button load more
+.ajax-load-wrapper{
+	text-align:center;
+	clear:both;
+	.ajax-load-button{
+		margin-top:0px;
+		display:inline-block;
+		vertical-align:top;
+		.ajax-loader,
+		a{
+			min-width:290px;
+			.abs-transition();
+			text-transform:uppercase;
+			.lib-button-primary();	
+			font-weight:600;
+			.abs-cssall(@btn_default_text, @btn_default_border, @btn_default_background);
+			&:hover{
+				
+				.abs-cssall(@btn_primary_text, @btn_primary_border, @btn_primary_background);
+			}	
+		}
+		.ajax-loader{
+			&:before{
+				.abs-iconfont('\f1ce', 16px);
+				margin-right:5px;
+				animation: cssload-rotate 1150ms linear infinite;
+				-o-animation: cssload-rotate 1150ms linear infinite;
+				-ms-animation: cssload-rotate 1150ms linear infinite;
+				-webkit-animation: cssload-rotate 1150ms linear infinite;
+				-moz-animation: cssload-rotate 1150ms linear infinite;
+			}
+		}
+		
+	}
+}
+
+///Back to top
+#back-top{
+	position:fixed;
+	right:15px;
+	bottom:15px;
+	z-index:99;
+	a{
+		.abs-transition();
+		.lib-button-primary();
+		text-transform:uppercase;
+		font-size:0;
+		&:before{
+			.abs-iconfont('\f176', 16px);
+			font-weight:bold;
+		}
+	}
+	.rtl-layout &{
+		right:auto;
+		left:15px;
+	}
+}
+
+
+////////////////////////////////
+@keyframes cssload-rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-o-keyframes cssload-rotate {
+	100% {
+		-o-transform: rotate(360deg);
+	}
+}
+
+@-ms-keyframes cssload-rotate {
+	100% {
+		-ms-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes cssload-rotate {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes cssload-rotate {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+//////////Mobile/////////////
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	.ui-tooltip.cdz-tooltip {
+		display:none !important;
+	}
+}

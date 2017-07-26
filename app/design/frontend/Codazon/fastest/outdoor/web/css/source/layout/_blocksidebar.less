@@ -1,0 +1,150 @@
+/* ============================================ *
+ * Codazon_BlockSidebar
+ * ============================================ */
+//block sidebar
+@block__background: @main_block_background;
+@block_text: @main_text;
+@block__border: @main_border;
+@block__radius: @border-radius;
+
+@block-title__background:@main_block_title_background;
+@block-title__text: @main_block_text_background;
+@block-title__border: @main_title_border;
+@block-title__font: @f_h4;
+
+
+// widget product
+@widget__background: @main_background;
+@widget__text: @main_text;
+
+
+
+
+& when (@media-common = true){
+	.cdz-block-title{
+		margin-bottom:@indent__xl;
+		.lib-css(border-bottom, 2px solid @block-title__border);
+		.b-title{
+			margin-bottom:0;
+			padding:@indent__s @indent__l; display:inline-block; vertical-align:top; position:relative; text-transform:uppercase !important;
+			background:@block-title__background;
+			.lib-css(color, @block-title__text);
+			.lib-css(font, @f_special);
+			strong{font-size:100%;}
+			
+		}
+	}
+	
+	
+	/*Block Sidebar*/
+	.block.crosssell,
+	.block.upsell,
+	.block.related,
+	.page-main .sidebar .block{
+		&:not(.block-static-block){
+			margin-bottom:2rem;
+			.abs-borderradius(@block__radius);
+			.block-collapsible-nav-title,
+			.block-title{
+				.abs-csscbf(@block-title__text, @block-title__background, @block-title__font);
+				text-transform:uppercase;
+				position:relative;
+				padding:10px 20px;
+				margin-bottom:0;
+				min-width:100%;
+				.abs-borderradius(@block__radius @block__radius 0 0);
+				&:before{ display:none;}
+				strong{
+					.lib-css(font, @block-title__font);
+					.lib-css(border, 0);
+					margin-top:0;
+					margin-bottom:0;
+					display:inline-block;
+					vertical-align:top;
+				}
+			}
+			.block-content{
+				padding:15px 20px;
+				.lib-css(background,@block__background);
+				.abs-borderradius( 0 0 @block__radius @block__radius);
+				.lib-css(border, 1px solid @block-title__border);
+				border-top:0;
+				text-align:left;
+				.empty{
+					padding:0;
+					border:0;
+				}
+				&.filter-content{padding-top:0;}
+				.rtl-layout &{
+					text-align:right;
+				}
+			}
+			> .empty{
+				.abs-borderradius( 0 0 @block__radius @block__radius);
+				padding:15px 20px;
+				.lib-css(border, 1px solid @block-title__border);
+				border-top:0;
+				.lib-css(background,@block__background);
+			}
+		}
+	}
+	
+	.page-main .sidebar .block{
+		&:not(.block-static-block){
+			margin-bottom:2rem;
+			
+		}
+	}
+	
+}
+
+
+.block.review-add{
+	.block-content{
+		padding-top:0 !important;
+	}
+}
+/////////////Mobile////////////////
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	
+}
+
+//
+//Detail No Tab
+.product.info.detailed.without_tab{
+	.product.data.items{
+		display:inline-block;
+		width:100%;
+		vertical-align:top;
+		text-align:left;
+		> .item.title {
+			float:none;
+			display:inline-block;
+			vertical-align:top;
+			width:100%;
+			> .switch:before{
+				display:none;
+			}
+			&.active{
+				> .switch{ 
+					.abs-csscbf(@block-title__text, @block-title__background, @block-title__font);
+					text-transform:uppercase;
+					position:relative;
+					padding:10px 20px;
+					margin-bottom:0;
+					min-width:100%;
+					.abs-borderradius(@block__radius @block__radius 0 0);
+					
+				}
+			}
+		}
+		> .content{
+			padding:15px 20px;
+			margin-bottom:20px;
+			.abs-borderradius( 0 0 @block__radius @block__radius);
+			.lib-css(border, 1px solid @block-title__border);
+			border-top:0;
+			text-align:left;
+		}
+	}
+}

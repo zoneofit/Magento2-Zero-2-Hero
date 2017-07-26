@@ -1,0 +1,33 @@
+.box-layout .page-wrapper{
+	margin:0 auto;
+	.abs-boxshadow(0 3px 3px #cacaca);
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	.box-layout{
+		.page-wrapper{
+			max-width:@screen__m;
+		}
+	}
+}.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+	.box-layout{
+		.page-wrapper{
+			max-width:@screen__l;
+		}
+	}
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+	.box-layout{
+		.page-wrapper{
+			max-width:@screen__xl;
+		}
+	}
+}
+@media (min-width: 1200px){
+	.box-layout{
+		.page-wrapper{
+			max-width:1200px !important;
+		}
+	}
+}
+

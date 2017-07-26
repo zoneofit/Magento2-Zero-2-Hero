@@ -1,0 +1,50 @@
+<div class="menu-container">
+    <div class="top-container" id="menu-form-outer">
+		<div class="menu-form-inner" id="menu-form-inner" >
+			<?php echo $this->getChildHtml('megamenu_edit') ?>
+		</div>
+    </div>
+    <div class="bottom-container">
+		<?php echo $this->getChildHtml('menu_item_types') ?>
+        <?php echo $this->getChildHtml('menu_items_layout') ?>
+        <?php echo $this->getChildHtml('menu_items_icons_panel') ?>
+        <?php echo $this->getChildHtml('menu_col_templates_panel') ?>
+    </div>
+    <div class="menu-settings-box" id="menu-settings-box" style="display:none;">
+        <div class="menu-settings-toggle noselect">
+		</div>
+        <div class="menu-settings-content"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+require(['jquery','domReady!'], function($){
+	var $settingsBox = $('#menu-settings-box'), $boxContent = $('.menu-settings-content',$settingsBox),
+	$formTop = $('#menu-form-outer'), $form = $('#menu-form-inner'),
+	$boxToggle = $('.menu-settings-toggle',$settingsBox),
+	formTopHeight = $formTop.outerHeight(true);
+	$formTop.css('height',formTopHeight);
+	
+	$(window).scroll(function(){
+		formTopHeight = $formTop.outerHeight(true);
+		formTopY = $formTop.offset().top;
+		var scrollY = window.scrollY;
+		if(scrollY > (formTopY + formTopHeight - 180) ){
+			$settingsBox.fadeIn('fast');
+			$form.appendTo($boxContent);
+		}else{
+			$settingsBox.hide();
+			$form.appendTo($formTop);
+			$settingsBox.removeClass('box-open');
+		}
+	});
+	$boxToggle.on('click',function(){
+		$settingsBox.toggleClass('box-open');
+	});
+	$('body').on('click',function(event){
+		if( !$(event.target).parents('.menu-settings-box').length ){
+			$settingsBox.removeClass('box-open');
+		}
+	});
+});
+</script>

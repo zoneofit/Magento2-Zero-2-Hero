@@ -1,0 +1,127 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Codazon\Slideshow\Block\Adminhtml\Slideshow\Helper\Form\Gallery\Content */
+$elementName = $block->getElement()->getName() . '[images]';
+$transitionList = $block->getEffectList();
+
+
+?>
+<div id="<?php echo $block->getHtmlId() ?>"
+     class='gallery'
+     data-mage-init='{"sliderGallery":{"template":"#<?php echo $block->getHtmlId() ?>-template"}}'
+     data-images="<?php echo $block->escapeHtml($block->getImagesJson()) ?>"
+     data-types="<?php echo $block->escapeHtml(
+         $this->helper('Magento\Framework\Json\Helper\Data')->jsonEncode($block->getImageTypes())
+     ) ?>"
+    >
+    <?php if (!$block->getElement()->getReadonly()) {
+    ?>
+        <div class="image image-placeholder">
+            <?php echo $block->getUploaderHtml();
+    ?>
+            <img class="spacer" src="<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/spacer.gif')?>"/>
+            <p class="image-placeholder-text"><?php /* @escapeNotVerified */ echo __('Click here or drag and drop to add images.');
+    ?></p>
+        </div>
+    <?php
+
+} ?>
+
+
+    <script id="<?php echo $block->getHtmlId() ?>-template" type="text/x-magento-template">
+        <div class="image item <% if (data.disabled == 1) { %>hidden-for-front<% } %>"
+             data-role="image">
+            <input type="hidden" name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][position]" value="<%- data.position %>" class="position"/>
+            <input type="hidden" name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][file]" value="<%- data.file %>"/>
+            <input type="hidden" name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][value_id]" value="<%- data.value_id %>"/>
+             <input type="hidden" name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][link]" value="<%- data.link %>"/>
+            <input type="hidden" name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][caption]" value="<%- data.caption %>"/>
+            <input type="hidden" name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][transition]" value="<%- data.transition %>"/>
+            <input type="hidden" name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][disabled]" value="<%- data.disabled %>"/>
+            <input type="hidden" name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][removed]" value="" class="is-removed"/>
+          
+            <img class="spacer" src="<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/spacer.gif')?>"/>
+            <img class="product-image" src="<%- data.url %>" alt="<%- data.label %>"/>
+            <div class="actions" >
+                <button type="button" class="action-delete" data-role="delete-button" title="<?php /* @escapeNotVerified */ echo __('Delete image') ?>">
+                    <span> <?php /* @escapeNotVerified */ echo __('Delete image') ?></span >
+                </button>            
+                <div class="draggable-handle" ></div >
+            </div >                        
+            <div class="image-fade"><span><?php /* @escapeNotVerified */ echo __('Hidden') ?></span></div>            
+        </div>
+    </script>
+    <script class="dialog-template" type="text/x-magento-template"  data-title="Image Options">
+        <div class="image-panel" data-role="dialog">
+            <div class="image-panel-preview">
+                <img src="<%- data.url %>" alt="<%- data.label %>" />
+            </div>
+            <div class="image-panel-controls">
+                
+                <fieldset class="fieldset fieldset-image-panel">
+                    <div class="field field-image-hide">
+                        <label class="label">
+                            <input type="checkbox"
+                                   data-role="visibility-trigger"
+                                   value="1"
+                                   name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][disabled]"
+                            <% if (data.disabled == 1) { %>checked="checked"<% } %> />
+                            <span><?php /* @escapeNotVerified */ echo __('Hide on Slideshow')?></span>
+                        </label>
+                    </div>
+					 <div class="field field-image-link">
+                        <label class="label" for="image-link">
+                            <span><?php /* @escapeNotVerified */ echo __('Image Link')?></span>
+                        </label>
+                        <div class="control">
+                            <input id="image-link" value="<%- data.link %>"                                     
+                                      name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][link]" />
+                        </div>
+                    </div>
+                    <div class="field field-image-caption">
+                        <label class="label" for="image-caption">
+                            <span><?php /* @escapeNotVerified */ echo __('Captions')?></span>
+                        </label>
+                        <div class="control">
+                            <textarea id="image-caption"
+                                      rows="3"
+                                      name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][caption]"><%- data.caption %><%- data.label %></textarea>
+                        </div>
+                    </div>
+					<div class="field field-image-transition">
+                        <label class="label" for="image-transition">
+                            <span><?php /* @escapeNotVerified */ echo __('Transition Effect')?></span>
+                        </label>
+                        <div class="control">							
+                                         <select id="image-transition" class="multiselect-alt" data-role="type-selector" name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][transition]">
+                                <?php foreach($transitionList as $transition):?>
+                                    
+                                            <option class="image-type"
+                                                                                                      
+                                                   value="<?php echo $transition['value'] ?>"
+                                                >
+                                            <?php echo $transition['value'] ?>
+                                            </option>              
+                            <?php endforeach; ?>
+                            </select>
+                        </div>
+                    </div>               
+                    
+                </fieldset>
+            </div>
+
+       
+            <div class="image-pointer"></div>
+        </div>
+    </script>
+    <p style="clear:both;"><strong style="color: #e02b27;
+    font-size: 1.2rem;
+    margin: 0 0 0 5px;">*</strong><?php /* @escapeNotVerified */ echo __('Click on image to edit');
+             ?></p>
+</div>

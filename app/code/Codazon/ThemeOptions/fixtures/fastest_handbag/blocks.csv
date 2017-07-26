@@ -1,0 +1,156 @@
+title,identifier,content
+"Fastest - Handbag - Main Menu",fastest-handbag-main-menu,"<div class=""cdz-main-menu"">{{widget type=""Codazon\MegaMenu\Block\Widget\Megamenu"" menu=""fastest-fashion-main-menu""}}</div>"
+"Fastest - Handbag - Main Content Top - Slideshow",fastest-handbag-main-content-top-slideshow,"<div class=""slideshow-banner"">
+<div class=""row"">
+<div class=""col-sm-18"">
+<div class=""slideshow-container"">{{widget type=""Codazon\Slideshow\Block\Widget\Slideshow"" slideshow_id=""fastest-handbag-home-slideshow""}}</div>
+</div>
+<div class=""col-sm-6 hidden-xs"">
+<div class=""row"">
+<div class=""col-sm-24 space-base""><a href=""#""><img class=""img-responsive"" src=""{{media url=""wysiwyg/codazon/handbag/home/img01.jpg""}}"" alt=""Banner 01"" /></a></div>
+</div>
+<div class=""row"">
+<div class=""col-sm-24""><a href=""#""><img class=""img-responsive"" src=""{{media url=""wysiwyg/codazon/handbag/home/img02.jpg""}}"" alt=""Banner 02"" /></a></div>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Handbag - Main Content Top - Advertisement Banners",fastest-handbag-main-content-top-advertisement-banners,"<div class=""wrapper-ads03"">
+<div class=""row"">
+<div class=""col-sm-8 space-xs"">
+<div class=""text-area"">
+<span class=""icon-font pe-7s-piggy"">&nbsp;</span>
+<h5>Discount 10% for buy online</h5>
+</div>
+</div>
+<div class=""col-sm-8 space-xs"">
+<div class=""text-area"">
+<span class=""icon-font pe-7s-credit"">&nbsp;</span>
+<h5>accept visa and mastercard</h5>
+</div>
+</div>
+<div class=""col-sm-8 space-xs"">
+<div class=""text-area"">
+<span class=""icon-font pe-7s-plane"">&nbsp;</span>
+<h5>Fast delivery services</h5>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Handbag - Main Content Area - Product Tabs",fastest-handbag-main-content-area-product-tabs,"<div class=""cdz-product-tabs product-style05 show-item-5"">
+<div class=""row"">
+<div class=""col-sm-24"">
+<div class=""bestseller-product product data items cdz-tabs"">
+<div class=""data item title text-uppercase"" data-role=""collapsible""><a class=""data switch"" tabindex=""0"" href=""#handbag-tab-1"" data-toggle=""switch"">Featured</a></div>
+<div id=""handbag-tab-1"" class=""data item content"" data-role=""content"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""10"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""280"" thumb_height=""345"" filter_template=""custom"" custom_template=""product/widget/content/infinitescroll_grid.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`48`;]]""}}</div>
+<div class=""data item title text-uppercase"" data-role=""collapsible""><a class=""data switch"" tabindex=""0"" href=""#handbag-tab-2"" data-toggle=""switch"">Popular</a></div>
+<div id=""handbag-tab-2"" class=""data item content"" data-role=""content"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""10"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""280"" thumb_height=""345"" filter_template=""custom"" custom_template=""product/widget/content/infinitescroll_grid.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`49`;]]""}}</div>
+<div class=""data item title text-uppercase"" data-role=""collapsible""><a class=""data switch"" tabindex=""0"" href=""#handbag-tab-3"" data-toggle=""switch"">Bestseller</a></div>
+<div id=""handbag-tab-3"" class=""data item content"" data-role=""content"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""10"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""280"" thumb_height=""345"" filter_template=""custom"" custom_template=""product/widget/content/infinitescroll_grid.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`50`;]]""}}</div>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Handbag - Main Content Area 2 - Blog",fastest-handbag-main-content-area-2-blog,"<div class=""cdz_wapper-blog02 space-base"">{{widget type=""Magefan\Blog\Block\Widget\PostList"" title=""Latest Blog Posts"" categories=""1"" order_by=""title"" order=""asc"" post_count=""6"" show_in_front=""thumb,name,description,published_date,author"" desc_length=""150"" show_slider=""1"" thumb_width=""380"" thumb_height=""280"" post_template=""custom"" custom_template=""blog_grid_slider.phtml""}}</div>"
+"Fastest - Handbag - Main Content Area 3 - Newsletter",fastest-handbag-main-content-area-3-newsletter,"<div class=""newsletter-wrapper wrapper-ads05"">
+<div class=""row"">
+<div class=""col-sm-24 col-md-12"">
+<div class=""newsletter-ads"">
+<p class=""h3"">Your daily close of style</p>
+<p>The latest look and style just for you</p>
+</div>
+</div>
+<div class=""col-sm-24 col-md-12"">
+<div class=""newsletter-container"">{{block class=""Magento\Newsletter\Block\Subscribe"" name=""form.subscribe"" as=""subscribe"" before=""-"" template=""subscribe.phtml""}}
+<p>By entering your email address, you are agreeing to our Terms of service, Privacy Policy, and to receive emails from Fastest Store.</p>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Handbag - Main Content Area 4 - Banners",fastest-handbag-main-content-area-4-banners,"<div class=""wrapper-ads04 banners-wrapper space-base"">
+<div class=""row"">
+<div class=""col-sm-12"">
+<div class=""banner space-xs""><img class=""img-responsive"" src=""{{media url=""wysiwyg/codazon/handbag/home/img03.jpg""}}"" alt=""Banner 03"" />
+<div class=""groupinfo"">
+<div class=""groupinfo-inner text-center"">
+<p class=""grifo-title h3 text-uppercase""><a href=""#"">Our Freshest Fashion Picks For 2016</a></p>
+<p><a class=""btn-link action button"" href=""#""><span>Shop now</span></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class=""col-sm-12"">
+<div class=""banner space-xs""><a href=""#""><img class=""img-responsive"" src=""{{media url=""wysiwyg/codazon/handbag/home/img04.jpg""}}"" alt=""Banner 04"" /></a>
+<div class=""groupinfo"">
+<div class=""groupinfo-inner text-center"">
+<p class=""grifo-title h3 text-uppercase""><a href=""#"">Top 10 Must-Have Items For January</a></p>
+<p><a class=""btn-link action button"" href=""#""><span>Shop now</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Handbag - Main Content Area 5 - Brands Slider",fastest-handbag-main-content-area-5-brands-slider,"<div class=""cdz-brand-slider-wrap hidden-xs"">
+<div class=""cdz-brand-slider"">
+<div class=""cdz-slider cdz-slider-banners cdz-slider-navigation-icon"" data-items-0=""1"" data-items-480=""3"" data-items-768=""4"" data-items-1024=""6"" data-items-1280=""7""  data-items=""7"" data-margin=""20"">
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_01.png'}}"" alt=""cdz_brand_01.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_02.png'}}"" alt=""cdz_brand_02.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_03.png'}}"" alt=""cdz_brand_03.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_04.png'}}"" alt=""cdz_brand_04.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_05.png'}}"" alt=""cdz_brand_05.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_06.png'}}"" alt=""cdz_brand_06.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_01.png'}}"" alt=""cdz_brand_01.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_02.png'}}"" alt=""cdz_brand_02.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_03.png'}}"" alt=""cdz_brand_03.jpg"" /></a></div>
+</div>
+</div>
+</div>"
+"Fastest - Handbag - Footer Top - Testimonials",fastest-handbag-footer-top-testimonials,"<div class=""text-center  wrapper-ads06 bg-wrapper-ads"">
+<div class=""cdz-parallax-wrapper maxwidth"">
+<div class=""parallax-container row"">
+<div class=""parallax-inner col-md-14 col-md-push-5 col-sm-20 col-sm-push-2"">
+<div class=""cdz-wrapper-banner cdz-slider cdz-slider-banners cdz-slider-navigation-icon"" data-items=""1"" data-items-0=""1"" data-items-480=""1"" data-items-768=""1"" data-items-1024=""1"" data-items-1280=""1"" data-margin=""20"">
+<div class=""cdz-banners-item content"">
+<p class=""ads-title"">""Karen Gold Fashion Designer said""</p>
+<p class=""ads-desc"">""In my quest to support the British manufacturing industry, the London based company has encouraged me to remain a Made in Britain brand.""</p>
+<p class=""ads-img""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/handbag/home/img06.png'}}"" alt="""" /></a></p>
+<p class=""ads-author"">Karen Gold</p>
+<p class=""ads-major"">F-Designer</p>
+</div>
+<div class=""cdz-banners-item content"">
+<p class=""ads-title"">""Karen Gold Fashion Designer said""</p>
+<p class=""ads-desc"">""In my quest to support the British manufacturing industry, the London based company has encouraged me to remain a Made in Britain brand.""</p>
+<p class=""ads-img""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/handbag/home/img06.png'}}"" alt="""" /></a></p>
+<p class=""ads-author"">Karen Gold</p>
+<p class=""ads-major"">F-Designer</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Handbag - Footer Container Top - Logo ",fastest-handbag-footer-container-top-logo,"<div class=""footer-logo-wrapper""><img class=""footer-logo"" src=""{{media url=""wysiwyg/codazon/handbag/home/logo-footer.png""}}"" alt="""" /></div>"
+"Fastest - Handbag - Footer Container Bottom - Social Icons",fastest-handbag-footer-container-bottom-social-icons,"<div class=""footer-social"">
+<p class=""social""><a href=""#""><span class=""fa fa-facebook"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-twitter"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-pinterest-p"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-google-plus"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-tumblr"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-vimeo"">&nbsp;</span></a></p>
+</div>"
+"Fastest - Handbag - Block Popup Content",fastest-handbag-block-popup-content,"<div class=""cdz-popup-newsletter"">
+<div class=""cdz-popup-newsletter-left"">
+<div class=""popup-banner"">
+<div class=""banner""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/handbag/home/banner-newsletter.jpg'}}"" alt=""Banner 01"" /></a></div>
+</div>
+</div>
+<div class=""cdz-popup-newsletter-right"">
+<div class=""popup-title"">
+<h3 class=""text-uppercase""><span>Sign up Newsletter</span></h3>
+</div>
+<div class=""popup-content"">
+<div class=""popup-content-ads"">
+<p class=""popup-content-title h3"">Join YourStore's squad for 20% off</p>
+<p class=""popup-content-desc"">and get all the latest news, trends and offs and offers straight to your inbox. Or get 15% off using code SQUAD15</p>
+<div class=""popup-content-newsletter"">{{block class=""Magento\Newsletter\Block\Subscribe"" name=""cdz.newsletter.style05"" template=""popup_subscribe.phtml""}}</div>
+<p class=""popup-content-small"">1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+</div>
+</div>"

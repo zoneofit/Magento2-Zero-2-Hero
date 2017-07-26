@@ -1,0 +1,12 @@
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	.page-main .block,
+	.cdz-slideshow{
+		margin-bottom:@space-lg;
+	}
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	.page-main .block,
+	.cdz-slideshow{
+		margin-bottom:@space-md;
+	}
+}

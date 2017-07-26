@@ -1,0 +1,192 @@
+<?php
+use Magento\Framework\App\Action\Action;
+?>
+
+<?php
+$_productCollection = $block->getProductCollection();
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+?>
+<?php if (!$_productCollection->count()): ?>
+    <div class="message info empty"><div><?php /* @escapeNotVerified */ echo __('We can\'t find products matching the selection.') ?></div></div>
+<?php else: ?>
+    <?php echo $block->getToolbarHtml() ?>
+    <?php echo $block->getAdditionalHtml() ?>
+    <?php
+    $viewMode = 'grid';
+    $image = 'home_bestseller_grid';
+    $image_hover = 'home_bestseller_grid_hover';
+    $showDescription = false;
+    $title = $block->getTitle() ? __($block->getTitle()) : '';
+    $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::SHORT_VIEW;
+    $classid = md5(json_encode($block->getData()));
+    /**
+     * Position for actions regarding image size changing in vde if needed
+     */
+    $pos = $block->getPositioned();
+	
+	/* isotope layout */
+	$width1Class = 'width-1';
+	$width2Class = 'width-1 width-2';
+	$layoutClass = [$width2Class,$width1Class,$width1Class,$width1Class,$width1Class,$width1Class,$width1Class];
+	$uniqId = uniqid('iso_');
+	$imageHelper = $this->helper('Magento\Catalog\Helper\Image');	
+	$wLHelper = $this->helper('Magento\Wishlist\Helper\Data'); //getWishlistItemCollection
+	
+	global $wLItemArray;
+	if( empty($wLItemArray) ){
+		$wLCollection = $wLHelper->getWishlistItemCollection();
+		$wLItemArray = [-1];
+		foreach($wLCollection as $wLItem){
+			$wLItemArray[] = $wLItem->getProductId();	
+		}
+	}
+	
+	$labelHelper = $this->helper('Codazon\ProductLabel\Helper\Data');
+    ?>
+    <div class="block widget block-products-list isotope-wrap <?php /* @escapeNotVerified */ echo $viewMode; ?>">
+		<?php if ($title):?>
+		<div class="block-title">
+		    <strong><?php /* @escapeNotVerified */ echo $title; ?></strong>
+		</div>
+		<?php endif ?>
+		<div class="block-content <?php echo $classid ?>">
+			<div class="products wrapper <?php echo $viewMode; ?> products-<?php echo $viewMode; ?>">
+				<?php $iterator = 0; ?>
+				<ol class="products list items product-items isotope" id="<?php echo $uniqId ?>">
+				    <?php foreach ($_productCollection as $_product): ?>
+						<?php
+						$itemClass = $layoutClass[$iterator%7];						
+                        switch($itemClass){
+							case $width2Class: 
+								$image = 'home_bestseller_grid';
+								$image_hover = 'home_bestseller_grid_hover';
+								break;
+							default: 
+								$image = 'home_bestseller_grid_small';
+								$image_hover = 'home_bestseller_grid_small_hover';
+								break;
+						}																			
+															
+											
+						?>
+				        <li class="item iso-item product product-item <?php echo $itemClass; $iterator++; ?>">
+						<div class="product-item-info">
+				        	<div class="cdz-product-top">
+							<a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" class="product photo product-item-photo" tabindex="-1">
+							<?php $productImage = $imageHelper->init($_product, $image);	?>
+				        	 	<span class="main-image">
+				        	 		<span class="product-image-container"
+									      style="width:<?php /* @escapeNotVerified */ echo $productImage->getWidth()?>px;">
+									    <span class="product-image-wrapper"
+									          style="padding-bottom: <?php /* @escapeNotVerified */ echo ($productImage->getHeight()/$productImage->getWidth() * 100); ?>%;">
+									         
+									        <img class="product-image-photo"									             
+									             src="<?php /* @escapeNotVerified */ echo $productImage->getUrl(); ?>"
+									             width="<?php /* @escapeNotVerified */ echo $productImage->getWidth(); ?>"
+									             height="<?php /* @escapeNotVerified */ echo $productImage->getHeight(); ?>"
+									             alt="<?php /* @escapeNotVerified */ echo $block->stripTags($productImage->getLabel(), null, true); ?>"/></span>
+									</span>									                            		
+                            	</span>
+                            	 <?php $productHoverImage = $imageHelper->init($_product, $image_hover); ?>
+                            	<span class="hover-image">
+                            			<span class="product-image-container"
+									       style="width:<?php /* @escapeNotVerified */ echo $productHoverImage->getWidth()?>px;">
+									    <span class="product-image-wrapper"
+									          style="padding-bottom: <?php /* @escapeNotVerified */ echo ($productHoverImage->getHeight()/$productHoverImage->getWidth() * 100); ?>%;">
+									         
+									        <img class="product-image-photo"									             
+									             src="<?php /* @escapeNotVerified */ echo $productHoverImage->getUrl(); ?>"
+									             width="<?php /* @escapeNotVerified */ echo $productHoverImage->getWidth(); ?>"
+									             height="<?php /* @escapeNotVerified */ echo $productHoverImage->getHeight(); ?>"
+									             alt="<?php /* @escapeNotVerified */ echo $block->stripTags($productHoverImage->getLabel(), null, true); ?>"/></span>
+									</span>									
+								</span>
+							</a>
+							<?php $labelHelper->showLabel($_product) ?>   
+                            </div>
+							<div class="cdz-product-wishlist">
+								<?php if($block->isShow('addto')): ?>
+                                <?php $inWLClass = ( in_array($_product->getId(),$wLItemArray) )?'in-wishlist':''; ?>
+                                <div class="actions-secondary show-tooltip" data-role="add-to-links" title="<?php echo $block->escapeHtml(__('Add to Wish List')); ?>">
+                                    <?php if ($this->helper('Magento\Wishlist\Helper\Data')->isAllow()): ?>
+                                        <a href="#"
+                                           class="action towishlist <?php echo $inWLClass ?>"
+                                           title="<?php echo $block->escapeHtml(__('Add to Wish List')); ?>"
+                                           aria-label="<?php echo $block->escapeHtml(__('Add to Wish List')); ?>"
+                                           data-post='<?php /* @escapeNotVerified */ echo $block->getAddToWishlistParams($_product); ?>'
+                                           data-action="add-to-wishlist"
+                                           role="button">
+                                            <span><?php /* @escapeNotVerified */ echo __('Add to Wish List') ?></span>
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
+                                <?php endif ?>
+							</div>
+                            <div class="cdz-product-bottom">
+                            	
+                                <div class="middle-block cdz-buttons-container">
+                                    <div class="product details product-item-details cdz-buttons-inner">
+                                    <?php if($block->isShow('name')): ?>
+										 <div class="product name product-item-name">
+											<a class="product-item-link" href="<?php echo $_product->getProductUrl() ?>">
+												<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?>
+											</a>
+										</div>
+										<?php endif ?>
+										
+                                        <?php if($block->isShow('price')): ?>
+                                            <?php echo $block->getProductPriceHtml($_product,'bestseller-tab') ?>
+                                        <?php endif ?>
+                                        <div class="cdz-buttons">
+                                            
+                                            <?php if($block->isShow('addtocart')): ?>
+												<?php if ($_product->isSaleable()): ?>
+												<?php $postParams = $block->getAddToCartPostParams($_product); ?>
+                                                <form data-role="tocart-form" action="<?php /* @escapeNotVerified */ echo $postParams['action']; ?>" method="post">
+                                                    <input type="hidden" name="product" value="<?php /* @escapeNotVerified */ echo $postParams['data']['product']; ?>">
+                                                    <input type="hidden" name="<?php /* @escapeNotVerified */ echo Action::PARAM_NAME_URL_ENCODED; ?>" value="<?php /* @escapeNotVerified */ echo $postParams['data'][Action::PARAM_NAME_URL_ENCODED]; ?>">
+                                                    <?php echo $block->getBlockHtml('formkey')?>
+                                                    <button type="submit"
+                                                            title="<?php echo $block->escapeHtml(__('Add to Cart')); ?>"
+                                                            class="action tocart primary show-tooltip">
+                                                        <span><?php /* @escapeNotVerified */ echo __('Add to Cart') ?></span>
+                                                    </button>
+                                                </form>
+                                                <?php endif ?>
+                                            <?php endif ?>
+											<?php echo $this->helper('Codazon\QuickShop\Helper\Data')->getQuickShopButton($_product,'show-tooltip') ?>
+											<?php
+									            $compareHelper = $this->helper('Magento\Catalog\Helper\Product\Compare');
+									          ?>									         
+											<?php if($block->isShow('addto')): ?>
+									        <a href="#"
+									          class="action tocompare show-tooltip"
+									          title="<?php echo $block->escapeHtml(__('Add to Compare')); ?>"
+									          aria-label="<?php echo $block->escapeHtml(__('Add to Compare')); ?>"
+									          data-post='<?php /* @escapeNotVerified */ echo $compareHelper->getPostDataParams($_product); ?>'
+									          role="button">
+									          <span><?php /* @escapeNotVerified */ echo __('Add to Compare') ?></span>
+									        </a>
+											<?php endif; ?>
+                                        </div>
+                                    </div>
+								</div>
+                            </div>
+                            </div>
+				        </li>
+				    <?php endforeach; ?>
+				</ol>
+			</div>
+			<?php echo $block->getToolbarHtml() ?>
+			<?php if (!$block->isRedirectToCartEnabled()) : ?>
+				<script type="text/x-magento-init">
+				{
+				    "[data-role=tocart-form], .form.map.checkout": {
+				        "catalogAddToCart": {}
+				    }
+				}
+				</script>
+			<?php endif; ?>
+		</div>
+	</div>
+<?php endif; ?>

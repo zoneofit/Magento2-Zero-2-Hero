@@ -1,0 +1,174 @@
+/* ============================================ *
+ * Codazon_BlockSidebar
+ * ============================================ */
+//block sidebar
+@block__background: @main_block_background;
+@block_text: @main_text;
+@block__border: @main_border;
+@block__radius: @border-radius;
+
+@block-title__background:@main_block_title_background;
+@block-title__text: @main_block_text_background;
+@block-title__border: @main_title_border;
+@block-title__font: @f_h4;
+
+
+// widget product
+@widget__background: @main_background;
+@widget__text: @main_text;
+
+
+
+
+& when (@media-common = true){
+	//.block,
+	.cdz-block-title{
+		text-align:center; margin-bottom:@indent__xl;
+		//text-align:center; 
+		//.block-title,
+		.b-title{
+			margin-bottom:0;
+			padding:0 @indent__l (@indent__s + 5) ; display:inline-block; vertical-align:top; position:relative; min-width:310px; text-transform:uppercase !important;
+			.lib-css(border-bottom, 1px solid @block-title__text);
+			.lib-css(color, @block-title__text);
+			.lib-css(font, @f_special);
+			strong{font-size:100%;}
+			&:before{
+				position:absolute; bottom:-11px; width:40px; height:20px; line-height:20px;
+				.lib-css(background, @main_background);
+				.abs-iconfont('\f219', 14px); 
+				left:40%; 
+				left: calc(~'50% - 20px');
+				-webkit-left: calc(~'50% - 20px');
+				-o-left: calc(~'50% - 20px');
+				-moz-left: calc(~'50% - 20px');
+			}
+		}
+	}
+	
+	
+	/*Block Sidebar*/
+	.block.crosssell,
+	.block.upsell,
+	.block.related,
+	.page-main .sidebar .block{
+		&:not(.block-static-block){
+			margin-bottom:2rem;
+			.abs-borderradius(@block__radius);
+			.block-collapsible-nav-title,
+			.block-title{
+				.abs-csscbf(@block-title__text, @block-title__background, @block-title__font);
+				text-transform:uppercase;
+				position:relative;
+				padding:10px 20px;
+				margin-bottom:0;
+				min-width:100%;
+				.abs-borderradius(@block__radius @block__radius 0 0);
+				&:before{ display:none;}
+				strong{
+					.lib-css(font, @block-title__font);
+					.lib-css(border, 0);
+					margin-top:0;
+					margin-bottom:0;
+					display:inline-block;
+					vertical-align:top;
+				}
+			}
+			.block-content{
+				padding:15px 20px;
+				.abs-borderradius( 0 0 @block__radius @block__radius);
+				.lib-css(border, 1px solid @block-title__border);
+				border-top:0;
+				text-align:left;
+				.empty{
+					padding:0;
+					border:0;
+				}
+				&.filter-content{padding-top:0;}
+			}
+			> .empty{
+				.abs-borderradius( 0 0 @block__radius @block__radius);
+				padding:15px 20px;
+				.lib-css(border, 1px solid @block-title__border);
+				border-top:0;
+			}
+		}
+	}
+	
+	.page-main .sidebar .block{
+		&:not(.block-static-block){
+			margin-bottom:2rem;
+			
+		}
+	}
+	
+}
+
+
+.block.review-add{
+	.block-content{
+		padding-top:0 !important;
+	}
+}
+/////////////Mobile////////////////
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	.cdz-block-title{
+		margin-bottom:@indent__base;
+		.b-title{
+			padding:0 0 (@indent__s + 5) ; min-width:0;
+			.lib-css(font, @f_h5);
+			font-weight:600;
+			strong{font-size:100%;}
+		}
+	}
+	/*Block Sidebar*/
+	.page-main .sidebar .block{
+		&:not(.block-static-block){
+			.block-title{
+				.lib-css(font, @f_h5);
+				font-weight:600;
+				border-bottom:0;
+			}
+		}
+	}
+}
+
+//
+//Detail No Tab
+.product.info.detailed.without_tab{
+	.product.data.items{
+		display:inline-block;
+		width:100%;
+		vertical-align:top;
+		text-align:left;
+		> .item.title {
+			float:none;
+			display:inline-block;
+			vertical-align:top;
+			width:100%;
+			> .switch:before{
+				display:none;
+			}
+			&.active{
+				> .switch{ 
+					.abs-csscbf(@block-title__text, @block-title__background, @block-title__font);
+					text-transform:uppercase;
+					position:relative;
+					padding:10px 20px;
+					margin-bottom:0;
+					min-width:100%;
+					.abs-borderradius(@block__radius @block__radius 0 0);
+					
+				}
+			}
+		}
+		> .content{
+			padding:15px 20px;
+			margin-bottom:20px;
+			.abs-borderradius( 0 0 @block__radius @block__radius);
+			.lib-css(border, 1px solid @block-title__border);
+			border-top:0;
+			text-align:left;
+		}
+	}
+}

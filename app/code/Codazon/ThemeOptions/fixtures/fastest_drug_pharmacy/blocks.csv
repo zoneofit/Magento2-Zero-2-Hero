@@ -1,0 +1,181 @@
+title,identifier,content
+"Fastest - Drug - Main Menu",fastest-drug-pharmacy-main-menu,"<div class=""cdz-main-menu"">{{widget type=""Codazon\MegaMenu\Block\Widget\Megamenu"" menu=""fastest-drug-main-menu""}}</div>"
+"Fastest - Drug - Left Navigation",fastest-drug-pharmacy-left-navigation,"<div class=""cdz-main-menu left-navigation""><nav id=""left-nav"" class=""navigation"">
+<div class=""menu-title"">All Categories</div>
+{{widget type=""Codazon\MegaMenu\Block\Widget\Megamenu"" menu=""fastest-drug-left-navigation""}}</nav></div>"
+"Fastest - Drug - Main Conent Area 1 - New Products",fastest-drug-pharmacy-new-products,"<div class=""new-products-block product-style03 cdz-block-title02"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" title=""New Products"" display_type=""all_products"" products_count=""14"" order_by=""name ASC"" show=""thumb,name,description,review,price,addtocart,addto"" thumb_width=""200"" thumb_height=""200"" filter_template=""custom"" custom_template=""custom_grid_slider.phtml"" show_slider=""1"" slider_item=""6"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`47`;]]""}}</div>"
+"Fastest - Drug - Main Content Area 2 - Categories Deals",fastest-drug-pharmacy-categories-deals,"<div class=""categories-deals cdz-block-title02 coltitle02"">
+<div class=""row"">
+<div class=""col-sm-24 "">
+<div class=""block-title""><strong>Categories Deals</strong><a class=""view-all"" href=""#""><span>view all categories</span></a></div>
+</div>
+</div>
+<div class=""row  text-center"">
+<div class=""col-sm-6 space-xs"">
+<div class=""banner-wrapper color01"">
+<div class=""top-deal-info"">
+<div class=""category-name""><a href=""#"">First Aids &amp; Health Care</a></div>
+<div class=""image-shell-wrapper""><a href=""#""> <img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/drug_pharmacy/home/img01.jpg'}}"" alt=""health"" data-retina-src=""#"" /> </a></div>
+</div>
+<div class=""bottom-deal-info"">
+<div class=""info-block"">
+<div class=""custom-info-block"">
+<p>Sale Off 25%</p>
+<p>Get Over 20$ in saving</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=""col-sm-6 space-xs"">
+<div class=""banner-wrapper color02"">
+<div class=""top-deal-info"">
+<div class=""category-name""><a href=""#"">Nutrition Foods &amp; Drink Products</a></div>
+<div class=""image-shell-wrapper""><a href=""#""> <img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/drug_pharmacy/home/img02.jpg'}}"" alt=""food"" data-retina-src=""#"" /> </a></div>
+</div>
+<div class=""bottom-deal-info"">
+<div class=""info-block"">
+<div class=""custom-info-block"">
+<p>In Store Now</p>
+<p>Plus Gift Set With Deal</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=""col-sm-6 space-xs"">
+<div class=""banner-wrapper color03"">
+<div class=""top-deal-info"">
+<div class=""category-name""><a href=""#"">First Aids &amp; Health Care</a></div>
+<div class=""image-shell-wrapper""><a href=""#""> <img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/drug_pharmacy/home/img03.jpg'}}"" alt=""care"" data-retina-src=""#"" /> </a></div>
+</div>
+<div class=""bottom-deal-info"">
+<div class=""info-block"">
+<div class=""custom-info-block"">
+<p>Better than 1/2 price</p>
+<p>Save up to 10% per day</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=""col-sm-6 space-xs"">
+<div class=""banner-wrapper color04"">
+<div class=""top-deal-info"">
+<div class=""category-name""><a href=""#"">Baby Care Products</a></div>
+<div class=""image-shell-wrapper""><a href=""#""> <img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/drug_pharmacy/home/img04.jpg'}}"" alt=""care"" data-retina-src=""#"" /> </a></div>
+</div>
+<div class=""bottom-deal-info"">
+<div class=""info-block"">
+<div class=""custom-info-block"">
+<p>Best Price ever</p>
+<p>Place Order Now to get it</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Drug - Main Content Area 3 - Banners",fastest-drug-pharmacy-banners,"<div class=""banners-wrapper row"">
+<div class=""col-sm-12 space-xs""><a class=""effect"" href=""#""> <img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/drug_pharmacy/home/img05.jpg'}}"" alt=""banner 1"" /></a></div>
+<div class=""col-sm-12 space-xs""><a class=""effect"" href=""#""> <img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/drug_pharmacy/home/img06.jpg'}}"" alt=""banner 2"" /></a></div>
+</div>"
+" Fastest - Drug - Main Content Area 4 - Bestselling",fastest-drug-pharmacy-bestselling,"<div class=""product-style04 cdz-block-title02 coltitle02"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" title=""Bestselling Medicines"" display_type=""bestseller_products"" products_count=""7"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""400"" thumb_height=""400"" filter_template=""custom"" custom_template=""custom_grid.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`47`;]]""}}</div>"
+"Fastest - Drug - Main Content Bottom - Home Brands Slider",fastest-drug-pharmacy-main-content-bottom-home-brands-slider,"<div class=""cdz-brand-slider-wrap hidden-xs  space-lg"">
+<div class=""cdz-brand-slider"">
+<div class=""cdz-slider cdz-slider-banners cdz-slider-navigation-icon"" data-items=""7"" data-items-0=""1"" data-items-480=""3"" data-items-768=""4"" data-items-1024=""6"" data-items-1280=""7"" data-margin=""20"">
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_01.png'}}"" alt=""cdz_brand_01.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_02.png'}}"" alt=""cdz_brand_02.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_03.png'}}"" alt=""cdz_brand_03.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_04.png'}}"" alt=""cdz_brand_04.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_05.png'}}"" alt=""cdz_brand_05.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_06.png'}}"" alt=""cdz_brand_06.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_01.png'}}"" alt=""cdz_brand_01.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_02.png'}}"" alt=""cdz_brand_02.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_03.png'}}"" alt=""cdz_brand_03.jpg"" /></a></div>
+</div>
+</div>
+</div>"
+"Fastest - Drug - Footer Container Top - Newsletter",fastest-drug-pharmacy-footer-container-top-newsletter,"<div class=""row"">
+<div class="" col-sm-12"">
+<div class=""newsletter-wrapper"">
+<div class=""newsletter-container"">{{block class=""Magento\Newsletter\Block\Subscribe"" name=""form.subscribe"" as=""subscribe"" before=""-"" template=""subscribe.phtml""}}</div>
+</div>
+</div>
+<div class=""col-sm-12"">
+<div class=""footer-social"">
+<p class=""social pull-right""><a href=""#""><span class=""fa fa-facebook"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-twitter"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-pinterest-p"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-google-plus"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-tumblr"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-vimeo"">&nbsp;</span></a></p>
+</div>
+</div>
+</div>"
+"Fastest - Drug - Footer Content - Links",fastest-drug-pharmacy-footer-content-links,"<div class=""row"">
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<p class=""h5"" data-cdz-toggle=""#footer-content-1"">CORPORATE</p>
+<ul id=""footer-content-1"" class=""footer-link showhide"">
+<li><a href=""{{store url=""""}}about-magento-demo-store/"">About Us</a></li>
+<li><a href=""#"">Orders and Returns</a></li>
+<li><a href=""{{store url=""""}}contacts/"">Afiliates</a></li>
+<li class=""last""><a href=""{{store url=""""}}privacy-policy-cookie-restriction-mode/"">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<p class=""h5"" data-cdz-toggle=""#footer-content-2"">Your Links</p>
+<ul id=""footer-content-2"" class=""footer-link showhide"">
+<li><a href=""#"">Shipping guide</a></li>
+<li><a href=""{{store url=""""}}about-magento-demo-store/"">Store location</a></li>
+<li><a href=""#"">Afiliates</a></li>
+<li class=""last""><a href=""{{store url=""""}}privacy-policy-cookie-restriction-mode/"">Customer point policy</a></li>
+</ul>
+</div>
+</div>
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<p class=""h5"" data-cdz-toggle=""#footer-content-3"">Support</p>
+<ul id=""footer-content-3"" class=""footer-link showhide"">
+<li><a href=""#"">FAQ</a></li>
+<li><a href=""{{store url=""""}}about-magento-demo-store/"">Our services</a></li>
+<li><a href=""{{store url=""""}}contacts/"">Contact Us</a></li>
+<li class=""last""><a href=""{{store url=""""}}privacy-policy-cookie-restriction-mode/"">Forum Support</a></li>
+</ul>
+</div>
+</div>
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<p class=""h5"" data-cdz-toggle=""#footer-content-4"">SHOP LOCATION</p>
+<ul id=""footer-content-4"" class=""footer-link showhide"">
+<li><span class=""fa fa-map-marker"">&nbsp;</span>200 Lincoln Ave, Salinas, CA 93901</li>
+<li><span class=""fa fa-phone"">&nbsp;</span>Phone: 023 32423 223</li>
+<li><span class=""fa fa-envelope"">&nbsp;</span>Email: owner@example.com</li>
+<li class=""last""><span class=""fa fa-clock-o"">&nbsp;</span>Support 24/7</li>
+</ul>
+</div>
+</div>
+</div>"
+"Fastest - Drug - Footer Payment",fastest-drug-pharmacy-footer-payment,"<div class=""pull-right footer-payment-logo"">
+<div class=""cdz-footer-bottom-payment""><img class=""img-responsive"" src=""{{media url=""wysiwyg/codazon/fastest_fashion/home/cdz-footer-payment.png""}}"" alt=""Accept Payment"" /></div>
+</div>"
+"Fastest - Drug - Main Content Top - Slideshow",fastest-drug-pharmacy-main-content-top-slideshow,"<div class=""slideshow-container"">{{widget type=""Codazon\Slideshow\Block\Widget\Slideshow"" slideshow_id=""fastest-drug-home-slideshow""}}</div>"
+"Fastest - Drug - Block Popup Content",fastest-drug-pharmacy-block-popup-content,"<div class=""cdz-popup-newsletter"">
+<div class=""cdz-popup-newsletter-left"">
+<div class=""popup-banner"">
+<div class=""banner""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/drug_pharmacy/home/banner-newsletter.jpg'}}"" alt=""Banner 01"" /></a></div>
+</div>
+</div>
+<div class=""cdz-popup-newsletter-right"">
+<div class=""popup-title"">
+<h3 class=""text-uppercase""><span>Sign up Newsletter</span></h3>
+</div>
+<div class=""popup-content"">
+<div class=""popup-content-ads"">
+<p class=""popup-content-title h3"">Join YourStore's squad for 20% off</p>
+<p class=""popup-content-desc"">and get all the latest news, trends and offs and offers straight to your inbox. Or get 15% off using code SQUAD15</p>
+<div class=""popup-content-newsletter"">{{block class=""Magento\Newsletter\Block\Subscribe"" name=""cdz.newsletter.style05"" template=""popup_subscribe.phtml""}}</div>
+<p class=""popup-content-small"">1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+</div>
+</div>"

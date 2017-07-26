@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="product_filter" class="Codazon\ProductFilter\Block\Product\ProductsList" is_email_compatible="true" placeholder_image="Codazon_ProductFilter::images/placeholder.gif" ttl="86400">
+        <label translate="true">Codazon Product Filter</label>
+        <description translate="true">List of Products</description>
+        <parameters>
+            <parameter name="title" xsi:type="text" required="false" visible="true">
+                <label translate="true">Title</label>
+            </parameter>
+            <parameter name="display_type" xsi:type="select" required="true" visible="true">
+                <label translate="true">Display Type</label>
+                <options>
+                    <option name="default" value="all_products" selected="true">
+                        <label translate="true">All products</label>
+                    </option>
+                    <option name="item2" value="bestseller_products">
+                        <label translate="true">Bestsellers</label>
+                    </option>
+                </options>
+            </parameter>            
+            <parameter name="products_count" xsi:type="text" required="true" visible="true">
+                <label translate="true">Number of Products to Display</label>
+                <value>10</value>
+            </parameter>
+            <parameter name="order_by" xsi:type="select" required="true" visible="true">
+                <label translate="true">Order by</label>
+                <options>
+                    <option name="default" value="name ASC" selected="true">
+                        <label translate="true">Name ASC</label>
+                    </option>
+                    <option name="order1" value="name DESC">
+                        <label translate="true">Name DESC</label>
+                    </option>
+                    <option name="order2" value="price ASC">
+                        <label translate="true">Price DESC</label>
+                    </option>
+                    <option name="order3" value="price DESC">
+                        <label translate="true">Price DESC</label>
+                    </option>
+                    <option name="order4" value="entity_id ASC">
+                        <label translate="true">Product's ID ASC</label>
+                    </option>
+                    <option name="order5" value="entity_id DESC">
+                        <label translate="true">Product's ID DESC</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="show" xsi:type="multiselect" visible="true" source_model="Codazon\ProductFilter\Model\Show">
+                <label translate="true">Show on frontend</label>
+            </parameter>
+            <parameter name="thumb_width" xsi:type="text" required="true" visible="true">
+                <label translate="true">Thumbnail Width</label>
+                <value>150</value>
+            </parameter>
+            <parameter name="thumb_height" xsi:type="text" required="true" visible="true">
+                <label translate="true">Thumbnail Height</label>
+                <value>150</value>
+            </parameter>
+            <parameter name="filter_template" xsi:type="select" required="true" visible="true">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="default" value="product/widget/content/grid.phtml" selected="true">
+                        <label translate="true">Products Grid Template</label>
+                    </option>
+                    <option name="item1" value="custom">
+                        <label translate="true">Custom Template</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="custom_template" xsi:type="text" required="true" visible="true">
+                <label translate="true">Custom template</label>
+                <depends>
+                    <parameter name="filter_template" value="custom" />
+                </depends>
+                <value>custom.phtml</value>
+            </parameter>
+            <parameter name="show_slider" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Show As Slider</label>
+            </parameter>
+            <parameter name="slider_item" xsi:type="text" visible="true">
+            	<label translate="true">Number of Products per Slide</label>
+                <depends>
+                    <parameter name="show_slider" value="1" />
+                </depends>
+                <value>4</value>
+            </parameter>
+            <parameter name="cache_lifetime" xsi:type="text" visible="true">
+                <label translate="true">Cache Lifetime (Seconds)</label>
+                <description translate="true">86400 by default, if not set. To refresh instantly, clear the Blocks HTML Output cache.</description>
+            </parameter>
+            <parameter name="condition" xsi:type="conditions" visible="true" required="true" sort_order="10" class="Magento\CatalogWidget\Block\Product\Widget\Conditions">
+                <label translate="true">Conditions</label>
+            </parameter>
+        </parameters>
+        <containers>
+            <container name="content">
+                <template name="grid" value="default" />
+            </container>
+            <container name="content.top">
+                <template name="grid" value="default" />
+            </container>
+            <container name="content.bottom">
+                <template name="grid" value="default" />
+            </container>
+        </containers>
+    </widget>
+</widgets>

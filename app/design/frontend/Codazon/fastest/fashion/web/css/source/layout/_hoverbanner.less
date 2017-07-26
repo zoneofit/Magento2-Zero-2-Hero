@@ -1,0 +1,320 @@
+/* ============================================ *
+ * Codazon_Banner_Effect
+ * ============================================ */
+/*Change Product Image*/
+.products-list .item,
+.products-grid .item{
+	a.product-item-photo{
+		.hover-image .product-image-container {
+			display: inline-block;
+			max-width: 100%;
+			vertical-align: top;
+			.abs-opacity(0);
+			.abs-transition();
+		}
+		.hover-image .product-image-container{
+			//transform: scale(0,1);
+		}
+		.main-image .product-image-container{
+			position:absolute;
+			top:0%;
+			.abs-transition();
+			.abs-opacity(1);
+		}
+	}
+	&:hover{
+		a.product-item-photo{
+			.hover-image .product-image-container{
+				.abs-transition();
+				.abs-opacity(1);
+				//transform: scale(1,1);
+			}
+			.main-image .product-image-container{
+				.abs-opacity(0);
+				.abs-transition();
+				position:absolute;
+				top:0;
+				
+			}
+		}
+	}
+}
+/*.products-grid .item{
+	.cdz-product-top{
+		> .hover-image {
+			display: inline-block;
+			max-width: 100%;
+			vertical-align: top;
+			.abs-opacity(0);
+			.abs-transition();
+		}
+		> .main-image{
+			position:absolute;
+			top:0%;
+			.abs-transition();
+			.abs-opacity(1);
+		}
+	}
+	&:hover{
+		.cdz-product-top {
+			> span.hover-image{
+				.abs-transition();
+				.abs-opacity(1);
+			}
+			> span.main-image{
+				.abs-opacity(0);
+				.abs-transition();
+				position:absolute;
+				top:0;
+				
+			}
+		}
+	}
+}*/
+
+
+/*Zoom Banner*/
+.eff-zoombanner{
+	overflow:hidden;
+	position:relative;
+	.banner-zoom img{
+		.abs-scale(1);
+		.abs-transition();
+	}
+	&:hover .banner-zoom img{
+		.abs-scale(~'1.05, 1.05');
+	}
+}
+/*Banner Border*/
+.banner-border{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+}
+.banner-border:before,
+.banner-border:after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    z-index: 1;
+}
+.banner-border:before {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    -webkit-transform: scale(1,0);
+    -ms-transform: scale(1,0);
+    -o-transform: scale(1,0);
+    transform: scale(1,0);
+    top: 30px;
+    right: 15px;
+    bottom: 30px;
+    left: 15px;
+}
+.banner-border:after {
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    -webkit-transform: scale(0,1);
+    -ms-transform: scale(0,1);
+    -o-transform: scale(0,1);
+    transform: scale(0,1);
+    top: 15px;
+    right: 30px;
+    bottom: 15px;
+    left: 30px;
+}
+.banner-border:hover:before,
+.banner-border:hover:after{
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.banner-border img {
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.banner-border:hover img{
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+.banner-border.style2:after{
+    border-left: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+} 
+.banner-border.style2:before{
+    border-top: 5px solid #ffffff;
+    border-bottom: 5px solid #ffffff;
+}
+
+
+
+///Effect Loading
+/*.loading,*/
+.loader,
+.qs-loader{
+	position:relative;
+	text-align:center;
+	padding:100px 0;
+	img{ display:none;}
+}
+.qs-loader{
+	display: table-cell;
+    vertical-align: middle;
+}
+
+/*.loading:after, 
+.loading:before,*/
+.loader:after, 
+.loader:before,
+.qs-loader:after, 
+.qs-loader:before {
+	position: absolute;
+	content: "";
+	border: 2px solid @main_border;
+	width: 31px;
+	height: 31px;
+}
+/*.loading:after,*/
+.loader:after,
+.qs-loader:after {
+	animation: cssload-spinner1 2.88s linear infinite;
+		-o-animation: cssload-spinner1 2.88s linear infinite;
+		-ms-animation: cssload-spinner1 2.88s linear infinite;
+		-webkit-animation: cssload-spinner1 2.88s linear infinite;
+		-moz-animation: cssload-spinner1 2.88s linear infinite;
+}
+
+/*.loading:before,*/
+.loader:before,
+.qs-loader:before {
+	width: 43px;
+	height: 43px;
+	margin-left: -6.5px;
+	margin-top: -6.5px;
+	animation: cssload-spinner2 2.88s linear infinite;
+		-o-animation: cssload-spinner2 2.88s linear infinite;
+		-ms-animation: cssload-spinner2 2.88s linear infinite;
+		-webkit-animation: cssload-spinner2 2.88s linear infinite;
+		-moz-animation: cssload-spinner2 2.88s linear infinite;
+}
+
+
+
+@keyframes cssload-spinner1 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@-o-keyframes cssload-spinner1 {
+	from {
+		-o-transform: rotate(0deg);
+	}
+	to {
+		-o-transform: rotate(360deg);
+	}
+}
+
+@-ms-keyframes cssload-spinner1 {
+	from {
+		-ms-transform: rotate(0deg);
+	}
+	to {
+		-ms-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes cssload-spinner1 {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes cssload-spinner1 {
+	from {
+		-moz-transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+@keyframes cssload-spinner2 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+@-o-keyframes cssload-spinner2 {
+	from {
+		-o-transform: rotate(0deg);
+	}
+	to {
+		-o-transform: rotate(-360deg);
+	}
+}
+
+@-ms-keyframes cssload-spinner2 {
+	from {
+		-ms-transform: rotate(0deg);
+	}
+	to {
+		-ms-transform: rotate(-360deg);
+	}
+}
+
+@-webkit-keyframes cssload-spinner2 {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(-360deg);
+	}
+}
+
+@-moz-keyframes cssload-spinner2 {
+	from {
+		-moz-transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(-360deg);
+	}
+}
+
+
+////////
+.icon-loading{
+	padding:100px 0;
+	width:50px;
+	height:50px;
+	display:inline-block;
+	text-align:center;
+	background:url(../images/loading_cart.gif) center center no-repeat;
+	width:100%;
+	span{
+		display:none;
+	}
+}

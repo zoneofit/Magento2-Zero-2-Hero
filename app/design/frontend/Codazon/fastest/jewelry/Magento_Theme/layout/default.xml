@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+		<referenceContainer name="page.wrapper">
+			<container name="pt.perspective" label="Page Perspective Area"  /> <!--htmlTag="div" htmlId="pt-main" htmlClass="pt-perspective"-->
+		</referenceContainer>
+		<referenceContainer name="header.container">
+			<container label="Header Before Slideshow" name="header.before.slidershow" htmlTag="div" htmlClass="before-slideshow-area" before="-">
+				<container name="header.box" htmlClass="box-header" htmlTag="div" before="-">
+					<container name="panel.wrapper.top" htmlClass="panel wrapper" htmlTag="div" before="-">
+					</container>
+					<container name="header.wrapper.middle" htmlClass="header-wrapper-middle sticky-menu" htmlTag="div" after="-">
+					</container>
+				</container>
+			</container>
+			<container label="Header Slideshow" name="header.slidershow" htmlTag="div" htmlClass="slideshow-area slideshow-area-pos" after="header.wrapper.content" />
+		</referenceContainer>
+		<move element="header.panel" destination="panel.wrapper.top" />
+		<move element="header-wrapper" destination="header.wrapper.middle" />
+		<move element="header.bottom.content" destination="header-wrapper" after="logo"/>
+		<move element="top.search" destination="header-wrapper" after="minicart" />
+		<!--<referenceBlock name="header-wrapper" htmlClass="header content sticky-menu" />-->
+    </body>
+</page>
+

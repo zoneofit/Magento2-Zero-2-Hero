@@ -1,0 +1,27 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php $_product = $block->getProduct();
+ $_helper = $this->helper('Magento\Catalog\Helper\Output');
+?>
+
+<div class="social-addthis">
+      <a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=<?php echo $_helper->productAttribute($_product, $_product->getProductUrl(), 'product_url'); ?>&amp;title=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>" target="_blank">
+	      <span class="icon-facebook fa fa-facebook"></span>
+      </a> 
+      <a href="https://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=<?php echo $_helper->productAttribute($_product, $_product->getProductUrl(), 'product_url'); ?>&amp;title=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>" target="_blank">
+	      <span class="icon-twitter fa fa-twitter"></span>
+      </a>     
+      <a href="https://api.addthis.com/oexchange/0.8/forward/google_plusone_share/offer?url=<?php echo $_helper->productAttribute($_product, $_product->getProductUrl(), 'product_url'); ?>&amp;title=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>" target="_blank">
+	      <span class="icon-google fa fa-google-plus"></span>
+	</a> 
+	 <a href="https://api.addthis.com/oexchange/0.8/forward/pinterest/offer?url=<?php echo $_helper->productAttribute($_product, $_product->getProductUrl(), 'product_url'); ?>&amp;title=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>" target="_blank">
+	      <span class="icon-pinterest fa fa-pinterest-square"></span>
+      </a> 
+</div>  

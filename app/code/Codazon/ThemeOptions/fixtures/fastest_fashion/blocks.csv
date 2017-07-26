@@ -1,0 +1,185 @@
+title,identifier,content
+"Fastest - Fashion - Three Banners",fastest-fashion-threebanner,"<div class=""cdz-three-banner hidden-xs"">
+<div class=""row"">
+<div class=""col-sm-8"">
+<div class=""groupbanner-text banner-border""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/img01.jpg'}}"" alt=""Banner 01"" /></a>
+<div class=""groupinfo"">
+<div class=""groupinfo-inner"">
+<div class=""groupinfo-desc text-uppercase text-center""><span class=""text-small"">Last Day</span>
+<p class=""grifo-title h2"">Free shipping on $25*</p>
+<p><a class=""btn-link action primary"" href=""#""><span>Use code J56S3X</span></a></p>
+<p><a class=""text-link"" href=""#""><span>Shop now</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=""col-sm-8"">
+<div class=""groupbanner-text banner-border""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/img02.jpg'}}"" alt=""Banner 03"" /></a>
+<div class=""groupinfo"">
+<div class=""groupinfo-inner"">
+<div class=""groupinfo-desc text-uppercase text-center""><span class=""text-small"">Men accessories</span>
+<p class=""grifo-title h2"">Buy one get one free*</p>
+<p><a class=""btn-link action primary"" href=""#""><span>Get it now</span></a></p>
+<p><a class=""text-link"" href=""#""><span>Shop now</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=""col-sm-8"">
+<div class=""groupbanner-text banner-border""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/img03.jpg'}}"" alt=""Banner 03"" /></a>
+<div class=""groupinfo"">
+<div class=""groupinfo-inner"">
+<div class=""groupinfo-desc text-uppercase text-center""><span class=""text-small"">New event</span>
+<p class=""grifo-title h2"">New Spring collection</p>
+<p><a class=""btn-link action primary"" href=""#""><span>Get it now</span></a></p>
+<p><a class=""text-link"" href=""#""><span>Shop now</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Fashion - Footer Links",fastest-fashion-footer-links,"<div class=""row"">
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<p class=""h5 hidden-xs"">About us</p>
+<div>
+<p class=""hidden-xs"">Fastest Magento 2 store has seen some remarkable accomplishments over the past 30 years. With a goal to become an $8 billion company by 2017</p>
+<div class=""footer-social"">
+<p class=""h5 visible-xs"">Follow us</p>
+<p class=""social""><a href=""#""><span class=""fa fa-facebook"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-twitter"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-pinterest-p"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-google-plus"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-tumblr"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-vimeo"">&nbsp;</span></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<p class=""h5"" data-cdz-toggle=""#footer-content-2"">You Link</p>
+<ul id=""footer-content-2"" class=""footer-link showhide"">
+<li><a href=""#"">Side Navigation</a></li>
+<li><a href=""{{store url=""""}}about-us"">About Us</a></li>
+<li><a href=""{{store url=""""}}contact"">Contact Us</a></li>
+<li><a href=""#"">Forum Support</a></li>
+<li class=""last""><a href=""{{store url=""""}}privacy-policy-cookie-restriction-mode"">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<p class=""h5"" data-cdz-toggle=""#footer-content-3"">Infomation</p>
+<ul id=""footer-content-3"" class=""footer-link showhide"">
+<li><a href=""#"">Side Navigation</a></li>
+<li><a href=""{{store url=""""}}about-us"">About Us</a></li>
+<li><a href=""{{store url=""""}}contact"">Contact Us</a></li>
+<li><a href=""#"">Forum Support</a></li>
+<li class=""last""><a href=""{{store url=""""}}privacy-policy-cookie-restriction-mode"">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<p class=""h5"" data-cdz-toggle=""#footer-content-4"">Item Tags</p>
+<ul id=""footer-content-4"" class=""item_tag showhide"">
+<li><a href=""#"">awesome</a></li>
+<li><a href=""#"">beautiful</a></li>
+<li><a href=""#"">flat design</a></li>
+<li><a href=""#"">ios</a></li>
+<li><a href=""#"">mass</a></li>
+<li><a href=""#"">awesome</a></li>
+<li><a href=""#"">beautiful</a></li>
+<li><a href=""#"">flat design</a></li>
+</ul>
+</div>
+</div>
+</div>"
+"Fastest - Fashion - Footer Bottom Payment",fastest-fashion-footer-bottom-payment,"<div class=""pull-right footer-payment-logo"">
+<div class=""cdz-footer-bottom-payment""><img class=""img-responsive"" src=""{{media url=""wysiwyg/codazon/fastest_fashion/home/cdz-footer-payment.png""}}"" alt=""Accept Payment"" /></div>
+</div>"
+"Fastest - Fashion - Main Area - Best Seller",fastest-fashion-main-area-best-seller,"<div class=""cdz-best-seller-wrap product-style01"">
+<div class=""row"">
+<div class=""col-sm-24"">
+<div class=""cdz-block-title"">
+<p class=""b-title h1""><span>Best Seller</span></p>
+</div>
+</div>
+</div>
+<div class=""row"">
+<div class=""col-sm-24"">
+<div class=""tabs-list bestseller-product product data items cdz-tabs"">
+<div class=""data item title text-uppercase"" data-role=""collapsible""><a class=""data switch"" tabindex=""0"" href=""#best-seller-tab-1"" data-toggle=""switch"">For Women</a></div>
+<div id=""best-seller-tab-1"" class=""data item content"" data-role=""content"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""7"" order_by=""name ASC"" show=""thumb,name,price,addtocart,addto"" thumb_width=""240"" thumb_height=""295"" filter_template=""custom"" custom_template=""product/widget/content/grid_isotope.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`46`;]]""}}</div>
+<div class=""data item title text-uppercase"" data-role=""collapsible""><a class=""data switch"" tabindex=""0"" href=""#best-seller-tab-2"" data-toggle=""switch"">For Mens</a></div>
+<div id=""best-seller-tab-2"" class=""data item content"" data-role=""content"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""7"" order_by=""name ASC"" show=""thumb,name,price,addtocart,addto"" thumb_width=""240"" thumb_height=""295"" filter_template=""custom"" custom_template=""product/widget/content/grid_isotope.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:34:`11, 12, 14, 15, 16, 17, 13, 18, 19`;]]""}}</div>
+<div class=""data item title text-uppercase"" data-role=""collapsible""><a class=""data switch"" tabindex=""0"" href=""#best-seller-tab-3"" data-toggle=""switch"">Set Collection</a></div>
+<div id=""best-seller-tab-3"" class=""data item content"" data-role=""content"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""7"" order_by=""name ASC"" show=""thumb,name,price,addtocart,addto"" thumb_width=""240"" thumb_height=""295"" filter_template=""custom"" custom_template=""product/widget/content/grid_isotope.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:1:`4`;]]""}}</div>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Fashion - Main Area - New Trend Fashion",fastest-fashion-main-area-new-trend-fashion,"<div class=""cdz-new-trend-wrap"">
+<div class=""row"">
+<div class=""col-sm-24"">
+<div class=""cdz-block-title"">
+<p class=""b-title h2""><span>New Trend Fashion</span></p>
+</div>
+</div>
+</div>
+<div class=""row"">
+<div class=""col-sm-24 cdz-new-trend product-style01"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""8"" order_by=""name ASC"" show=""thumb,name,sku,description,review,price,addtocart,addto"" thumb_width=""280"" thumb_height=""345"" filter_template=""custom"" custom_template=""product/widget/content/infinitescroll_grid.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`46`;]]""}}</div>
+</div>
+</div>"
+"Fastest - Fashion - Main Area - New Blog Posts List",fastest-fashion-main-area-new-blog-post-list,"<div class=""cdz_wapper-blog01 text-center space-lg"">{{widget type=""Magefan\Blog\Block\Widget\PostList"" title=""Latest Blog Posts"" categories=""1"" order_by=""publish_time"" order=""desc"" post_count=""6"" show_in_front=""thumb,name,description,published_date,author"" desc_length=""150"" show_slider=""1"" thumb_width=""380"" thumb_height=""280"" post_template=""post/widget/content/grid.phtml""}}</div>"
+"Fastest - Fashion - Main Area - Home Brands Slider",fastest-fashion-main-area-home-brands-slider,"<div class=""cdz-brand-slider-wrap hidden-xs"">
+<div class=""cdz-brand-slider"">
+<div class=""cdz-slider cdz-slider-banners cdz-slider-navigation-icon"" data-items=""7"" data-items-0=""1"" data-items-480=""3"" data-items-768=""4"" data-items-1024=""6"" data-items-1280=""7"" data-margin=""20"">
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_01.png'}}"" alt=""cdz_brand_01.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_02.png'}}"" alt=""cdz_brand_02.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_03.png'}}"" alt=""cdz_brand_03.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_04.png'}}"" alt=""cdz_brand_04.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_05.png'}}"" alt=""cdz_brand_05.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_06.png'}}"" alt=""cdz_brand_06.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_01.png'}}"" alt=""cdz_brand_01.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_02.png'}}"" alt=""cdz_brand_02.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_03.png'}}"" alt=""cdz_brand_03.jpg"" /></a></div>
+</div>
+</div>
+</div>"
+"Fastest - Fashion - Main Menu",fastest-fashion-main-menu,"<div class=""cdz-main-menu"">{{widget type=""Codazon\MegaMenu\Block\Widget\Megamenu"" menu=""fastest-fashion-main-menu""}}</div>"
+"Fastest - Fashion - Footer Top - Newsletter",fastest-fashion-footer-top-newsletter,"<div class=""footer-top-ads text-center"">
+<p class=""ftop-ads-title"">Join us. Subscribe To Our Mailing List</p>
+<p class=""ftop-ads-desc"">and get all the latest news, trends and offs and offers straight to your inbox. Or get 15% off using code SQUAD15</p>
+<div class=""ftop-newsletter"">{{block class=""Magento\Newsletter\Block\Subscribe"" name=""cdz.newsletter.style05"" template=""subscribe.phtml""}}</div>
+<p class=""ftop-ads-small"">1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3. T&amp;C's apply</p>
+</div>"
+"Fastest - Block Popup Content",fastest-fashion-block-popup-content,"<div class=""cdz-popup-newsletter"">
+<div class=""cdz-popup-newsletter-left"">
+<div class=""popup-banner"">
+<div class=""banner""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/banner-newsletter.jpg'}}"" alt=""Banner 01"" /></a></div>
+</div>
+</div>
+<div class=""cdz-popup-newsletter-right"">
+<div class=""popup-title"">
+<h3 class=""text-uppercase""><span>Sign up Newsletter</span></h3>
+</div>
+<div class=""popup-content"">
+<div class=""popup-content-ads"">
+<p class=""popup-content-title h3"">Join YourStore's squad for 20% off</p>
+<p class=""popup-content-desc"">and get all the latest news, trends and offs and offers straight to your inbox. Or get 15% off using code SQUAD15</p>
+<div class=""popup-content-newsletter"">{{block class=""Magento\Newsletter\Block\Subscribe"" name=""cdz.newsletter.style05"" template=""popup_subscribe.phtml""}}</div>
+<p class=""popup-content-small"">1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Fashion - Product Static Block - SizeChart",fastest-fashion-product-static-block-sizechart,"<div class=""size-chart-fashion"">
+<div class=""size-chart-link""><a class=""sizechart-trigger"" title=""Size Chart"" href=""#"" data-dlg-options=""{&quot;width&quot;:800,&quot;height&quot;:800}"">Size Chart</a></div>
+<div class=""size-chart-content modal"" style=""display: none;"">
+<div class=""content""><!-- Dynamically Insert Content Here --> <img src=""http://demandware.edgesuite.net/aavn_prd/on/demandware.static/-/Sites-adriannapapell-Library/default/dw5329bee6/sizeguide.jpg"" alt="""" /> <button class=""close""></button></div>
+<div class=""overlay"">&nbsp;</div>
+</div>
+</div>"
+"Fastest - Fashion - Home Slideshow",fastest-fashion-home-slideshow,"<div class=""slideshow-container"">{{widget type=""Codazon\Slideshow\Block\Widget\Slideshow"" slideshow_id=""fastest-fashion-home-slideshow""}}</div>"
+"Fastest - Fashion - Main Area - New Blog Posts List",fastest-fashion-main-area-new-blog-posts-list,"<div>{{widget type=""Magefan\Blog\Block\Widget\PostList"" title=""Latest Blog Posts"" categories=""1,2,3"" order_by=""publish_time"" order=""desc"" post_count=""6"" show_in_front=""thumb,name,description,published_date,author"" desc_length=""150"" show_slider=""1"" thumb_width=""380"" thumb_height=""209"" post_template=""custom"" custom_template=""post/widget/blog_slider.phtml""}}</div>"

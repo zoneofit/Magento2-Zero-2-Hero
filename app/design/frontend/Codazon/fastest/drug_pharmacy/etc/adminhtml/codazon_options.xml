@@ -1,0 +1,721 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="general" translate="label" sortOrder="10">
+            <label>General Options</label>
+        </tab>
+        <section id="general_section" translate="label" sortOrder="10" showInDefault="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Theme Options</label>
+            <tab>general</tab>
+            <resource>Codazon_ThemeOptions::config</resource>
+            <group id="layout" translate="label" type="text" sortOrder="10" showInDefault="1" showInStore="1">
+                <label>General</label>
+				<field id="box_wide" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInStore="1">
+                    <label>Box/Wide Layout</label>                    
+                    <source_model>Codazon\ThemeOptions\Model\Config\Source\Boxwide</source_model>
+                </field>
+                <field id="enable_rtl" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInStore="1">
+                    <label>RTL Support</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>      
+            </group>
+            <group id="header" translate="label" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+            	<label>Header</label>
+            	<field id="ajaxcart_pro_desk" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInStore="1">
+                    <label>AjaxCart Pro Desk</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="ajaxcart_pro_mobile" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInStore="1">
+                    <label>AjaxCart Pro Mobile</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            	<field id="default_menu" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInStore="1">
+                    <label>Default Menu</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            	<field id="sticky_header" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInStore="1">
+                    <label>Sticky Header</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="category_view" translate="label" type="text" sortOrder="30" showInDefault="1" showInStore="1">				
+                <label>Category View</label>				
+                <!--field id="alternative_image" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInStore="1">
+                    <label>Alternative Image</label>                    
+                    <comment><![CDATA[Show thumbnail image when hover in product image area]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field-->
+                <field id="keep_image_ratio" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInStore="1">
+                    <label>Keep Image Aspect Ratio</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="image_width" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+                    <label>Image Width</label>                    
+                </field>
+                <field id="image_height" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInStore="1">
+                    <label>Image Height</label>                    
+                </field>
+                <field id="show_action" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInStore="1">
+                    <label>Show Add To Compare/Wishlist</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="review_rating_star" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInStore="1">
+                    <label>Review/Rating Star</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="show_short_description" translate="label comment" type="select" sortOrder="60" showInDefault="1" showInStore="1">
+                    <label>Short Description</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+				<field id="hover_product_effect" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInStore="1">
+                    <label>Hover Product effect</label>      
+                    <comment>If Enable, all of the action links that "Add to Cart" button, "Add to Compare" link and "Add to Wishlist" link will be moved to product image area</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+				<group id="category_desktop_view" translate="label" type="text" sortOrder="80" showInDefault="1" showInStore="1">
+					<label>Desktop View (Product per row)</label>
+					<field id="product_row_desk_1col" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInStore="1">
+						<label>1 column</label>                    
+					</field>
+					<field id="product_row_desk_2col" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+						<label>2 columns</label>                    
+					</field>
+					<field id="product_row_desk_3col" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInStore="1">
+						<label>3 columns</label>                    
+					</field>
+				</group>
+				<group id="category_tablet_view" translate="label" type="text" sortOrder="90" showInDefault="1" showInStore="1">
+					<label>Tablet View (Product per row)</label>
+					<field id="product_row_tablet_1col" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInStore="1">
+						<label>1 column</label>                    
+					</field>
+					<field id="product_row_tablet_2col" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+						<label>2 columns</label>                    
+					</field>
+					<field id="product_row_tablet_3col" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInStore="1">
+						<label>3 columns</label>                    
+					</field>
+				</group>   				                
+				<group id="category_mobile_view" translate="label" type="text" sortOrder="100" showInDefault="1" showInStore="1">
+					<label>Mobile View</label>
+					<field id="product_row_mobile" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInStore="1">
+						<label>Product per row</label>                    
+					</field>
+				</group>                
+            </group>
+            <group id="product_view" translate="label" type="text" sortOrder="40" showInDefault="1" showInStore="1">
+                <label>Product View</label>
+                <field id="keep_image_ratio" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInStore="1">
+                    <label>Keep Image Aspect Ratio</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="base_image_width" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+                    <label>Base Image Width</label>                    
+                </field>
+                <field id="base_image_height" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInStore="1">
+                    <label>Base Image Height</label>                    
+                </field>
+                <field id="moreview_image_width" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInStore="1">
+                    <label>More View Image Width</label>                    
+                </field>
+                <field id="moreview_image_height" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInStore="1">
+                    <label>More View Image Height</label>                    
+                </field>
+                <field id="moreview_thumb_style" translate="label comment" type="select" sortOrder="60" showInDefault="1" showInStore="1">
+                    <label>More View Thumbnail Style</label>                    
+                    <source_model>Codazon\ThemeOptions\Model\Config\Source\Direction</source_model>
+                </field>
+                <field id="disable_product_zoom" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInStore="1">
+                    <label>Disable Product Zoom</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="product_tabs" translate="label comment" type="select" sortOrder="80" showInDefault="1" showInStore="1">
+                    <label>Product Tabs</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+            </group>
+            <!--group id="customtabs_product_view" translate="label" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+                <label>Custom Tabs on Product View</label>
+                <field id="show_custom_tabs" translate="label comment" type="select" sortOrder="90" showInDefault="1" showInStore="1">
+                    <label>Show Custom Tabs</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="disable_product_zoom" translate="label comment" type="select" sortOrder="100" showInDefault="1" showInStore="1">
+                    <label>Show Tabs by Settings from Parent Categories</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="cms_block_tab1" translate="label comment" type="select" sortOrder="110" showInDefault="1" showInStore="1">
+                    <label>CMS Block Tab #1</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="custom_tabs_title" translate="label comment" type="text" sortOrder="120" showInDefault="1" showInStore="1">
+                    <label>Custom Tabs Title</label>                    
+                </field>
+                <field id="static_block_id1" translate="label comment" type="text" sortOrder="130" showInDefault="1" showInStore="1">
+                    <label>Static Block ID #1</label>                    
+                </field>
+                <field id="cms_block_tab2" translate="label comment" type="select" sortOrder="140" showInDefault="1" showInStore="1">
+                    <label>CMS Block Tab #2</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="cms_block_tab3" translate="label comment" type="select" sortOrder="150" showInDefault="1" showInStore="1">
+                    <label>CMS Block Tab #3</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="cms_block_tab4" translate="label comment" type="select" sortOrder="160" showInDefault="1" showInStore="1">
+                    <label>CMS Block Tab #4</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="cms_block_tab5" translate="label comment" type="select" sortOrder="170" showInDefault="1" showInStore="1">
+                    <label>CMS Block Tab #5</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+            </group-->
+            <group id="product_compare" translate="label" type="text" sortOrder="50" showInDefault="1" showInStore="1">
+                <label>Product Compare</label>
+                <field id="show_compare_link_top" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInStore="1">
+                    <label>Show Compare Page Link in TopLinks Area</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="newsletter_popup" translate="label" type="text" sortOrder="60" showInDefault="1" showInStore="1">
+                <label>Newsletter Popup</label>
+                <field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInStore="1">
+                    <label>Enable</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="static_block_id" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+                    <label>Static Block ID</label>                    
+                </field>
+                <!--field id="popup_width" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInStore="1">
+                    <label>Popup Width</label>                    
+                </field>
+                <field id="popup_height" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInStore="1">
+                    <label>Popup Height</label>                    
+                </field-->
+            </group>
+            <group id="contact_us" translate="label" type="text" sortOrder="70" showInDefault="1" showInStore="1">
+                <label>Contact Us</label>
+                <field id="show_google_map" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInStore="1">
+                    <label>Show Google Map</label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="address" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+                    <label>Address</label>                    
+                </field>
+                <field id="latitude" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInStore="1">
+                    <label>Latitude</label>                    
+                </field>
+                <field id="longitude" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInStore="1">
+                    <label>Longitude</label>                    
+                </field>
+                <field id="zoom" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInStore="1">
+                    <label>Zoom</label>                    
+                </field>
+                <!--field id="contact_info" translate="label comment" type="textarea" sortOrder="60" showInDefault="1" showInStore="1">
+                    <label>Contact Info</label>                    
+                </field-->
+            </group>
+        </section>
+        <tab id="typography" translate="label" sortOrder="20">
+            <label>Typography Options</label>
+        </tab>
+        
+        <section id="variables" translate="label" type="text" sortOrder="10" showInDefault="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Custom Variables</label>  
+            <tab>typography</tab>                  
+            <resource>Codazon_ThemeOptions::config</resource>
+            <group id="font" translate="label" type="text" sortOrder="10" showInDefault="1" showInStore="1">
+                <label>Font</label>
+				<!--<field id="f_google_font_api_key" translate="label" type="text" sortOrder="9" showInDefault="1" showInStore="1">
+                    <label>Google Web Fonts API Key</label>
+					<comment><![CDATA[The Google Web Fonts Developer API lets you retrieve information about web fonts served by Google. This API Key is free.
+					<br />
+					To get a Google Fonts API key:
+					<ol>
+						<li>Go to <a href='https://console.cloud.google.com/' target="_blank">console</a></li>
+						<li>From the projects list, select a project or create a new one.</li>
+						<li>Open the console menu and select API Manager.</li>						
+						<li>On the left, click Credentials and then click New credentials.</li>
+						<li>Choose API Key, then Browser Key and create</li>
+						<li>Copy API Key and paste it into this field</li>
+					</ol>
+					<p>Go to <a href='https://developers.google.com/fonts/' target="_blank">Google Fonts link</a></p>
+					
+						]]></comment>
+                </field>-->
+				<field id="f_google_font" translate="label comment" type="multiselect" sortOrder="10" showInDefault="1" showInStore="1">
+                    <label>Import Google Fonts</label>
+					<source_model>Codazon\ThemeOptions\Model\Config\Source\Font</source_model>
+					<comment>Choose Google Fonts to import. To import many fonts, hold Ctrl and click</comment>					
+                </field>
+				<field id="f_google_font_weights" translate="label" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+                    <label>Import Google Fonts</label>
+					<source_model>Codazon\ThemeOptions\Model\Config\Source\Font</source_model>
+					<comment><![CDATA[Import Google Font Weights					
+						<p>Default: 200,200italic,300,300italic,400,400italic,500,500italic,600italic,600italic,700,700italic,800,800italic,900,900italic</p>					
+						]]></comment>					
+                </field>
+                <field id="f_default" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInStore="1">
+                    <label>Font Default</label>
+					<comment>Default: 400 12px/1.55 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+                <field id="f_h1" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInStore="1">
+                    <label>Font H1</label>
+					<comment>Default: 500 24px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+                <field id="f_h2" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInStore="1">
+                    <label>Font H2</label>
+					<comment>Default: 500 20px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+                <field id="f_h3" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInStore="1">
+                    <label>Font H3</label>
+					<comment>Default: 500 18px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+                <field id="f_h4" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInStore="1">
+                    <label>Font H4</label>
+					<comment>Default: 500 16px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+                <field id="f_h5" translate="label comment" type="text" sortOrder="80" showInDefault="1" showInStore="1">
+                    <label>Font H5</label>
+					<comment>Default: 400 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+                <field id="f_h6" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInStore="1">
+                    <label>Font H6</label>
+					<comment>Default: 400 11px/1.55 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+                <field id="f_special" translate="label comment" type="text" sortOrder="100" showInDefault="1" showInStore="1">
+                    <label>Font Title Block Home Page</label>
+					<comment>Default: 400 18px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+                <field id="f_note" translate="label comment" type="text" sortOrder="110" showInDefault="1" showInStore="1">
+                    <label>Font Note</label>
+					<comment>Default: 400 12px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+            </group>
+            <group id="page" translate="label" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+                <label>Page</label>
+				<field id="border_radius" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInStore="1">
+                	<label>Border Radius</label>
+                	<comment>Default: 5px</comment>
+                </field>
+				<field id="box_shadow" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+                	<label>Box Shadow</label>
+                	<comment>Default: 1px 3px 1px rgba(50, 50, 50, 0.04)</comment>
+                </field>
+                <field id="page_background" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInStore="1">
+                	<label>Page Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="page_background_file" translate="label comment" type="image" sortOrder="40" showInDefault="1">
+                    <label>Page Background Image</label>
+                    <comment>Upload your custom page background image</comment> 
+                    <backend_model>Codazon\ThemeOptions\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media">codazon/themeoptions/background</upload_dir>
+                    <base_url type="media">codazon/themeoptions/background</base_url>                                      
+                </field>     
+                <field id="page_background_image_option" translate="label comment" type="text" sortOrder="50" showInDefault="1">
+                    <label>Page Background Image Position</label>                    
+                    <comment>Default: 0 0 no-repeat fixed</comment>
+                </field>  
+            </group>
+            <group id="header" translate="label" type="text" sortOrder="30" showInDefault="1" showInStore="1">
+                <label>Header</label>
+                <field id="header_background" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInStore="1">
+                	<label>Header Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="header_background_file" translate="label comment" type="image" sortOrder="20" showInDefault="1">
+                    <label>Header Background Image</label>
+                    <comment>Upload your custom header background image</comment> 
+                    <backend_model>Codazon\ThemeOptions\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media">codazon/themeoptions/background</upload_dir>
+                    <base_url type="media">codazon/themeoptions/background</base_url>                                      
+                </field>     
+                <field id="header_background_image_option" translate="label comment" type="text" sortOrder="30" showInDefault="1">
+                    <label>Header Background Image Position</label>                    
+                    <comment>Default: 0 0 no-repeat fixed</comment>
+                </field>                  
+                <field id="header_top_background" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInStore="1">
+                	<label>Header Top Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #4f5053</comment>
+                </field>
+                <field id="header_text" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInStore="1">
+                	<label>Header Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #cccccc</comment>
+                </field>
+                <field id="header_hover_text" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInStore="1">
+                	<label>Header Hover Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+                <field id="header_border" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInStore="1">
+                	<label>Header Border</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #e7e7e7</comment>
+                </field>
+                <field id="header_cart_background" translate="label comment" type="text" sortOrder="80" showInDefault="1" showInStore="1">
+                	<label>Header Cart Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #67696c</comment>
+                </field>
+                <field id="header_text_cart" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInStore="1">
+                	<label>Header Text Cart</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="header_search_text" translate="label comment" type="text" sortOrder="100" showInDefault="1" showInStore="1">
+                	<label>Header Search Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #999999</comment>
+                </field>
+                <field id="header_search_background" translate="label comment" type="text" sortOrder="110" showInDefault="1" showInStore="1">
+                	<label>Header Search Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="header_drop_text" translate="label comment" type="text" sortOrder="120" showInDefault="1" showInStore="1">
+                	<label>Header Drop Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #999999</comment>
+                </field>
+                <field id="header_drop_background" translate="label comment" type="text" sortOrder="130" showInDefault="1" showInStore="1">
+                	<label>Header Drop Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+            </group>
+            <group id="menu" translate="label" type="text" sortOrder="40" showInDefault="1" showInStore="1">
+                <label>Menu</label>
+                <field id="menu_background" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInStore="1">
+                	<label>Menu Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+                <field id="menu_hover_background" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+                	<label>Menu Hover Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+                <field id="menu_text" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInStore="1">
+                	<label>Menu Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="menu_hover_text" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInStore="1">
+                	<label>Menu Hover Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="menu_border" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInStore="1">
+                	<label>Menu Border</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="menu_font" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInStore="1">
+                	<label>Menu Font</label>
+					<comment>Default: 500 12px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+				
+				<field id="vermenu_background" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInStore="1">
+                	<label>Verical Menu Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #fafafa</comment>
+                </field>
+                <field id="vermenu_hover_background" translate="label comment" type="text" sortOrder="80" showInDefault="1" showInStore="1">
+                	<label>Verical Menu Hover Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+                <field id="vermenu_text" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInStore="1">
+                	<label>Verical Menu Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #444444</comment>
+                </field>
+                <field id="vermenu_hover_text" translate="label comment" type="text" sortOrder="100" showInDefault="1" showInStore="1">
+                	<label>Verical Menu Hover Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="vermenu_border" translate="label comment" type="text" sortOrder="110" showInDefault="1" showInStore="1">
+                	<label>Verical Menu Border</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ebebeb</comment>
+                </field>
+                <field id="vermenu_font" translate="label comment" type="text" sortOrder="120" showInDefault="1" showInStore="1">
+                	<label>Verical Menu Font</label>
+					<comment>Default: 400 12px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+				
+                <field id="menu_drop_background" translate="label comment" type="text" sortOrder="130" showInDefault="1" showInStore="1">
+                	<label>Menu Drop Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="menu_drop_text_title" translate="label comment" type="text" sortOrder="140" showInDefault="1" showInStore="1">
+                	<label>Menu Drop Text_title</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #282828</comment>
+                </field>
+                <field id="menu_drop_text" translate="label comment" type="text" sortOrder="150" showInDefault="1" showInStore="1">
+                	<label>Menu Drop Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #282828</comment>
+                </field>
+                <field id="menu_drop_hover_text" translate="label comment" type="text" sortOrder="160" showInDefault="1" showInStore="1">
+                	<label>Menu Drop Hover Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+                <field id="menu_drop_border" translate="label comment" type="text" sortOrder="170" showInDefault="1" showInStore="1">
+                	<label>Menu Drop Border</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #999999</comment>
+                </field>
+                <field id="menu_drop_font" translate="label comment" type="text" sortOrder="180" showInDefault="1" showInStore="1">
+                	<label>Menu Drop Font</label>
+					<comment>Default: 400 12px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+            </group>
+            <group id="main" translate="label" type="text" sortOrder="50" showInDefault="1" showInStore="1">
+                <label>Main Content</label>
+                <field id="main_background" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInStore="1">
+                	<label>Main Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="main_block_background" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInStore="1">
+                	<label>Main Block Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="main_block_title_background" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInStore="1">
+                	<label>Main Block Title Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #e8e8e8</comment>
+                </field>
+                <field id="main_block_text_background" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInStore="1">
+                	<label>Main Block Text Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #282828</comment>
+                </field>
+                <field id="main_text" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInStore="1">
+                	<label>Main Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #282828</comment>
+                </field>
+                <field id="main_hover_text" translate="label comment" type="text" sortOrder="80" showInDefault="1" showInStore="1">
+                	<label>Main Hover Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+                <field id="main_title_text" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInStore="1">
+                	<label>Main Title Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #121212</comment>
+                </field>
+                <field id="main_alink_text" translate="label comment" type="text" sortOrder="100" showInDefault="1" showInStore="1">
+                	<label>Main Alink Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #999999</comment>
+                </field>
+                <field id="main_note_text" translate="label comment" type="text" sortOrder="110" showInDefault="1" showInStore="1">
+                	<label>Main Note Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #999999</comment>
+                </field>
+                <field id="main_productname_text" translate="label comment" type="text" sortOrder="120" showInDefault="1" showInStore="1">
+                	<label>Main Product Name Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+                <field id="main_price_text" translate="label comment" type="text" sortOrder="130" showInDefault="1" showInStore="1">
+                	<label>Main Price Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #3b3b3b</comment>
+                </field>
+                <field id="main_hover_text_box" translate="label comment" type="text" sortOrder="140" showInDefault="1" showInStore="1">
+                	<label>Main Hover Text Box</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="main_border" translate="label comment" type="text" sortOrder="150" showInDefault="1" showInStore="1">
+                	<label>Main Border</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #dbdbdb</comment>
+                </field>
+                <field id="main_title_border" translate="label comment" type="text" sortOrder="160" showInDefault="1" showInStore="1">
+                	<label>Main Title Border</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #dbdbdb</comment>
+                </field>
+                <field id="main_tab_background" translate="label comment" type="text" sortOrder="170" showInDefault="1" showInStore="1">
+                	<label>Main Tab Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #f2f2f2</comment>
+                </field>
+                <field id="main_tab_hover_background" translate="label comment" type="text" sortOrder="180" showInDefault="1" showInStore="1">
+                	<label>Main Tab HoverBackground</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #f2f2f2</comment>
+                </field>
+                <field id="main_tab_text" translate="label comment" type="text" sortOrder="190" showInDefault="1" showInStore="1">
+                	<label>Main Tab Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #999999</comment>
+                </field>
+                <field id="main_tab_hover_text" translate="label comment" type="text" sortOrder="200" showInDefault="1" showInStore="1">
+                	<label>Main Tab Hover Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #222222</comment>
+                </field>
+                <field id="main_tab_border" translate="label comment" type="text" sortOrder="210" showInDefault="1" showInStore="1">
+                	<label>Main Tab Border</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #999999</comment>
+                </field>
+            </group>
+            <group id="footer" translate="label" type="text" sortOrder="60" showInDefault="1" showInStore="1">
+                <label>Footer</label>
+                <field id="footer_background" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInStore="1">
+                	<label>Footer Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="footer_background_file" translate="label comment" type="image" sortOrder="20" showInDefault="1">
+                    <label>Footer Background Image</label>
+                    <comment>Upload your custom footer background image</comment> 
+                    <backend_model>Codazon\ThemeOptions\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media">codazon/themeoptions/background</upload_dir>
+                    <base_url type="media">codazon/themeoptions/background</base_url>                                      
+                </field>     
+                <field id="footer_background_image_option" translate="label comment" type="text" sortOrder="30" showInDefault="1">
+                    <label>Footer Background Image Position</label>                    
+                    <comment>Default: 0 0 no-repeat fixed</comment>
+                </field>
+                <field id="footer_top_background" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInStore="1">
+                	<label>Footer Top Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #f8f8f8</comment>
+                </field>
+                <field id="footer_bottom_background" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInStore="1">
+                	<label>Footer Bottom Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="footer_text" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInStore="1">
+                	<label>Footer Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #777777</comment>
+                </field>
+                <field id="footer_title_text" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInStore="1">
+                	<label>Footer Title Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #3b3b3b</comment>
+                </field>
+                <field id="footer_hover_text" translate="label comment" type="text" sortOrder="80" showInDefault="1" showInStore="1">
+                	<label>Footer Hover Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+                <field id="footer_border" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInStore="1">
+                	<label>Footer Border</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #dbdbdb</comment>
+                </field>
+            </group>
+            <group id="button" translate="label" type="text" sortOrder="70" showInDefault="1" showInStore="1">
+                <label>Button</label>
+                <field id="btn_default_background" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInStore="1">
+                	<label>Default Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+                <field id="btn_default_text" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+                	<label>Default Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="btn_default_border" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInStore="1">
+                	<label>Default Border</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+                <field id="btn_default_font" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInStore="1">
+                	<label>Default Font</label>
+					<comment>Default: 500 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+                <field id="btn_primary_background" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInStore="1">
+                	<label>Primary Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+                <field id="btn_primary_text" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInStore="1">
+                	<label>Primary Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="btn_primary_border" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInStore="1">
+                	<label>Primary Border</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+                <field id="btn_primary_font" translate="label comment" type="text" sortOrder="80" showInDefault="1" showInStore="1">
+                	<label>Primary Font</label>
+					<comment>Default: 500 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+                <field id="btn_productitem_background" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInStore="1">
+                	<label>Product Item Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+				<field id="btn_productitem_text" translate="label comment" type="text" sortOrder="100" showInDefault="1" showInStore="1">
+                	<label>Product Item Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="btn_productitem_border" translate="label comment" type="text" sortOrder="110" showInDefault="1" showInStore="1">
+                	<label>Product Item Border</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+                <field id="btn_productitem_font" translate="label comment" type="text" sortOrder="120" showInDefault="1" showInStore="1">
+                	<label>Product Item Font</label>
+					<comment>Default: 500 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+                <field id="btn_hover_background" translate="label comment" type="text" sortOrder="130" showInDefault="1" showInStore="1">
+                	<label>Hover Background</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #ffffff</comment>
+                </field>
+                <field id="btn_hover_text" translate="label comment" type="text" sortOrder="140" showInDefault="1" showInStore="1">
+                	<label>Hover Text</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+                <field id="btn_hover_border" translate="label comment" type="text" sortOrder="150" showInDefault="1" showInStore="1">
+                	<label>Hover Border</label>
+                	<frontend_class>colour</frontend_class>
+					<comment>Default: #b0d235</comment>
+                </field>
+                <field id="btn_hover_font" translate="label comment" type="text" sortOrder="160" showInDefault="1" showInStore="1">
+                	<label>Hover Font</label>
+					<comment>Default: 500 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</comment>
+                </field>
+            </group>
+        </section>          
+    </system>
+</config>
+

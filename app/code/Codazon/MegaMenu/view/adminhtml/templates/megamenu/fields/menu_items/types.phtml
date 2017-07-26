@@ -1,0 +1,126 @@
+<script>
+var menuItemTypes = <?php echo $this->getItemTypesJson() ?>;
+</script>
+<script id='menu-item-type-tmpl' type='text/x-jquery-tmpl'>
+	<div class="menu-item menu-item-depth-0 menu-item-edit-inactive type-${name}" data-itemtype="${name}">
+		<div class="menu-item-bar">
+			<div class="menu-item-handle">
+				<span class="drag-icon"></span>
+				<span class="item-title"><span class="menu-item-title">${title}</span></span>
+				<span class="preview-icon">{%tmpl placeholder %}</span>
+				<span class="link-title"></span>
+			</div>
+		</div>
+		{%if !name.equalsTo('heading') %}
+		<div class="menu-item-heading-control">
+			<a class="item-edit menu-btn" href="javascript:void(0)"><i></i></a>
+			<a class="item-ungroup menu-btn" href="javascript:void(0)"><i></i></a>
+		</div>
+		{%/if%}
+		<div class="menu-item-settings">
+			<div class="menu-item-fields"></div>
+			<div class="menu-item-actions">
+				<a href="javascript:void(0)" class="item-delete menu-btn"><?php echo __('Remove Menu Item') ?></a>
+				<a href="javascript:void(0)" class="add-to-menu menu-btn"><?php echo __('Add to menu') ?></a>
+			</div>
+		</div>
+		<div class="menu-item-transport"></div>
+	</div>
+</script>
+
+<script id='menu-item-content-tmpl' type='text/x-jquery-tmpl'>
+	<div {%if style %}style="${style}"{%/if%} class="menu-item-field row type__${type} {%if !type.equalsTo('heading') %}field__${name}{%/if%}">
+		{%if type.equalsTo('layout') %}
+		<div class="content-layout-wrap">
+			<input type="hidden" data-name="${name}" data-type="${type}" class="menu-field field-${name}" value="1"/>
+			<button class="content-btn content-layout" onclick="cdzmenu.toggleLayoutPanel(this)"><?php echo __('Change Layout') ?></button>
+			<span class="preview-layout layout-1"><span class="layout-col-1 layout-col"></span></span>
+			<div class="content-layout-chooser">
+				{%each(i,cols) layouts%}
+					<a href="javascript:void(0)" class="layout-row layout-{%= cols.join('-') %}" onclick="cdzmenu.changeContentLayout(this,[{%= cols %}])">
+					{%each(ii,colNum) cols%}
+						<span class="layout-col layout-col-${colNum}"></span>
+					{%/each%}
+					</a>
+				{%/each%}
+				</a>				
+			</div>
+		</div>		
+		{%elif type.equalsTo('editor') %}
+			<div class="content-row">
+				{%tmpl getTmplById('menu-item-content-type-editor-tmpl',{type:'editor',name: name,loop:columns,value:value }) %}
+			</div>
+			<!--button class="content-btn content-col-add" onclick="return cdzmenu.addNewColumn(this)">Add New Column</button-->
+		{%elif type.equalsTo('heading')%}
+			<div class="heading">
+				<span>{%html title %}</span>
+				{%if description %}
+					<div class="menu-label-desc">{%tmpl description %}</div>
+				{%/if%}
+			</div>
+		{%else%}
+			<div class="col-xs-4 label">
+				<span>{%html title %}</span>
+			</div>
+			<div class="col-xs-8">
+			{%if type.equalsTo('text')%}
+				<input data-type="${type}" data-name="${name}" {%if name.equalsTo('label')%}onkeyup="cdzmenu.attachLabel(this);"{%/if%} type="${type}" class="menu-field field-${name}" value="${value}" {%if placeholder %}placeholder="${placeholder}"{%/if%} />
+			{%elif type.equalsTo('dropdown')%}
+				<select data-type="${type}" data-name="${name}" class="menu-field field-${name}" {%if action %}onchange="${action}"{%/if%}>
+					{%each(i, val) values %}
+					<option value="${val.value}" {%if selected_value%}{%if val.value.equalsTo(selected_value)%}selected{%/if%}{%/if%}>${val.label}</option>
+					{%/each%}
+				</select>
+			{%elif type.equalsTo('textarea') %}
+				<textarea data-type="${type}" data-name="${name}" class="menu-field field-${name}">${value}</textarea>
+			{%elif type.equalsTo('image') %}
+				<input type="text" data-type="${type}" data-name="${name}" type="${type}" class="menu-field image-field field-${name}" value="${value}" id="{%= $data.id = uniqid('image_')%}" onchange="cdzmenu.attachIconToItemHeading(this,this.value,1)" placeholder="<?php echo __('Get image from library or enter other URL') ?>" />
+				<button class="content-btn content-col-image" onclick="CdzMediabrowserUtility.openDialog('<?php echo $this->getUrl('megamenu/wysiwyg_images') ?>target_element_id/${id}')">{%if button_text%}${button_text}{%else%}<?php echo __('Library') ?>{%/if%}</button>
+				<div class="preview-${type}-outer">
+					<div class="preview-${type}-inner">
+						<a class="preview-${type}" onclick="cdzmenu.viewfull(this)" data-href="<?php echo $this->getImageUrl('menu/placeholder.jpg') ?>" href="javascript:void(0)" onclick=""><img src="<?php echo $this->getImageUrl('menu/placeholder.jpg') ?>" /></a>
+						<button class="content-btn content-col-image-delete" onclick="cdzmenu.removeImage(this)"><i class="fa fa-remove"></i></button>
+					</div>
+				</div>
+				<p class="content-note"><?php echo __('Allow file types: jpg, jpeg, png, gif') ?></p>
+				{%if description%}<p class="content-note">${description}</p>{%/if%}
+			{%elif type.equalsTo('icon') %}
+				<input type="hidden" data-type="${type}" data-name="${name}" type="${type}" class="menu-field field-${name}" value="${value}" id="{%= $data.id = uniqid('icon_')%}" onchange="cdzmenu.attachIconToItemHeading(this,this.value,0)" />
+				<button class="content-btn content-col-${type}" onclick="Icons.openIconChooser('${id}','menu-item-icons-tmpl',false,iconLibrabry)"><?php echo __('Icon Font Library') ?></button>
+				<div class="preview-${type}-outer">
+					<div class="preview-${type}-inner">
+						<button class="content-btn content-col-${type}-delete" onclick="cdzmenu.removeIcon(this)"><i class="fa fa-remove"></i></button>
+						<span class="icon preview-${type}" id="preview-${id}"><i></i></span>
+					</div>
+				</div>
+				{%if description%}<p>${description}</p>{%/if%}
+			{%elif type.equalsTo('category') %}
+				<input class="menu-field field-${name}" data-type="${type}" data-name="${name}" id="{%= $data.id = uniqid('category_')%}" type="text" value="${value}" />
+				<button class="content-btn content-col-${type}" onclick="${id}.choose()"><?php echo __('Select') ?></button>
+				{%if description%}<p>${description}</p>{%/if%}
+			{%elif type.equalsTo('label')%}
+				<div class="label-html">{%tmpl value %}</div>
+			{%/if%}
+			</div>
+		{%/if%}
+	</div>
+</script>
+<script id='menu-item-content-type-editor-tmpl' type='text/x-jquery-tmpl'>
+	{%for(i=1;i<=loop;i++)%}
+	<div class="content-col active" style="width: 100%;">
+		<div class="content-col-inner">
+			<div class="content-heading">
+				<div class="content-actions">
+					<button class="content-btn content-col-wysiwyg df-btn" onclick="menuWysiwygEditor.open('<?php echo $this->getUrl('megamenu/index/wysiwyg') ?>', '{%= $data.id = uniqid('editor_')%}')" title="<?php echo __('Wysiwyg Editor') ?>"><i class="fa fa-pencil"></i></button>
+					<button class="content-btn content-col-widget df-btn" onclick="widgetTools.openDialog('<?php echo $this->getUrl('admin/widget') ?>widget_target_id/${id}')" title="<?php echo __('Widget') ?>" ><?php echo __('Widget') ?></button>
+					<button class="content-btn content-col-template df-btn" onclick="Icons.openIconChooser('${id}','menu-col-tmpl-tmpl','<?php echo 'Choose template...' ?>')" title="<?php echo __('Column Template') ?>"><i class="fa fa-clipboard"></i></button>
+					<!--button class="content-btn content-col-delete df-btn" onclick="return cdzmenu.deleteColumn(this);" title="<?php echo __('Remove Column') ?>"><i class="fa fa-trash"></i></button-->
+				</div>
+			</div>
+			<div class="content-body">
+				<textarea placeholder="<?php echo __('&lt;p&gt;Insert HTML structure&lt;/p&gt;')?>" id="${id}" data-type="${type}" data-name="${name}" class="menu-field field-${name}">${value}</textarea>
+			</div>
+		</div>
+	</div>
+	{%/for%}
+</script>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Codazon_MegaMenu::megamenu" title="CDZ Megamenu Drag &amp; Drop" module="Codazon_MegaMenu" sortOrder="11" resource="Codazon_MegaMenu::index" />
+		<add id="Codazon_MegaMenu::manage_menus" title="Manage Megamenu" module="Codazon_MegaMenu" sortOrder="0" parent="Codazon_MegaMenu::megamenu" action="megamenu/index" resource="Codazon_MegaMenu::index" />
+		<add id="Codazon_MegaMenu::new_menu" title="Create New Megamenu" module="Codazon_MegaMenu" sortOrder="0" parent="Codazon_MegaMenu::megamenu" action="megamenu/index/new" resource="Codazon_MegaMenu::save" />
+		<add id="Codazon_MegaMenu::settings" title="Setting Megamenu extension" module="Codazon_MegaMenu" sortOrder="20" parent="Codazon_MegaMenu::megamenu" action="megamenu/index/new" resource="Codazon_MegaMenu::settings" />
+	</menu>
+</config>

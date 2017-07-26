@@ -1,0 +1,268 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+@toolbar-mode-icon-font-size: 16px;
+@toolbar-background: transparent;
+@toolbar-element-background: @color-gray94;
+@pager-action__background: @toolbar-element-background;
+@pager-action__hover__background: darken(@toolbar-element-background, 7%);
+@pager__font-weight: @font-weight__bold;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .page-products {
+        .columns {
+            padding-top: 60px;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .toolbar {
+        &:extend(.abs-add-clearfix all);
+		.lib-css(background, @main_block_background);
+		.abs-boxshadow(@box-shadow);
+		.abs-borderradius(2px);
+		padding:@indent__s @indent__base;
+        margin-bottom: @indent__base;
+        text-align: center;
+		clear:both;
+        select {
+			height:34px;
+			
+        }
+
+        &-amount {
+            left: 0;
+            line-height: @toolbar-mode-icon-font-size+2;
+            margin: 0;
+            padding: 7px 0;
+            position: absolute;
+            text-align: left;
+            top: 0;
+            vertical-align: middle;
+            .products.wrapper ~ .toolbar & {
+                display: none;
+            }
+        }
+
+        .page-with-filter & {
+            &-amount {
+                position: static;
+            }
+        }
+
+        &-products {
+            .pages {
+                display: none;
+                .products.wrapper ~ & {
+                    display: block;
+                }
+            }
+        }
+        .pages {
+            //margin-bottom: @indent__m;
+			
+        }
+    }
+
+    .sorter {
+        float: right;
+		.rtl-layout &{
+			float:left;
+		}
+        .page-products & {
+            position: absolute;
+            right: @indent__s;
+            top: 0;
+            z-index: 1;
+        }
+		.rtl-layout.page-products &{
+			right:auto;
+			left: @indent__s;
+		}
+        .products.wrapper ~ .toolbar & {
+            display: none;
+        }
+        &-options {
+            margin: 0 @indent__xs 0 7px;
+            width: auto;
+        }
+        &-action {
+            .lib-icon-font(
+            @icon-arrow-up,
+            @_icon-font-size: 16px,
+            @_icon-font-color: @header-icons-color,
+            @_icon-font-color-hover: @header-icons-color-hover
+            );
+            .lib-icon-text-hide();
+            &.sort-desc:before {
+                content: @icon-arrow-down;
+            }
+        }
+    }
+
+    .modes {
+        display: none;
+    }
+
+    .limiter {
+        display: none;
+        &-options {
+            margin: 0 5px 0 7px;
+            width: auto;
+        }
+        &-label {
+            font-weight: 400;
+        }
+        .page-products .toolbar & {
+            display: none;
+        }
+        .control {
+            display: inline-block;
+        }
+    }
+}
+.products.wrapper ~ .toolbar {
+	//padding-top: @indent__base;
+	//padding-bottom: 0;
+	//.lib-css(border-top, 1px solid @main_border);
+	//.lib-css(border-bottom, 0px);
+}
+//
+//  Desctop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .toolbar-products {
+        //margin-bottom: 0;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .page-products {
+        .columns {
+            padding-top: 0;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .toolbar {
+        &-amount {
+            display: block;
+            float: left;
+            position: static;
+			.rtl-layout &{
+				float: right;
+			}
+        }
+        .products.wrapper ~ & .pages {
+            float: left;
+            margin-bottom: 0;
+			.rtl-layout &{
+				float: right;
+			}
+        }
+    }
+
+    .modes {
+        display: inline-block;
+        float: left;
+        margin-right: @indent__base;
+		.rtl-layout &{
+			float: right;
+			margin-right: 0;
+			margin-left: @indent__base;
+		}
+        .products.wrapper ~ .toolbar & {
+            display: none;
+        }
+
+        &-label {
+            &:extend(.abs-visually-hidden-desktop-s all);
+        }
+
+        &-mode {
+            border: 1px solid @btn_default_border;
+            border-right-width: 0;
+            float: left;
+            font-weight: @font-weight__regular;
+            line-height: 1;
+            padding: 7px 10px;
+            text-align: center;
+			.abs-transition();
+			.rtl-layout &{
+				float: right;
+			}
+            .modes-label + & {
+                
+            }
+            &:hover {
+                .abs-cssall(@pager__hover__color, @pager__hover__background, @pager__hover__background);
+				border:@pager__hover__border;
+				border-width: 1px;
+				&:before{
+					color: @pager__hover__color !important;
+				}
+            }
+            &:last-child {
+				border-right-width: 1px;
+            }
+            &.active {
+               .abs-cssall(@pager__hover__color, @pager__hover__background, @pager__hover__background);
+			   border:@pager__hover__border;
+			   border-width: 1px;
+				&:before{
+					color: @pager__hover__color;
+				}
+            }
+			
+            .lib-icon-font(
+            @icon-grid,
+            @_icon-font-size: @toolbar-mode-icon-font-size,
+            @_icon-font-text-hide: true,
+            @_icon-font-color: @pager__color,
+            @_icon-font-color-hover: @pager__hover__color
+            );
+        }
+    }
+
+    .sorter {
+        .page-products & {
+            position: static;
+        }
+    }
+
+    .mode-list {
+        &:before {
+            content: @icon-list;
+        }
+    }
+
+    .limiter {
+        float: right;
+		.rtl-layout &{
+			float: left;
+		}
+        .products.wrapper ~ .toolbar & {
+            display: block;
+        }
+    }
+}
+
+
+//RTL====//
+.rtl-layout{
+	.pages .action.previous:before{
+		content: '\e608';
+	}
+	.pages .action.next:before{
+		content: '\e617';
+	}
+}

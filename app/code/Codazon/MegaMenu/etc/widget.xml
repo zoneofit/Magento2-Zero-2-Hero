@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2016 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+	<widget id="codazon_megamenu" class="Codazon\MegaMenu\Block\Widget\Megamenu" is_email_compatible="true" placeholder_image="Codazon_MegaMenu::images/megamenu_widget.png" ttl="86400">
+		<label translate="true">Codazon Megamenu</label>
+		<description translate="true">Show selected megamenu in frontend</description>
+		<parameters>
+			<parameter name="menu" source_model="Codazon\MegaMenu\Model\Choosemenu" xsi:type="select" required="true" visible="true">
+			 	<label translate="true">Menu</label>
+			</parameter>
+		</parameters>
+	</widget>
+	<widget id="codazon_category_tree" class="Codazon\MegaMenu\Block\Widget\Categorieslist" is_email_compatible="true"  placeholder_image="Codazon_MegaMenu::images/categoriestree_widget.png" ttl="86400">
+		<label translate="true">Codazon Category Tree</label>
+		<description translate="true"></description>
+		<parameters>
+			<parameter name="parent_id" xsi:type="block" visible="true" required="true" sort_order="10">
+                <label translate="true">Category</label>
+                <block class="Magento\Catalog\Block\Adminhtml\Category\Widget\Chooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string" translate="true">Select Category...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+			<parameter name="item_count" xsi:type="text" visible="true" sort_order="20">
+                <label translate="true">Category children limit of first sublevel</label>
+				<description translate="true">Leave empty to show all</description>
+			</parameter>
+		</parameters>
+	</widget>
+</widgets>

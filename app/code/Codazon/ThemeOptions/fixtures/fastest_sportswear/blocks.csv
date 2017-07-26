@@ -1,0 +1,176 @@
+title,identifier,content
+"Fastest - Sportswear - Main Menu",fastest-sportswear-main-menu,"<div class=""cdz-main-menu"">{{widget type=""Codazon\MegaMenu\Block\Widget\Megamenu"" menu=""fastest-fashion-main-menu""}}</div>"
+"Fastest - Sportswear - Main Slideshow",fastest-sportswear-main-slideshow,"<div class=""slideshow-container"">{{widget type=""Codazon\Slideshow\Block\Widget\Slideshow"" slideshow_id=""fastest-sportwear-home-slideshow""}}</div>"
+"Fastest - Sportswear - Category Link Tabs",fastest-sportswear-category-link-tabs,"<div class=""category-link-tabs cdz-tabs"">
+<div class="" product data items"">
+<div id=""tab-label-men"" class=""data item title"" data-role=""collapsible""><a id=""tab-label-men-title"" class=""data switch"" tabindex=""-1"" href=""#link-tab-men"" data-toggle=""switch""> Men </a></div>
+<div id=""link-tab-men"" class=""data item content"" data-role=""content"">
+<ul class=""category-links items"">
+<li class=""item""><a href=""#"">Accessories</a></li>
+<li class=""item""><a href=""#"">Smartphone</a></li>
+<li class=""item""><a href=""#"">Lights & Lasers</a></li>
+<li class=""item""><a href=""#"">Watches</a></li>
+<li class=""item""><a href=""#"">Cell Phone Goodies</a></li>
+<li class=""item""><a href=""#"">Travel & Outdoors</a></li>
+<li class=""item""><a href=""#"">Geek Tools</a></li>
+<li class=""item""><a href=""#"">Car Gadgets</a></li>
+<li class=""item""><a href=""#"">Power & Eco-friendly</a></li>
+<li class=""item""><a href=""#"">Electronic Gadgets</a></li>
+<li class=""item""><a href=""#"">Power & Eco-friendly</a></li>
+<li class=""item last""><a href=""#"">Electronic Gadgets</a></li>
+</ul>
+</div>
+<div id=""tab-label-women"" class=""data item title"" data-role=""collapsible""><a id=""tab-label-women-title"" class=""data switch"" tabindex=""-1"" href=""#link-tab-women"" data-toggle=""switch""> Women </a></div>
+<div id=""link-tab-women"" class=""data item content"" data-role=""content"">
+<ul class=""category-links items"">
+<li class=""item""><a href=""#"">Travel & Outdoors</a></li>
+<li class=""item""><a href=""#"">Geek Tools</a></li>
+<li class=""item""><a href=""#"">Car Gadgets</a></li>
+<li class=""item""><a href=""#"">Power & Eco-friendly</a></li>
+<li class=""item""><a href=""#"">Electronic Gadgets</a></li>
+<li class=""item""><a href=""#"">Power & Eco-friendly</a></li>
+<li class=""item""><a href=""#"">Accessories</a></li>
+<li class=""item""><a href=""#"">Smartphone</a></li>
+<li class=""item""><a href=""#"">Lights & Lasers</a></li>
+<li class=""item""><a href=""#"">Watches</a></li>
+<li class=""item""><a href=""#"">Cell Phone Goodies</a></li>
+<li class=""item last""><a href=""#"">Electronic Gadgets</a></li>
+</ul>
+</div>
+</div>
+</div>"
+"Fastest - Sportswear - Main Content - New Products",fastest-sportswear-main-content-new-products,"<div class=""cdz-best-seller-wrap cdz-products product-style06"">
+<div class=""row"">
+<div class=""col-sm-24"">
+<div class=""cdz-block-title"">
+<p class=""b-title h2""><span>New <span class=""lastcolor"">Collections</span></span><a class=""view-all"" href=""#"">View All</a></p>
+</div>
+</div>
+</div>
+<div class=""row"">
+<div class=""col-sm-24"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""6"" order_by=""name ASC"" show=""thumb,name,sku,description,review,price,addtocart,addto"" thumb_width=""300"" thumb_height=""300"" filter_template=""custom"" custom_template=""grid_slider_2.phtml"" show_slider=""1"" slider_item=""3"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`51`;]]""}}</div>
+</div>
+</div>"
+"Fastest - Sportswear - Main Content - Banner",fastest-sportswear-main-content-banner,"<div class=""banners-wrapper row"">
+<div class=""col-sm-24""><a class=""effect"" href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/sportswear/home/img03.jpg'}}"" alt=""Main Content Banner"" /></a></div>
+</div>"
+"Fastest - Sportswear - Main Content - Product Tabs ",fastest-sportswear-main-content-product-tabs,"<div class=""cdz-product-tabs"">
+<div class=""row"">
+<div class=""col-sm-24"">
+<div class=""tabs-list  tabs-list-sty03 bestseller-product product data items cdz-tabs"">
+<div class=""data item title text-uppercase"" data-role=""collapsible""><a class=""data switch"" tabindex=""0"" href=""#sportswear-tab-1"" data-toggle=""switch"">Featured</a></div>
+<div id=""sportswear-tab-1"" class=""data item content"" data-role=""content"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""6"" order_by=""name ASC"" show=""thumb,name,description,price,addtocart,addto"" thumb_width=""260"" thumb_height=""320"" filter_template=""custom"" custom_template=""grid_slider_1.phtml"" show_slider=""1"" slider_item=""4"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`57`;]]""}}</div>
+<div class=""data item title text-uppercase"" data-role=""collapsible""><a class=""data switch"" tabindex=""0"" href=""#sportswear-tab-2"" data-toggle=""switch"">Popular</a></div>
+<div id=""sportswear-tab-2"" class=""data item content"" data-role=""content"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""6"" order_by=""name ASC"" show=""thumb,name,description,price,addtocart,addto"" thumb_width=""260"" thumb_height=""320"" filter_template=""custom"" custom_template=""grid_slider_1.phtml"" show_slider=""1"" slider_item=""4"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`53`;]]""}}</div>
+<div class=""data item title text-uppercase"" data-role=""collapsible""><a class=""data switch"" tabindex=""0"" href=""#sportswear-tab-3"" data-toggle=""switch"">Bestseller</a></div>
+<div id=""sportswear-tab-3"" class=""data item content"" data-role=""content"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""bestseller_products"" products_count=""6"" order_by=""name ASC"" show=""thumb,name,description,price,addtocart,addto"" thumb_width=""260"" thumb_height=""320"" filter_template=""custom"" custom_template=""grid_slider_1.phtml"" show_slider=""1"" slider_item=""4"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`51`;]]""}}</div>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Sportswear - Sidebar - Special Products",fastest-sportswear-sidebar-special-products,"<div class=""row"">
+<div class=""cdz-products col-sm-24 product-list-style01"">
+<div class=""cdz-block-title"">
+<p class=""b-title h2""><span>Special <span class=""lastcolor"">Products</span></span></p>
+</div>
+<div class=""cdz-products-list"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""4"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart"" thumb_width=""88"" thumb_height=""88"" filter_template=""custom"" custom_template=""custom_list.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`57`;]]""}}</div>
+</div>
+</div>"
+"Fastest - Sportswear - Sidebar - Banner 1",fastest-sportswear-sidebar-banner1,"<div class=""banners-wrapper row  hidden-xs"">
+<div class=""col-sm-24""><a class=""effect"" href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/sportswear/home/img01.jpg'}}"" alt=""Sidebar Banner  1"" /></a></div>
+</div>"
+"Fastest - Sportswear - Sidebar - Banner 2",fastest-sportswear-sidebar-banner2,"<div class=""banners-wrapper row hidden-xs"">
+<div class=""col-sm-24""><a class=""effect"" href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/sportswear/home/img02.jpg'}}"" alt=""Sidebar Banner  2"" /></a></div>
+</div>"
+"Fastest - Sportswear - Footer Content - About Us",fastest-sportswear-footer-content-about-us,"<div class=""row clsflex"">
+<div class=""col-sm-8 col-md-10 col-lg-12 box-aboutus clsflex-grow"">
+<div class=""box-content"">
+<p class=""h2"">About Us</p>
+<div>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.</p>
+</div>
+</div>
+</div>
+<div class=""col-sm-8 col-md-7 col-lg-6 box-tweets clsflex-grow"">
+<div class=""box-content"">
+<p class=""h2"">TWITTER</p>
+{{block class=""Codazon\ThemeOptions\Block\Latesttweets"" name=""latest.twitter"" template=""Magento_Theme::html/latest_tweets.phtml""}}</div>
+</div>
+<div class=""col-sm-8 col-md-6 col-md-7 col-lg-6 box-facebook clsflex-grow"">
+<div class=""box-content"">
+<p class=""h2"">Facebook</p>
+{{block class=""Magento\Framework\View\Element\Template"" name=""facebook_fanbox"" template=""Magento_Theme::html/facebook_fanbox.phtml""}}</div>
+</div>
+</div>"
+"Fastest - Sportswear - Footer Content 2 - Footer Links",fastest-sportswear-footer-content-2-footer-links,"<div class=""row"">
+<div class=""col-sm-18"">
+<div class=""row"">
+<div class=""col-sm-6"">
+<div class=""footer-logo-wrapper""><img class=""footer-logo img-responsive"" src=""{{media url=""wysiwyg/codazon/sportswear/home/logo-footer.png""}}"" alt="""" /></div>
+</div>
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<p class=""h5"" data-cdz-toggle=""#footer-content-1"">CORPORATE</p>
+<ul id=""footer-content-1"" class=""footer-link showhide"">
+<li><a href=""{{store url=""""}}about-magento-demo-store/"">About Us</a></li>
+<li><a href=""#"">Orders and Returns</a></li>
+<li><a href=""{{store url=""""}}contacts/"">Afiliates</a></li>
+<li class=""last""><a href=""{{store url=""""}}privacy-policy-cookie-restriction-mode/"">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<p class=""h5"" data-cdz-toggle=""#footer-content-2"">YOU LINK</p>
+<ul id=""footer-content-2"" class=""footer-link showhide"">
+<li><a href=""#"">Shipping guide</a></li>
+<li><a href=""{{store url=""""}}about-magento-demo-store/"">Store location</a></li>
+<li><a href=""#"">Afiliates</a></li>
+<li class=""last""><a href=""{{store url=""""}}privacy-policy-cookie-restriction-mode/"">Customer point policy</a></li>
+</ul>
+</div>
+</div>
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<p class=""h5"" data-cdz-toggle=""#footer-content-3"">Support</p>
+<ul id=""footer-content-3"" class=""footer-link showhide"">
+<li><a href=""#"">FAQ</a></li>
+<li><a href=""{{store url=""""}}about-magento-demo-store/"">Our services</a></li>
+<li><a href=""{{store url=""""}}contacts/"">Contact Us</a></li>
+<li class=""last""><a href=""{{store url=""""}}privacy-policy-cookie-restriction-mode/"">Forum Support</a></li
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<div class=""footer-social"">
+<p class=""social""><a href=""#""><span class=""fa fa-facebook"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-twitter"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-pinterest-p"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-google-plus"">&nbsp;</span></a> <a href=""#""><span class=""fa fa-vimeo"">&nbsp;</span></a></p>
+</div>
+<div class=""newsletter-container"">{{block class=""Magento\Newsletter\Block\Subscribe"" name=""form.subscribe"" as=""subscribe"" before=""-"" template=""subscribe.phtml""}}</div>
+</div>
+</div>
+</div>"
+"Fastest - Sportswear - Before Footer - Latest Blog",fastest-sportswear-before-footer-latest-blog,"<div class=""cdz_wapper-blog03"">{{widget type=""Magefan\Blog\Block\Widget\PostList"" title=""Latest Blog Posts"" categories=""6"" order_by=""title"" order=""asc"" post_count=""6"" show_in_front=""thumb,name,description,published_date,author"" desc_length=""150"" show_slider=""1"" thumb_width=""380"" thumb_height=""209"" post_template=""custom"" custom_template=""latest_blog_slider.phtml""}}</div>"
+"Fastest - Sportswear - Block Popup Content",fastest-sportswear-block-popup-content,"<div class=""cdz-popup-newsletter"">
+<div class=""cdz-popup-newsletter-left"">
+<div class=""popup-banner"">
+<div class=""banner""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/sportswear/home/banner-newsletter.jpg'}}"" alt=""Banner 01"" /></a></div>
+</div>
+</div>
+<div class=""cdz-popup-newsletter-right"">
+<div class=""popup-title"">
+<h3 class=""text-uppercase""><span>Sign up Newsletter</span></h3>
+</div>
+<div class=""popup-content"">
+<div class=""popup-content-ads"">
+<p class=""popup-content-title h3"">Join YourStore's squad for 20% off</p>
+<p class=""popup-content-desc"">and get all the latest news, trends and offs and offers straight to your inbox. Or get 15% off using code SQUAD15</p>
+<div class=""popup-content-newsletter"">{{block class=""Magento\Newsletter\Block\Subscribe"" name=""cdz.newsletter.style05"" template=""popup_subscribe.phtml""}}</div>
+<p class=""popup-content-small"">1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+</div>
+</div>"

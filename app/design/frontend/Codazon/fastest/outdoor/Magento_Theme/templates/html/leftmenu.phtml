@@ -1,0 +1,47 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @see \Magento\Theme\Block\Html\Topmenu
+ */
+?>
+<?php $columnsLimit = $block->getColumnsLimit() ?: 0; ?>
+<?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
+<?php $_visibleMenuCount = $block->getData("visible_item") ? $block->getData("visible_item") : 7 ?>
+<nav class="navigation" role="navigation">
+    <ul class="left-menu" data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+        <?php /* @escapeNotVerified */ echo $_menu; ?>
+    </ul>
+</nav>
+<script type="text/javascript">
+require(['jquery','mage/translate'],function($){
+	var visibleCount = <?php echo $_visibleMenuCount ?>;
+	if($("ul.left-menu li.level-top").length > visibleCount){
+		$("ul.left-menu li.level-top").each(function(index,key){
+			if (index >= visibleCount-1)
+			{
+				$(this).addClass("more_menu");
+				$(this).hide();			
+			}
+		
+		});
+		var more = "<li class='more-categories'><a href='#'><span>"+$.mage.__('More Categories')+"</span></a></li>";
+		$("ul.left-menu").append(more);
+		$(".more-categories").click(function() {
+		  $(".more_menu").slideToggle();
+		  if ($(".more-categories").hasClass("clicked")) {
+		      $(".more-categories").removeClass("clicked");
+		  } else $(".more-categories").addClass("clicked");
+	    });
+    }
+});
+</script>

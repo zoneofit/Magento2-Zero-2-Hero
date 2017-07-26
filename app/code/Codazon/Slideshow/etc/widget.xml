@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="codazon_slideshow" class="Codazon\Slideshow\Block\Widget\Slideshow"
+            placeholder_image="Codazon_Slideshow::images/placeholder.gif">
+        <label translate="true">Codazon Slideshow</label>
+        <description translate="true">Create Slideshow slider</description>
+        <parameters>
+            <parameter name="slideshow_id" xsi:type="select" visible="true" sort_order="10" source_model="Codazon\Slideshow\Model\Config\Source\Slideshow">
+                <label translate="true">Select Slideshow</label>                
+            </parameter>                       
+        </parameters>
+    </widget>   
+</widgets>

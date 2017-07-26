@@ -1,0 +1,256 @@
+//Home Outdoor
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	.slideshow-banner{margin:0 -10px -60px;}
+	.banners-wrapper-top{
+		padding:10px;
+		background:#fff;
+		border:1px solid #cfcfcf;
+		position:relative;
+		z-index:1;
+	}
+}
+.page-main{
+	background:#fff;
+}
+.cms-index-index .page-main{
+	background:#fff;
+	max-width:@layout__max-width;
+	
+	position:relative;
+	&:after{
+		content:'';
+		width:100%;
+		height:100%;
+		.abs-boxshadow(0 5px 30px rgb(81, 78, 78));
+		position:absolute;
+		left:0;
+		top:0;
+		z-index:-1;
+	}
+}
+.cdz-slideshow .owl-carousel.owl-theme .owl-nav [class*='owl-']{
+	.abs-borderradius(100%);
+}
+
+//Footer
+.page-footer{
+
+}
+
+
+//Home Outdoor
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	.product-style07{
+		.owl-carousel .owl-nav{
+			right:-5px;
+		}
+		.cdz-block-title{
+			margin-bottom:0;
+		}
+		.product-item{
+			margin-top:40px !important;
+			margin-bottom:0 !important;
+			.product-item-info{
+				text-align:left;
+				.rtl-layout &{
+					text-align:right;
+				}
+				.product-item-details{
+					padding-bottom:0;
+				}
+				&:hover{
+					.abs-boxshadow(none);
+				}
+			}
+			.product-buttons-inner{
+				position:relative;
+				margin-top:15px;
+				.qs-button{
+					position:absolute;
+					left:0;
+					top:0;
+				}
+				.actions-secondary{
+					position:absolute;
+					right:0;
+					top:0;
+				}
+				form{ 
+					width:100%;
+				}
+				.action.primary{
+					width:100%;
+					padding:7px 35px;
+					border-bottom:2px solid darken(@btn_primary_border, 10%);
+				}
+				.qs-button,
+				.actions-secondary a.tocompare{
+					border-bottom:2px solid darken(@btn_productitem_border, 10%);
+				}
+				.qs-button,
+				.actions-secondary a.tocompare{
+					background:darken(@btn_productitem_background, 6%);
+					&:hover{
+						background:@btn_hover_background;
+					}
+				}
+				.actions-secondary a.tocompare:before{ content:'\f074';}
+			}
+			
+		}
+	}
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	.product-style07{
+		.product-item{
+			.actions-secondary{display:inline-block}
+			.actions-secondary a.tocompare:before{ content:'\f074';}
+		}
+	}
+}
+//================================
+
+& when (@media-common = true) {
+	body{
+		input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"]{
+			height:34px;
+			
+		}
+	}
+	/*.page-title-wrapper h1.page-title{
+		.lib-css(color, @main_hover_text_box);
+	}*/
+	.cart-footer .cart-qty{
+		background:#008ae3 !important;
+		border-color:#008ae3 !important;
+	}
+    .breadcrumbs {
+		background:#fff;
+		/*.items{
+			.lib-css(color, @main_hover_text_box);
+			a{ 
+				.abs-link(@main_hover_text_box, @main_hover_text_box);
+				&:hover{ text-decoration:underline}
+			}
+			strong{
+				.lib-css(color, @main_hover_text_box);
+			}
+		}*/
+	}	
+	.block-collapsible-nav .content{ padding:15px 20px !important}
+	.sidebar .widget.blog-search .block-content {
+		padding-top: 15px !important;
+	}
+	/*.opc-progress-bar-item._complete > span,
+	.opc-progress-bar-item > span:after,
+	.opc-progress-bar-item._active > span{
+		color:@main_hover_text_box !important;
+	}
+	.cart-discount .block > .title,
+	.cart-discount .block > .title strong{
+		color:@main_hover_text_box !important;
+		border-color:@main_hover_text_box !important;
+	}*/
+	.checkout-index-index{
+		.authentication-wrapper{ margin-right:10px;}
+		.page-header .authorization-link.switcher{ display:none;}
+	}
+	.post-view .post-bottom .block.related:not(.block-static-block) .block-title{
+		padding:15px 0;
+		margin-bottom:20px;
+	}
+	.sidebar .widget.block-categories{
+		ul.accordion{
+			padding:15px 20px !important;
+			.lib-css(border, 1px solid @main_border);
+			border-top:0;
+			margin:0 !important;
+		}
+	}
+	.page-main .sidebar .block.block-search:not(.block-static-block) .block-content{
+		.lib-css(border, 1px solid @main_border);
+	}
+	.block-collapsible-nav .content{
+		padding:15px 20px !important;
+		.lib-css(border,1px solid @main_border);
+		border-top:0;
+	}
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	.cart-discount .block > .title{
+		margin-bottom:0 !important;
+		strong{ border-bottom:0;}
+	}
+	.cart-discount .block .content{
+		box-shadow: @box-shadow !important;
+		-moz-box-shadow: @box-shadow !important;
+		-webkit-box-shadow: @box-shadow !important;
+		-o-box-shadow: @box-shadow !important;
+		-ms-box-shadow: @box-shadow !important;
+		-webkit-border-radius: @border-radius !important;
+		-moz-border-radius: @border-radius !important;
+		border-radius: @border-radius !important;
+	}
+}
+.catalog-category-view .products-grid .product-item-info{
+	.abs-borderradius(@border-radius);
+	border:1px solid #e1e1e1;
+	.product-image-wrapper{
+		.abs-borderradius(@border-radius @border-radius 0 0);
+	}
+}
+
+//add to link detail
+.product-addto-links{
+	.action{
+		&:hover{
+			span{
+				.abs-cssall(@btn_hover_text, @btn_hover_border, @btn_hover_background);
+			}
+		}		
+	}
+}
+//Tab desktop
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	//Detail
+	/*.quickshop-tabs,*/
+	.product.info.detailed{
+		.product.data.items{
+			> .item.title {
+				> .switch {
+					&:before{
+						background:@main_tab_background;
+					}
+					.abs-cssall(@main_tab_background, @main_tab_background, transparent);
+					&:hover{
+						.abs-cssall(@main_tab_hover_background, @main_tab_hover_background, transparent);
+						&:before{
+							background:@main_tab_hover_background;
+						}
+					}
+				}
+				&.active{
+					> .switch{ 
+						.abs-cssall(@main_tab_hover_background, @main_tab_hover_background, transparent);
+						&:before{
+							background:@main_tab_hover_background;
+						}
+					}
+				}
+			}
+			> .item.content{
+				border-top-width:1px;
+			}
+		}
+	}
+}
+
+
+//Mobile
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	
+	.nav-toggle span:after, 
+	.nav-toggle span:before,
+	.nav-toggle:before{background:@menu_text !important}
+	.slideshow-banner{ margin:0 -15px}
+}

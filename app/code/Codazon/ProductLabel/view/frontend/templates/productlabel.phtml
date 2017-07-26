@@ -1,0 +1,35 @@
+<?php
+	$object = $block->getObject();
+	$labels = $object['labels'];
+    $product = $object['product'];
+	$imgHelper = $this->helper('Codazon\ProductLabel\Helper\Image');
+	$objectManager = $this->objectManager;
+	$filterObject = $objectManager->create('Magento\Framework\DataObject');
+	$htmlFilter = $objectManager->create('Codazon\ProductLabel\Model\Filter');
+	$filterObject->setData('product',$product);
+?>
+<ul class="cdz-product-labels">
+	<?php foreach($labels as $label): ?>
+    <?php
+		$style="";
+    	$filterObject->setData('text',$label->getContent());
+		if($label->getLabelBackground()){
+			$background = (string)$imgHelper->init($label->getLabelBackground())->resize(100,100);
+			$style .= "background-image: url($background)"	;
+		}
+		if($label->getLabelImage()){
+			$image = (string)$imgHelper->init($label->getLabelImage())->resize(100,100);
+		}
+		$class = $label->getCustomClass();
+	?>
+    
+    <li class="label-item <?php echo $class ?>" style="<?php echo $style ?>" >
+		<div class="label-content">
+			<?php if(isset($image)): ?>
+			<img src="<?php echo $image ?>" />
+			<?php endif ?>
+			<?php echo $htmlFilter->filter($filterObject) ?>
+		</div>
+    </li>
+    <?php endforeach ?>
+</ul>

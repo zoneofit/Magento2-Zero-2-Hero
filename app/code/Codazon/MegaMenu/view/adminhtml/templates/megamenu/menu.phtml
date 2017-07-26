@@ -1,0 +1,78 @@
+<?php $menu = $this->getMenuObject(); ?>
+
+<?php if(count($menu)): ?>
+
+<?php
+$type = $menu->getData('type');
+$cssClass = $menu->getData('css_class');
+$dropdownAnimation = $menu->getData('dropdown_animation');
+$items = json_decode($menu->getContent());
+$categoryTree = $this->getLayout()->createBlock('Codazon\MegaMenu\Block\Widget\CategoriesTree');
+$uniqId = uniqid('menu-');
+?>
+
+
+<div class="cdz-menu <?php echo ($type == 1)?'cdz-vertical-menu':'cdz-horizontal-menu' ?> <?php echo $cssClass ?> <?php echo 'cdz-'.$dropdownAnimation ?>" id="<?php echo $uniqId ?>" data-mage-init='{"megamenu":{"dropdownEffect":"<?php echo $dropdownAnimation ?>","type":<?php echo $type ?>}}'>
+<ul class="groupmenu">
+<?php $i = 0;foreach($items as $item): ?>
+	<?php
+    	$depth = (int)$item->depth;
+		$content = $item->content;
+		$itemType = $item->item_type;
+	?>
+    <?php echo $this->openTag($items,$i) ?>
+	<?php if($itemType == 'link'): ?> class="<?php echo $this->getItemCSSClass($items,$i) ?>" >
+		<?php /* Link */ ?>		
+        <a class="menu-link" href="<?php echo $content->url ?>"><?php echo $this->getIcon($content) ?> <span><?php echo $content->label ?></span></a>
+        <?php /* End Link */ ?>
+		<?php elseif($itemType == 'text'): ?>
+        class="<?php echo $this->getItemCSSClass($items,$i) ?>">
+        <?php /* Text */ ?>
+        <?php
+        $text = $content->content;
+		$layout = explode(',',$content->layout);
+		$totalPart = array_sum($layout);
+        ?>
+		<?php if($content->background): ?>
+        <img class="groupdrop-banner-pos" src="<?php echo $content->background ?>" style="<?php echo $this->getBackgroundStyle($content) ?>" />
+        <?php endif ?>
+        <div class="<?php echo $content->class ?> groupmenu-drop-content <?php echo ($content->width_class)?'groupmenu-width-'.$content->width_class:'' ?>" style=" <?php echo $content->style ?>">
+        	<?php if($totalPart > 1): ?>
+        	<div class="row">
+            <?php foreach($layout as $key => $column): ?>
+            	<div class="col-sm-<?php echo (int)$column*(24/(int)$totalPart); ?>"><?php echo $text[$key] ?></div>
+            <?php endforeach ?>
+            </div>
+            <?php else: ?>
+            	<?php echo $text ?>
+            <?php endif ?>
+        </div>
+        <?php /* End Text */ ?>
+        <?php elseif($itemType == 'category'): ?> class="<?php echo $this->getItemCSSClass($items,$i); ?>">
+		<?php /* Category */ ?>
+        <?php if($content->label): ?>
+        <a class="<?php echo ($depth == 0)?'menu-link':'groupdrop-title' ?>" href="<?php echo $content->url ?>"><?php echo $this->getIcon($content) ?> <span><?php echo $content->label ?></span></a>
+        <?php endif ?>
+        <ul class="cat-tree groupmenu-drop">
+        <?php
+        	echo $categoryTree->setData('parent_id',$content->category)
+				->setData('level',$depth)
+				->getHtml('', 'submenu', 0) ?>
+		</ul>
+        <?php /* End Category */ ?>
+        <?php elseif($itemType == 'row'): ?>
+		<?php /* Row */ ?>
+        class="<?php echo $this->getItemCSSClass($items,$i); ?>" style="<?php echo ($content->background)?"background-image:{$content->background}":"" ?> <?php echo $content->style ?>">
+		<?php /* End Row */ ?>
+        <?php elseif($itemType == 'col'): ?>
+		<?php /* Col */ ?>
+        class="<?php echo $this->getItemCSSClass($items,$i); ?>" style="<?php echo $content->style ?>" >
+		<?php /* End Col */ ?>
+    	<?php endif ?>
+        
+	<?php echo $this->closeTag($items,$i) ?>
+<?php $i++; endforeach ?>
+</ul>
+</div>
+<?php endif ?>
+

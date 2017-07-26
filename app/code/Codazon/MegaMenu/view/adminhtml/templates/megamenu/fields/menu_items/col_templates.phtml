@@ -1,0 +1,94 @@
+
+<?php $colTmpls = $this->getColumnTemplates() ?>
+<script type="text/x-jquery-tmpl" id="menu-col-tmpl-tmpl">
+	<div class="template-chooser row">
+	<?php foreach($colTmpls as $tmpl): ?>
+		<?php if($tmpl['type'] == 'heading'): ?>
+		<p class="icon-label col-m-12"><?php echo $tmpl['title'] ?></p>
+		<?php else: ?>
+		<div class="tmpl-item col-m-<?php echo 2*$tmpl['col'] ?> col-xs-<?php echo 6*$tmpl['col'] ?>">
+			<div class="block-content">
+				<p><a class="layout-img img-<?php echo $tmpl['type'] ?>" onclick="Icons.insertTemplate('<?php echo $tmpl['type'] ?>-tmpl')" href="javascript:void(0)"><img src="<?php echo $tmpl['image'] ?>" /></a></p>
+				<a class="layout-name" onclick="Icons.insertTemplate('<?php echo $tmpl['type'] ?>-tmpl')" href="javascript:void(0)"><?php echo $tmpl['title'] ?></a>
+			</div>
+		</div>
+		<?php endif ?>
+	<?php endforeach ?>
+	</div>
+</script>
+
+<script type="text/static-tmpl" id="layout01-tmpl"/>
+<div class="groupdrop-banner space-s">
+	<a href="#"><img class="img-responsive" src="{{media url='wysiwyg/codazon/menu/menu-img04.jpg}}'" alt="menu-img04.jpg" /></a>
+</div>
+<p class="groupdrop-title">Collections</p>
+<div class="groupdrop-paragraph">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</script>
+
+<script type="text/static-tmpl" id="layout02-tmpl">
+<div class="groupdrop-banner space-s">
+	<a href="#"><img class="img-responsive" src="{{media url='wysiwyg/codazon/menu/menu-img04.jpg'}}" alt="menu-img04.jpg" /></a>
+</div>
+<p class="groupdrop-title">Collections</p>
+<ul class="groupdrop-link">
+	<li class="item"><a href="{{store direct_url='gear.html'}}">Handbag</a></li>
+	<li class="item"><a href="{{store direct_url='gear/bags.html'}}">Shoes men &amp; women</a></li>
+	<li class="item"><a href="{{store direct_url='gear/fitness-equipment.html'}}">T-Shirt</a></li>
+	<li class="item"><a href="{{store direct_url='men/bottoms-men/shorts-men.html'}}">Swimswear</a></li>
+	<li class="item"><a href="{{store direct_url='training.html'}}">Shopping Cart</a></li>
+	<li class="item"><a href="{{store direct_url='training/training-video.html'}}">Checkout</a></li>
+	<li class="item"><a href="{{store direct_url='men/pants-men.html'}}">Wishlist</a></li>
+	<li class="item"><a href="{{store direct_url='men/shorts-men.html'}}">Order Tracking</a></li>
+</ul>
+</script>
+
+<script type="text/static-tmpl" id="layout03-tmpl"/>
+<p class="groupdrop-title">Collections</p>
+<div class="groupdrop-paragraph">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</script>
+
+<script type="text/static-tmpl" id="layout04-tmpl"/>
+<p class="groupdrop-title">Collections</p>
+<ul class="groupdrop-link">
+	<li class="item"><a href="{{store direct_url='gear.html'}}">Handbag</a></li>
+	<li class="item"><a href="{{store direct_url='gear/bags.html'}}">Shoes men &amp; women</a></li>
+	<li class="item"><a href="{{store direct_url='gear/fitness-equipment.html'}}">T-Shirt</a></li>
+	<li class="item"><a href="{{store direct_url='men/bottoms-men/shorts-men.html'}}">Swimswear</a></li>
+	<li class="item"><a href="{{store direct_url='training.html'}}">Shopping Cart</a></li>
+	<li class="item"><a href="{{store direct_url='training/training-video.html'}}">Checkout</a></li>
+	<li class="item"><a href="{{store direct_url='men/pants-men.html'}}">Wishlist</a></li>
+	<li class="item"><a href="{{store direct_url='men/shorts-men.html'}}">Order Tracking</a></li>
+</ul>
+</script>
+
+<script type="text/static-tmpl" id="layout05-tmpl"/>
+<p class="groupdrop-title">Collections</p>
+<ul class="groupdrop-link">
+	<li class="item"><a href="{{store direct_url='gear.html'}}">Handbag</a></li>
+	<li class="item"><a href="{{store direct_url='gear/bags.html'}}">Shoes men &amp; women</a></li>
+	<li class="item"><a href="{{store direct_url='gear/fitness-equipment.html'}}">T-Shirt</a></li>
+	<li class="item"><a href="{{store direct_url='men/bottoms-men/shorts-men.html'}}">Swimswear</a></li>
+	<li class="item"><a href="{{store direct_url='training.html'}}">Shopping Cart</a></li>
+	<li class="item"><a href="{{store direct_url='training/training-video.html'}}">Checkout</a></li>
+	<li class="item"><a href="{{store direct_url='men/pants-men.html'}}">Wishlist</a></li>
+	<li class="item"><a href="{{store direct_url='men/shorts-men.html'}}">Order Tracking</a></li>
+</ul>
+<div class="groupdrop-banner space-s">
+	<a href="#"><img class="img-responsive" src="{{media url='wysiwyg/codazon/menu/menu-img04.jpg'}}" alt="menu-img04.jpg" /></a>
+</div>
+</script>
+
+<script type="text/static-tmpl" id="layout06-tmpl"/>
+<p class="groupdrop-title">Collections</p>
+<div class="groupdrop-paragraph">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="groupdrop-banner space-s">
+	<a href="#"><img class="img-responsive" src="{{media url='wysiwyg/codazon/menu/menu-img04.jpg'}}" alt="menu-img04.jpg" /></a>
+</div>
+</script>
+

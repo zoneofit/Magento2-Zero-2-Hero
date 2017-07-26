@@ -1,0 +1,89 @@
+<div class="row preview-wrap">
+	<div class="col-m-12 preview-area" id="preview-area" style="display:none;">
+    	<div class="row">
+        	<div class="row col-m-12 horizontal-area">
+            	<div class="horizontal-preview col-m-12"></div>
+                <div class="col-m-12"><img class="img-responsive demo-banner" src="<?php echo $this->getImageUrl('demo_banner.jpg') ?>" /></div>
+            </div>
+            <div class="row col-m-12 vertical-area">
+            	<div class="vertical-preview col-m-3"></div>
+                <div class="col-m-9"><img class="img-responsive demo-banner" src="<?php echo $this->getImageUrl('demo_banner.jpg') ?>" /></div>
+            </div>
+        </div>
+    </div>
+	<div class="col-m-12">
+    	<button class="preview-btn" id="preview-btn"><i class="fa fa-eye"></i> <?php echo __('Preview Your Megamenu') ?></button>
+    </div>
+</div>
+<div class="row menu-content">
+
+	<div id="menu-spinner" data-role="spinner" class="admin__data-grid-loading-mask">
+        <div class="spinner">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+    </div>
+
+    <div class="col-m-3 col-left">
+        <div class="menu-item-types">
+            <div class="type-items" id="type-items"></div>
+        </div>
+        <div class="menu-bottom">
+        	<div class="menu-tutorial-outer">
+            	<a class="menu-tutorial-inner" href="https://www.youtube.com/watch?v=HkbDb8Ojswo" target="_blank" title="<?php echo __('Click to view tutorial video') ?>">
+                	<span class="tutorial-icon fa"></span>
+                </a>
+                <p class="tutorial-text"><?php echo __('CDZ Megamenu Tutorial Video') ?></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-m-9 col-main">
+        <div class="menu-item-wrapper">
+            <h2 class="title"><?php echo __('Megamenu Structure') ?></h2>
+            <div class="menu-actions">
+            	<button class="expand-btn" id="expand-btn"><i class="fa fa-expand"></i> <?php echo __('Expand All') ?></button>
+        		<button class="collapse-btn" id="collapse-btn"><i class="fa fa-compress"></i> <?php echo __('Collapse All') ?></button>
+			</div>
+            <div class="menu" id="menu-to-edit">
+            	
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+require([
+	"jquery",
+	"Magento_Ui/js/modal/alert",
+	"Magento_Ui/js/modal/modal",
+	"Magento_Ui/js/modal/confirm",
+	"jqueryTmpl",
+	"cdzJqueryUi",
+	"categoryChooser",
+	"wysiwygEditor",
+	"menuLayout",
+	"domReady!"
+],function($,alert,modal,confirm){
+	window.cdzInstantiateChooser = function(uniqId) {
+		window[uniqId] = new WysiwygWidget.categoryChooser(
+			uniqId,
+			"<?php echo $this->getUrl('catalog/category_widget/chooser') ?>uniq_id/"+uniqId,
+			{"buttons":{"open":"<?php echo __('Select Category...') ?>","close":"<?php echo __('Close') ?>"}}
+		);
+		if ($(uniqId+"value")){
+			$(uniqId+"value").advaiceContainer = uniqId+"advice-container";
+		}
+	}
+	var $menu = $('#menu-to-edit');
+	$menu.menuLayout({
+		menuItemTypes: menuItemTypes,
+		menuItems: menuItems,
+		previewUrl: '<?php echo $this->getUrl('megamenu/index/view') ?>',
+		previewBtn: '#preview-btn',
+		previewForm: '#edit_form',
+		alert: alert,
+		confirm: confirm,
+		mediaUrl: '<?php echo $this->getMediaUrl() ?>',
+		imagePlaceholder: '<?php echo $this->getImageUrl('menu/placeholder.jpg') ?>',
+		spinner: '#menu-spinner'
+	});
+});
+</script>

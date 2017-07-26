@@ -1,0 +1,89 @@
+title,identifier,content
+"Fastest - Jewelry - Main Area - Featured Products",fastest-jewelry-main-area-featured-products,"<div class=""cdz-best-seller-wrap col-sm-24"">
+<div class=""row"">
+<div class=""col-sm-24"">
+<div class=""cdz-block-title03"">
+<p class=""b-title h2""><span>Your Collections</span></p>
+</div>
+</div>
+</div>
+<div class=""row"">
+<div class=""col-sm-24 tabs-list-sty02 bestseller-product product data items cdz-tabs"">
+<div class=""data item title text-uppercase"" data-role=""collapsible""><a class=""data switch"" tabindex=""0"" href=""#best-seller-tab-1"" data-toggle=""switch"">Featured</a></div>
+<div id=""best-seller-tab-1"" class=""data item content"" data-role=""content"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""14"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""220"" thumb_height=""220"" filter_template=""custom"" custom_template=""product/widget/content/slider_style01.phtml"" show_slider=""1"" slider_item=""7"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`52`;]]""}}</div>
+<div class=""data item title text-uppercase"" data-role=""collapsible""><a class=""data switch"" tabindex=""0"" href=""#best-seller-tab-2"" data-toggle=""switch"">Rings</a></div>
+<div id=""best-seller-tab-2"" class=""data item content"" data-role=""content"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""14"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""220"" thumb_height=""220"" filter_template=""custom"" custom_template=""product/widget/content/slider_style01.phtml"" show_slider=""1"" slider_item=""7"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`54`;]]""}}</div>
+<div class=""data item title text-uppercase"" data-role=""collapsible""><a class=""data switch"" tabindex=""0"" href=""#best-seller-tab-3"" data-toggle=""switch"">Necklace</a></div>
+<div id=""best-seller-tab-3"" class=""data item content"" data-role=""content"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""14"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""220"" thumb_height=""220"" filter_template=""custom"" custom_template=""product/widget/content/slider_style01.phtml"" show_slider=""1"" slider_item=""7"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`55`;]]""}}</div>
+<div class=""data item title text-uppercase"" data-role=""collapsible""><a class=""data switch"" tabindex=""0"" href=""#best-seller-tab-1"" data-toggle=""switch"">Errings</a></div>
+<div id=""best-seller-tab-1"" class=""data item content"" data-role=""content"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""14"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""220"" thumb_height=""220"" filter_template=""custom"" custom_template=""product/widget/content/slider_style01.phtml"" show_slider=""1"" slider_item=""7"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`56`;]]""}}</div>
+</div>
+</div>
+</div>"
+"Fastest - Jewelry - Main Area - New Collections",fastest-jewelry-main-area-new-collections,"<div class=""cdz-best-seller-wrap cdz-products text-center cdz-sm-24"">
+<div class=""row"">
+<div class=""col-sm-24"">
+<div class=""cdz-block-title03"">
+<p class=""b-title h2""><span>New Collections</span></p>
+</div>
+</div>
+</div>
+<div class=""row"">
+<div class=""col-sm-24"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""14"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""220"" thumb_height=""220"" filter_template=""custom"" custom_template=""product/widget/content/slider_style01.phtml"" show_slider=""1"" slider_item=""7"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`55`;]]""}}</div>
+</div>
+</div>"
+"Fastest - Jewelry - Main Area - Top Banners",fastest-jewelry-main-area-top-banners,"<div class=""cdz-home-top-banners hidden-xs"">
+<div class=""row"">
+<div class=""col-sm-6 no-padding""><img src=""{{media url=""wysiwyg/codazon/jewelry/home/img01.jpg""}}"" alt="""" /></div>
+<div class=""col-sm-6  no-padding""><img src=""{{media url=""wysiwyg/codazon/jewelry/home/img02.jpg""}}"" alt="""" /></div>
+<div class=""col-sm-6  no-padding""><img src=""{{media url=""wysiwyg/codazon/jewelry/home/img03.jpg""}}"" alt="""" /></div>
+<div class=""col-sm-6  no-padding""><img src=""{{media url=""wysiwyg/codazon/jewelry/home/img04.jpg""}}"" alt="""" /></div>
+</div>
+</div>"
+"Fastest - Jewelry - Main Area - Discovery Jewelry",fastest-jewelry-main-area-discovery-jewelry,"<div class=""cdz-item-types-wrapper wrapper-ads02 bg-wrapper-ads"">
+<div class=""maxwidth"">
+<div class=""row"">
+<div class=""cdz-sm-24"">
+<div class=""cdz-item-types"">
+<ul class=""items"">
+<li class=""item""><a href=""#""><img class=""responsive-img"" src=""{{media url='wysiwyg/codazon/jewelry/home/img06.png'}}"" alt="""" /></a></li>
+<li class=""item""><a href=""#""><img class=""responsive-img"" src=""{{media url='wysiwyg/codazon/jewelry/home/img07.png'}}"" alt="""" /></a></li>
+<li class=""item""><a href=""#""><img class=""responsive-img"" src=""{{media url='wysiwyg/codazon/jewelry/home/img08.png'}}"" alt="""" /></a></li>
+<li class=""item""><a href=""#""><img class=""responsive-img"" src=""{{media url='wysiwyg/codazon/jewelry/home/img09.png'}}"" alt="""" /></a></li>
+<li class=""item""><a href=""#""><img class=""responsive-img"" src=""{{media url='wysiwyg/codazon/jewelry/home/img10.png'}}"" alt="""" /></a></li>
+<li class=""item""><a href=""#""><img class=""responsive-img"" src=""{{media url='wysiwyg/codazon/jewelry/home/img11.png'}}"" alt="""" /></a></li>
+<li class=""item""><a href=""#""><img class=""responsive-img"" src=""{{media url='wysiwyg/codazon/jewelry/home/img12.png'}}"" alt="""" /></a></li>
+<li class=""item""><a href=""#""><img class=""responsive-img"" src=""{{media url='wysiwyg/codazon/jewelry/home/img13.png'}}"" alt="""" /></a></li>
+</ul>
+<div class=""statement"">
+<p>The perfect engagement ring may be the one you create yourself</p>
+<p>Choose a shape or if you like we also feature unique settings designed to bring out a diamond's dazzle and shine</p>
+</div>
+<div class=""newsletter-style02"">{{block class=""Magento\Newsletter\Block\Subscribe"" name=""cdz.newsletter.style02"" template=""subscribe.phtml""}}</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Jewelry - Main Menu",fastest-jewelry-main-menu,"<div class=""cdz-main-menu"">{{widget type=""Codazon\MegaMenu\Block\Widget\Megamenu"" menu=""fastest-jewelry-main-menu""}}</div>"
+"Fastest - Jewelry - Block Popup Content",fastest-jewelry-block-popup-content,"<div class=""cdz-popup-newsletter"">
+<div class=""cdz-popup-newsletter-left"">
+<div class=""popup-banner"">
+<div class=""banner""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/jewelry/home/banner-newsletter.jpg'}}"" alt=""Banner 01"" /></a></div>
+</div>
+</div>
+<div class=""cdz-popup-newsletter-right"">
+<div class=""popup-title"">
+<h3 class=""text-uppercase""><span>Sign up Newsletter</span></h3>
+</div>
+<div class=""popup-content"">
+<div class=""popup-content-ads"">
+<p class=""popup-content-title h3"">Join YourStore's squad for 20% off</p>
+<p class=""popup-content-desc"">and get all the latest news, trends and offs and offers straight to your inbox. Or get 15% off using code SQUAD15</p>
+<div class=""popup-content-newsletter"">{{block class=""Magento\Newsletter\Block\Subscribe"" name=""cdz.newsletter.style05"" template=""popup_subscribe.phtml""}}</div>
+<p class=""popup-content-small"">1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Jewelry - Home Slideshow",fastest-jewelry-home-slideshow,"<div class=""slideshow-container"">{{widget type=""Codazon\Slideshow\Block\Widget\Slideshow"" slideshow_id=""jewelry-home-slideshow""}}</div>"

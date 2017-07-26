@@ -1,0 +1,42 @@
+<?php
+$posts = $block->getPostCollection();
+$descLength = $block->getDescLength();
+?>
+
+<div class="cdz_wapper-blog01 text-center">
+	<div class="row">
+        <div class="cdz-sm-24">
+            <div class="cdz-block-title">
+	            <p class="b-title h1"><span><?php echo $block->getTitle() ?></span></p>
+            </div>
+        </div>
+    </div>
+<?php $i = 0 ?>    
+<?php foreach($posts as $item): ?>
+	<?php if ( ($i%3) == 0 ): ?><div class="row"><?php endif ?>
+    	<?php
+			$url = $item->getPostUrl();
+			$desc = $item->getMetaDescription();
+			if(strlen($desc)> $descLength ) { 
+				$strCutDesc = substr($desc, 0, $descLength);
+				$desc = substr($strCutDesc, 0, strrpos($strCutDesc, ' ')).'&hellip;';
+			}
+			$desc = $this->stripTags($desc,null,true);
+		?>
+    	<div class="cdz-sm-8">
+            <div class="blog-content">
+				<a href="<?php echo $url ?>">                
+        			<img class="img-responsive" src="<?php echo $block->getPostImage($item); ?>" />
+                </a>
+            </div>
+            <div class="content">
+                <h5 class="blog-title"><a href="<?php echo $url ?>"><?php echo $item->getTitle() ?></a></h5>
+                <p class="blog-author-date"><?php echo __('By <span class="author">%1</span> on <span class="date">%2</span>','Cinoss',$block->getPostedOn($item,'F d, Y')) ?></span></p>
+                <div class="blog-desc"><?php echo $desc ?></div>
+                <p class="blog-text-link"><a class="btn-link" href="<?php echo $url ?>"><span><?php echo __('Read more') ?></span></a></p>
+            </div>
+        </div>
+    <?php if ( ($i%3) == 2 ): ?></div><?php endif; $i++ ?>
+<?php endforeach ?>
+	</div>
+</div>

@@ -1,0 +1,479 @@
+title,identifier,content
+"Fastest - Big Market- Main Area - Our Blog",fastest-bigmarket-main-area-our-blog,"<div class=""cdz_wapper-blog01 text-center space-lg"">{{widget type=""Magefan\Blog\Block\Widget\PostList"" title=""Latest Blog Posts"" categories=""10"" order_by=""publish_time"" order=""desc"" post_count=""6"" show_in_front=""thumb,name,description,published_date,author"" desc_length=""150"" show_slider=""1"" thumb_width=""380"" thumb_height=""280"" post_template=""custom"" custom_template=""latest_blog_slider.phtml""}}</div>"
+"Fastest - Big Market- Main Area - Social",fastest-bigmarket-main-area-social,"<div class=""row main-social wrapper-ads08"">
+<div class=""col-sm-6 space-xs"">
+<div class=""box fb-box"">
+<div class=""social-title""><span>Facebook</span></div>
+<div class=""social-cap""><span>Follow us on facebook</span></div>
+<div class=""social-desc""><span>You would have to be half mad to dream me up.</span></div>
+<div class=""button""><a href=""#"" class=""action primary""><span>Like Us</span></a></div>
+</div>
+</div>
+
+<div class=""col-sm-6 space-xs"">
+<div class=""box tw-box"">
+<div class=""social-title""><span>Twitter</span></div>
+<div class=""social-cap""><span>Follow us on Twitter</span></div>
+<div class=""social-desc""><span>You would have to be half mad to dream me up.</span></div>
+<div class=""button""><a href=""#"" class=""action primary""><span>Twitter Now</span></a></div>
+</div>
+</div>
+
+<div class=""col-sm-6 space-xs"">
+<div class=""box go-box"">
+<div class=""social-title""><span>Google +</span></div>
+<div class=""social-cap""><span>Follow us on google +</span></div>
+<div class=""social-desc""><span>You would have to be half mad to dream me up.</span></div>
+<div class=""button""><a href=""#"" class=""action primary""><span>Follow us</span></a></div>
+</div>
+</div>
+<div class=""col-sm-6 space-xs"">
+<div class=""box in-box"">
+<div class=""social-title""><span>Instagram</span></div>
+<div class=""social-cap""><span>Follow us on instagram</span></div>
+<div class=""social-desc""><span>You would have to be half mad to dream me up.</span></div>
+<div class=""button""><a href=""#"" class=""action primary""><span>Follow us</span></a></div>
+</div>
+</div>
+</div>"
+"Fastest - Big Market- Main Area - Ads",fastest-bigmarket-main-area-ads,"<div class=""wrapper-ads07 hidden-xs"">
+<div class=""row"">
+<div class=""col-sm-6 space-xs"">
+<div class=""text-area"">
+<span class=""icon-font pe-7s-ticket"">&nbsp;</span>
+<h4>+15.000 products</h4>
+<p class=""text"">Sports , Movies etc</p>
+</div>
+</div>
+<div class=""col-sm-6 space-xs"">
+<div class=""text-area"">
+<span class=""icon-font pe-7s-star"">&nbsp;</span>
+<h4>More then 20 Categories</h4>
+<p class=""text"">Fashion , Electronics, Book</p>
+</div>
+</div>
+<div class=""col-sm-6 space-xs"">
+<div class=""text-area"">
+<span class=""icon-font pe-7s-car"">&nbsp;</span>
+<h4>Free Shipping</h4>
+<p class=""text"">Free shipping on the world</p>
+</div>
+</div>
+<div class=""col-sm-6 space-xs"">
+<div class=""text-area"">
+<span class=""icon-font pe-7s-piggy"">&nbsp;</span>
+<h4>Refund in 2 days</h4>
+<p class=""text"">100% guarantee</p>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Big Market - Footer Content - Links",fastest-bigmarket-footer-content-links,"<div class=""row"">
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<p class=""h5"" data-cdz-toggle=""#footer-content-1"">CORPORATE</p>
+<ul id=""footer-content-1"" class=""footer-link showhide"">
+<li><a href=""{{store url=""""}}about-us"">About Us</a></li>
+<li><a href=""#"">Orders and Returns</a></li>
+<li><a href=""{{store url=""""}}contact"">Afiliates</a></li>
+<li class=""last""><a href=""{{store url=""""}}privacy-policy-cookie-restriction-mode"">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<p class=""h5"" data-cdz-toggle=""#footer-content-2"">Your Links</p>
+<ul id=""footer-content-2"" class=""footer-link showhide"">
+<li><a href=""#"">Shipping guide</a></li>
+<li><a href=""{{store url=""""}}about-us"">Store location</a></li>
+<li><a href=""#"">Afiliates</a></li>
+<li class=""last""><a href=""{{store url=""""}}privacy-policy-cookie-restriction-mode"">Customer point policy</a></li>
+</ul>
+</div>
+</div>
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<p class=""h5"" data-cdz-toggle=""#footer-content-3"">Support</p>
+<ul id=""footer-content-3"" class=""footer-link showhide"">
+<li><a href=""#"">FAQ</a></li>
+<li><a href=""{{store url=""""}}about-us"">Our services</a></li>
+<li><a href=""{{store url=""""}}contact"">Contact Us</a></li>
+<li class=""last""><a href=""{{store url=""""}}privacy-policy-cookie-restriction-mode"">Forum Support</a></li>
+</ul>
+</div>
+</div>
+<div class=""col-sm-6"">
+<div class=""footer-box"">
+<p class=""h5"" data-cdz-toggle=""#footer-content-4"">SHOP LOCATION</p>
+<ul id=""footer-content-4"" class=""footer-link showhide"">
+<li><span class=""fa fa-map-marker"">&nbsp;</span>200 Lincoln Ave, Salinas, CA 93901</li>
+<li><span class=""fa fa-phone"">&nbsp;</span>Phone: 023 32423 223</li>
+<li><span class=""fa fa-envelope"">&nbsp;</span>Email: owner@example.com</li>
+<li class=""last""><span class=""fa fa-clock-o"">&nbsp;</span>Support 24/7</li>
+</ul>
+</div>
+</div>
+</div>"
+"Fastest - Big Market - Footer Container Top - Newsletter",fastest-bigmarket-footer-container-top-newsletter,"<div class=""row"">
+<div class="" col-sm-12"">
+<div class=""newsletter-wrapper"">
+<div class=""newsletter-container"">{{block class=""Magento\Newsletter\Block\Subscribe"" name=""form.subscribe"" as=""subscribe"" before=""-"" template=""subscribe.phtml""}}</div>
+</div>
+</div>
+<div class=""col-sm-12"">
+<div class=""footer-text"">
+<span class=""pull-right"">Sign up for new Customer, updates, surveys & offers.</span>
+</div>
+</div>
+</div>"
+"Fastest - Big Market - Footer Payment",fastest-bigmarket-footer-payment,"<div class=""pull-right footer-payment-logo"">
+<div class=""cdz-footer-bottom-payment""><img class=""img-responsive"" src=""{{media url=""wysiwyg/codazon/fastest_fashion/home/cdz-footer-payment.png""}}"" alt=""Accept Payment"" /></div>
+</div>"
+"Fastest - Big Market - Block Popup Content",fastest-bigmarket-block-popup-content,"<div class=""cdz-popup-newsletter"">
+<div class=""cdz-popup-newsletter-left"">
+<div class=""popup-banner"">
+<div class=""banner""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/banner-newsletter.jpg'}}"" alt=""Banner 01"" /></a></div>
+</div>
+</div>
+<div class=""cdz-popup-newsletter-right"">
+<div class=""popup-title"">
+<h3 class=""text-uppercase""><span>Sign up Newsletter</span></h3>
+</div>
+<div class=""popup-content"">
+<div class=""popup-content-ads"">
+<p class=""popup-content-title h3"">Join YourStore's squad for 20% off</p>
+<p class=""popup-content-desc"">and get all the latest news, trends and offs and offers straight to your inbox. Or get 15% off using code SQUAD15</p>
+<div class=""popup-content-newsletter"">{{block class=""Magento\Newsletter\Block\Subscribe"" name=""cdz.newsletter.style05"" template=""popup_subscribe.phtml""}}</div>
+<p class=""popup-content-small"">1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Big Market - Main Content Top - Slideshow",fastest-bigmarket-main-content-top-slideshow,"<div class=""space-base"">
+<div class=""row"">
+<div class=""col-sm-6"">
+<div class=""cdz-main-menu left-navigation hidden-xs""><nav id=""left-nav"" class=""navigation"">{{widget type=""Codazon\MegaMenu\Block\Widget\Megamenu"" menu=""fastest-bigmarket-left-navigation""}}</nav></div>
+</div>
+<div class=""col-sm-18"">
+<div class=""row no-margin"">
+<div class=""col-sm-16 no-padding"">
+<div class=""slideshow-container"">{{widget type=""Codazon\Slideshow\Block\Widget\Slideshow"" slideshow_id=""fastest-big-market-home-slideshow""}}</div>
+</div>
+<div class=""col-sm-8 no-padding"">
+<div class=""banners-wrapper row hidden-xs"">
+<div class=""col-sm-24""><a class=""effect"" href=""#""> <img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/img01.jpg'}}"" alt=""banner 1"" /></a></div>
+<div class=""col-sm-24""><a class=""effect"" href=""#""> <img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/img02.jpg'}}"" alt=""banner 2"" /></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Big Market - Main Menu",fastest-bigmarket-main-menu,"<div class=""cdz-main-menu"">
+{{widget type=""Codazon\MegaMenu\Block\Widget\Megamenu"" menu=""fastest-bigmarket-main-menu""}}
+</div>"
+"Fastest - Big Market - Left Navigation",fastest-bigmarket-left-navigation,"<div class=""cdz-main-menu left-navigation""><nav id=""left-nav"" class=""navigation"">
+<div class=""menu-title"">All Categories</div>
+{{widget type=""Codazon\MegaMenu\Block\Widget\Megamenu"" menu=""fastest-bigmarket-left-navigation""}} </nav></div>"
+"Fastest - Big Market- Header Call Us",fastest-bigmarket-header-call-us,"<div class=""header-call-us hidden-xs""><span>Call Us : 118-0093-333</span></div>"
+"Fastest - Big Market- Main Area - New Product",fastest-bigmarket-main-area-new-product,"<div class=""cdz-best-seller-wrap cdz-products product-style08 box-product"">
+<div class=""row"">
+<div class=""col-sm-24"">
+<div class=""block-title"">
+<p class=""b-title h3""><span>New Product</span></p>
+</div>
+</div>
+</div>
+<div class=""row"">
+<div class=""col-sm-24 text-center "">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""14"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""220"" thumb_height=""220"" filter_template=""custom"" custom_template=""grid_slider_1.phtml"" show_slider=""1"" slider_item=""6"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`62`;]]""}}</div>
+</div>
+</div>"
+"Fastest - Big Market- Main Area - Home Brands Slider",fastest-bigmarket-main-area-home-brands-slider,"<div class=""cdz-brand-slider-wrap hidden-xs"">
+<div class=""cdz-brand-title"">
+<span>Hot Brands</span>
+</div>
+<div class=""cdz-brand-slider"">
+<div class=""cdz-slider cdz-slider-banners cdz-slider-navigation-icon"" data-items=""6"" data-items-0=""1"" data-items-480=""3"" data-items-768=""4"" data-items-1024=""6"" data-items-1280=""6"" data-margin=""0"">
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_01.png'}}"" alt=""cdz_brand_01.jpg"" /></a>
+<a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_01.png'}}"" alt=""cdz_brand_01.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_02.png'}}"" alt=""cdz_brand_02.jpg"" /></a><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_02.png'}}"" alt=""cdz_brand_02.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_03.png'}}"" alt=""cdz_brand_03.jpg"" /></a><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_03.png'}}"" alt=""cdz_brand_03.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_04.png'}}"" alt=""cdz_brand_04.jpg"" /></a><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_04.png'}}"" alt=""cdz_brand_04.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_05.png'}}"" alt=""cdz_brand_05.jpg"" /></a><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_05.png'}}"" alt=""cdz_brand_05.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_06.png'}}"" alt=""cdz_brand_06.jpg"" /></a><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_06.png'}}"" alt=""cdz_brand_06.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_01.png'}}"" alt=""cdz_brand_01.jpg"" /></a><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_01.png'}}"" alt=""cdz_brand_01.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_02.png'}}"" alt=""cdz_brand_02.jpg"" /></a><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_02.png'}}"" alt=""cdz_brand_02.jpg"" /></a></div>
+<div class=""cdz-banners-item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_03.png'}}"" alt=""cdz_brand_03.jpg"" /></a><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/fastest_fashion/home/brands/cdz_brand_03.png'}}"" alt=""cdz_brand_03.jpg"" /></a></div>
+</div>
+</div>
+</div>"
+"Fastest - Big Market- Main Area - Four Block Products",fastest-bigmarket-main-area-four-block-product,"<div class=""row"">
+<div class=""cdz-products col-sm-6 product-list-style02 space-xs"">
+<div class=""cdz-block-title"">
+<p class=""b-title h2""><span>Our pick</span></p>
+</div>
+<div class=""cdz-products-list"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""4"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""70"" thumb_height=""70"" filter_template=""custom"" custom_template=""custom_list.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`48`;]]""}}</div>
+</div>
+<div class=""cdz-products col-sm-6 product-list-style02 space-xs"">
+<div class=""cdz-block-title"">
+<p class=""b-title h2""><span>Trends</span></p>
+</div>
+<div class=""cdz-products-list"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""4"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""70"" thumb_height=""70"" filter_template=""custom"" custom_template=""custom_list.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`54`;]]""}}</div>
+</div>
+<div class=""cdz-products col-sm-6 product-list-style02 space-xs"">
+<div class=""cdz-block-title"">
+<p class=""b-title h2""><span>For men</span></p>
+</div>
+<div class=""cdz-products-list"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""4"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""70"" thumb_height=""70"" filter_template=""custom"" custom_template=""custom_list.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`14`;]]""}}</div>
+</div>
+<div class=""cdz-products col-sm-6 product-list-style02 space-xs"">
+<div class=""cdz-block-title"">
+<p class=""b-title h2""><span>For woman</span></p>
+</div>
+<div class=""cdz-products-list"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""4"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""70"" thumb_height=""70"" filter_template=""custom"" custom_template=""custom_list.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`46`;]]""}}</div>
+</div>
+</div>"
+"Fastest - Big Market- Main Area - Kid world",fastest-bigmarket-main-area-kid-world,"<div class=""box-cate-style01 product-style08"">
+<div class=""row"">
+<div class=""col-sm-24"">
+<div class=""row"">
+<div class=""col-sm-8"">
+<div class=""block-title"">
+<p class=""b-title h2""><span>Kid world</span></p>
+</div>
+</div>
+<div class=""col-sm-16"">
+<ul class=""box-cate-link items pull-right  hidden-xs"">
+<li class=""item""><a href=""#"">All</a></li>
+<li class=""item""><a href=""#"">Boys</a></li>
+<li class=""item""><a href=""#"">Girls</a></li>
+<li class=""item""><a href=""#"">Accessories</a></li>
+<li class=""item""><a href=""#"">Lovely</a></li>
+</ul>
+</div>
+</div>
+<div class=""row"">
+<div class=""col-sm-24"">
+<div class=""box-cate-products"">
+<div class=""row no-margin"">
+<div class=""col-sm-6 col-md-5 no-padding hidden-xs""><a class=""effect"" href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/img03.jpg'}}"" alt=""Main Content Banner"" /></a></div>
+<div class=""col-sm-18 col-md-19 text-center cdz-best-seller-wrap cdz-products no-padding"">
+<div class=""box-products"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""8"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""300"" thumb_height=""300"" filter_template=""custom"" custom_template=""grid_slider_2.phtml"" show_slider=""1"" slider_item=""4"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`60`;]]""}}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Big Market- Main Area - Cosmetic and Perfumes",fastest-bigmarket-main-area-cosmetic-and-perfumes,"<div class=""box-cate-style01 bkg-color02 product-style08"">
+<div class=""row"">
+<div class=""col-sm-24"">
+<div class=""row"">
+<div class=""col-sm-8"">
+<div class=""block-title"">
+<p class=""b-title h2""><span>Cosmetic and perfumes</span></p>
+</div>
+</div>
+<div class=""col-sm-16"">
+<ul class=""box-cate-link items pull-right hidden-xs"">
+<li class=""item""><a href=""#"">All Beauty</a></li>
+<li class=""item""><a href=""#"">Clean clear</a></li>
+<li class=""item""><a href=""#"">Health</a></li>
+<li class=""item""><a href=""#"">Vitamins</a></li>
+<li class=""item""><a href=""#"">Luxyry Beauty</a></li>
+</ul>
+</div>
+</div>
+
+<div class=""row"">
+<div class=""col-sm-24"">
+<div class=""box-cate-products"">
+<div class=""row no-margin"">
+<div class=""col-sm-6 col-md-5 no-padding  hidden-xs"">
+<a class=""effect"" href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/img04.jpg'}}"" alt=""Main Content Banner"" /></a>
+</div>
+<div class=""col-sm-18 col-md-19 text-center cdz-best-seller-wrap cdz-products no-padding"">
+<div class=""box-products"">
+{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""8"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""300"" thumb_height=""300"" filter_template=""custom"" custom_template=""grid_slider_2.phtml"" show_slider=""1"" slider_item=""4"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`61`;]]""}}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Big Market- Main Area - Baby & Mom",fastest-bigmarket-main-area-baby-and-mom,"<div class=""box-cate-style02 bkg-color03 product-style08"">
+<div class=""row no-margin"">
+<div class=""col-sm-6 no-padding abs-line-right"">
+<div class=""block-title"">
+<p class=""b-title h4""><span>Baby &amp; Mom</span></p>
+</div>
+<ul class=""box-cate-link items"">
+<li class=""item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/icate-01.jpg'}}"" alt=""Icon Category"" /><span>Baby Toys</span></a></li>
+<li class=""item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/icate-02.jpg'}}"" alt=""Icon Category"" /><span>Bath &amp; Shower</span></a></li>
+<li class=""item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/icate-03.jpg'}}"" alt=""Icon Category"" /><span>Feeding</span></a></li>
+<li class=""item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/icate-04.jpg'}}"" alt=""Icon Category"" /><span>Strollers</span></a></li>
+<li class=""item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/icate-05.jpg'}}"" alt=""Icon Category"" /><span>Maternity</span></a></li>
+<li class=""item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/icate-06.jpg'}}"" alt=""Icon Category"" /><span>Safety &amp; Gear</span></a></li>
+</ul>
+</div>
+<div class=""col-sm-12 no-padding abs-line-left abs-line-right"">
+<div class=""text-center cdz-best-seller-wrap cdz-products no-padding-left"">
+<div class=""box-products"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""6"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""300"" thumb_height=""300"" filter_template=""custom"" custom_template=""grid_slider_2.phtml"" show_slider=""1"" slider_item=""3"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`59`;]]""}}</div>
+</div>
+</div>
+<div class=""col-sm-6 no-padding abs-line-left"">
+<div class=""cdz-products product-list-style02"">
+<div class=""cdz-block-title"">
+<p class=""b-title h2""><span>Best Seller</span></p>
+</div>
+<div class=""cdz-products-list"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""bestseller_products"" products_count=""4"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""70"" thumb_height=""70"" filter_template=""custom"" custom_template=""custom_list.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`59`;]]""}}</div>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Big Market- Main Area - Electronics",fastest-bigmarket-main-area-electronics,"<div class=""box-cate-style02 bkg-color04 product-style08"">
+<div class=""row no-margin"">
+<div class=""col-sm-6 no-padding abs-line-right"">
+<div class=""block-title"">
+<p class=""b-title h4""><span>Electronics</span></p>
+</div>
+<ul class=""box-cate-link items"">
+<li class=""item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/icate-07.jpg'}}"" alt=""Icon Category"" /><span>Audio &amp; Sound</span></a></li>
+<li class=""item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/icate-08.jpg'}}"" alt=""Icon Category"" /><span>Video &amp; Camera</span></a></li>
+<li class=""item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/icate-09.jpg'}}"" alt=""Icon Category"" /><span>Games &amp; Gear</span></a></li>
+<li class=""item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/icate-10.jpg'}}"" alt=""Icon Category"" /><span>Accessories</span></a></li>
+<li class=""item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/icate-11.jpg'}}"" alt=""Icon Category"" /><span>Computer &amp; Laptop</span></a></li>
+<li class=""item""><a href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/icate-12.jpg'}}"" alt=""Icon Category"" /><span>Mobile &amp; Tablet</span></a></li>
+</ul>
+</div>
+<div class=""col-sm-12 no-padding abs-line-left abs-line-right"">
+<div class=""text-center cdz-best-seller-wrap cdz-products no-padding-left"">
+<div class=""box-products"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""6"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""300"" thumb_height=""300"" filter_template=""custom"" custom_template=""grid_slider_2.phtml"" show_slider=""1"" slider_item=""3"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`58`;]]""}}</div>
+</div>
+</div>
+<div class=""col-sm-6 no-padding abs-line-left"">
+<div class=""cdz-products product-list-style02"">
+<div class=""cdz-block-title"">
+<p class=""b-title h2""><span>Best Seller</span></p>
+</div>
+<div class=""cdz-products-list"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""bestseller_products"" products_count=""4"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""70"" thumb_height=""70"" filter_template=""custom"" custom_template=""custom_list.phtml"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`58`;]]""}}</div>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Big Market- Product Content Right - Custom Block",fastest-bigmarket-product-content-right-custom-block,"<div class=""product-ads"">
+	<div class=""product-ads-title"">
+		<h3>Free Shipping</h3>
+		<p>On Orders Over $100</p>
+	</div>
+	<div class=""product-ads-content"">
+		<ul class=""items"">
+			<li><a href=""#""><span class=""fa fa-cc-visa"">&nbsp;</span>Accept payments online</a></li>
+			<li><a href=""#""><span class=""fa fa-money"">&nbsp;</span>Money back guarantee</a></li>
+			<li><a href=""#""><span class=""fa fa-calculator"">&nbsp;</span>Calculate shipping cost</a></li>
+			<li><a href=""#""><span class=""fa fa-check"">&nbsp;</span>Ships items quickly</a></li>
+			<li><a href=""#""><span class=""fa fa-truck"">&nbsp;</span>Same-day delivery</a></li>
+		</ul>
+	</div>
+</div>
+<div class=""wk-seller-block wk-block no-display"" id=""mp-wk-block"">
+	<div>
+		<span class=""wk-block-font-bold-up"">Sold By</span> <br>
+		<span class=""wk-block-title-css"">
+			<a href=""#"" title=""Visit Shop"" id=""profileconnect"">Footwear Store</a>
+		</span>
+		<br>
+		<span class=""wk-block-rating"">
+			0 / 5
+		</span>
+		<div style=""display: none;"" class=""wk-seller-rating wk-mp-design-inner"">
+			<div style=""padding: 5px 0;"">
+				<span>
+					0% positive feedback (0 ratings) 					</span>
+			</div>
+			<div class=""row"">				    
+				<div class=""mpfeedback"">
+					<div class=""price"">
+						<span class=""wk-ordertitle-label"">Price </span><span>:</span>
+						<div class=""ratingslider-box"">
+							<div class=""rating"" style=""width:0%;""></div>
+						</div>
+						<span>&nbsp;(0/5)</span>
+						<div class=""clear""></div>
+					</div>
+					<div class=""value"">
+						<span class=""wk-ordertitle-label"">Value </span><span>:</span>
+						<div class=""ratingslider-box"">
+							<div class=""rating"" style=""width:0%;""></div>								
+						</div>
+						<span>&nbsp;(0/5)</span>
+						<div class=""clear""></div>
+					</div>
+					<div class=""quality"">
+						<span class=""wk-ordertitle-label"">Quality </span><span>:</span>
+						<div class=""ratingslider-box"">
+							<div class=""rating"" style=""width:0%;""></div>
+						</div>
+						<span>&nbsp;(0/5)</span>
+						<div class=""wk-clear""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="""">
+		<div class=""ask_que"">
+			<a id=""askque"">Contact Us</a>				
+		</div>								
+				</div>	
+</div>"
+"Fastest - Big Market- Main Area - Sports & Outdoors",fastest-bigmarket-main-area-sports-outdoors,"<div class=""box-cate-style01 bkg-color03 product-style08"">
+<div class=""row"">
+<div class=""col-sm-24"">
+<div class=""row"">
+<div class=""col-sm-8"">
+<div class=""block-title"">
+<p class=""b-title h2""><span>Sports &amp; Outdoors</span></p>
+</div>
+</div>
+<div class=""col-sm-16"">
+<ul class=""box-cate-link items pull-right hidden-xs"">
+<li class=""item""><a href=""#"">Cycling Gear</a></li>
+<li class=""item""><a href=""#"">Camping</a></li>
+<li class=""item""><a href=""#"">Hiking Gear</a></li>
+<li class=""item""><a href=""#"">Swim Gear</a></li>
+<li class=""item""><a href=""#"">Accessories</a></li>
+</ul>
+</div>
+</div>
+<div class=""row"">
+<div class=""col-sm-24"">
+<div class=""box-cate-products"">
+<div class=""row no-margin"">
+<div class=""col-sm-6 col-md-5 no-padding  hidden-xs""><a class=""effect"" href=""#""><img class=""img-responsive"" src=""{{media url='wysiwyg/codazon/bigmarket/home/img05.jpg'}}"" alt=""Main Content Banner"" /></a></div>
+<div class=""col-sm-18 col-md-19 text-center cdz-best-seller-wrap cdz-products no-padding"">
+<div class=""box-products"">{{widget type=""Codazon\ProductFilter\Block\Product\ProductsList"" display_type=""all_products"" products_count=""8"" order_by=""name ASC"" show=""thumb,name,review,price,addtocart,addto"" thumb_width=""300"" thumb_height=""300"" filter_template=""custom"" custom_template=""grid_slider_2.phtml"" show_slider=""1"" slider_item=""4"" conditions_encoded=""a:2:[i:1;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Combine`;s:10:`aggregator`;s:3:`all`;s:5:`value`;s:1:`1`;s:9:`new_child`;s:0:``;]s:4:`1--1`;a:4:[s:4:`type`;s:50:`Magento|CatalogWidget|Model|Rule|Condition|Product`;s:9:`attribute`;s:12:`category_ids`;s:8:`operator`;s:2:`==`;s:5:`value`;s:2:`43`;]]""}}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+"Fastest - Big Market - Scroll Bar",fastest-bigmarket-scroll-bar,"<div class=""float-bar hidden-xs hidden-sm hidden-md"">
+<div class=""float-bar-content"">
+<ul class=""items"">
+<li class=""item""><a href=""{{store url=""""}}contact""><span class=""fa fa-envelope-o"">&nbsp;</span><span>Contact</span></a></li>
+<li class=""item""><a href=""{{store url=""""}}about-us""><span class=""fa fa-comments-o"">&nbsp;</span><span>Live Chat</span></a></li>
+<li class=""item""><a href=""{{store url=""""}}about-us""><span class=""fa fa-clock-o"">&nbsp;</span><span>Store Open time</span></a></li>
+<li class=""item""><a href=""{{store url=""""}}about-us""><span class=""fa fa-credit-card"">&nbsp;</span><span>Accept payments</span></a></li>
+<li class=""item""><a href=""{{store url=""""}}about-us""><span class=""fa fa-phone-square"">&nbsp;</span><span>Call Us</span></a></li>
+<li class=""item last""><a href=""{{store url=""""}}about-us""><span class=""fa fa-map-marker"">&nbsp;</span><span>Our store locations</span></a></li>
+</ul>
+</div>
+</div>"

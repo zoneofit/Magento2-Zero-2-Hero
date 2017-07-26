@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="codazon" translate="label" sortOrder="400">
+            <label>Codazon</label>
+        </tab>
+        <section id="quickshop" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Quick Shop</label>
+            <tab>codazon</tab>
+            <resource>Codazon_QuickShop::config_quickshop</resource>
+            <group id="general" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use Quick Shop</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="label" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Label</label>
+                </field>
+				<field id="auto_add_buttons" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Auto add buttons</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					<comment><![CDATA[This option used for adding Quick Shop buttons to product list automatically.<br />Moreover, you can also use <br /> <code>echo $this->helper('Codazon\QuickShop\Helper\Data')</code><br /><code>->getQuickShopButton($_product)</code><br /> to customize your template.]]></comment>
+                </field>
+                <field id="item_class" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product Item Class</label>
+                    <comment><![CDATA[Use comma (,) to separate different item class. Default is <em>.product-item</em>]]></comment>
+					<depends>
+						<field id="auto_add_buttons">1</field>
+					</depends>
+                </field>
+				<field id="target" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Target Class</label>
+                    <comment><![CDATA[The element CSS class that Quick Shop button will be appended to. Default is <em>.product-item-info</em>.]]></comment>
+					<depends>
+						<field id="auto_add_buttons">1</field>
+					</depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

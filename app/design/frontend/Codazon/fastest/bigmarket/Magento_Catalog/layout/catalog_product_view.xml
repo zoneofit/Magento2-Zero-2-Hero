@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="product.info.sku" destination="page.main.title" />
+        <move element="product.info.review" destination="page.main.title" after="product.info.sku"/>
+        <move element="product.info.stock.sku" destination="product.info.main" after="page.main.title"/>
+	<referenceBlock name="catalog.leftnav" remove="true"/>
+	<move element="product.info.overview" destination="product.info.main" after="product.info.review" />	
+	
+	<referenceBlock name="product.info.overview" template="product/view/short_description.phtml">
+		<arguments>
+            <argument name="at_call" xsi:type="string">getShortDescription</argument>
+            <argument name="at_code" xsi:type="string">short_description</argument>
+            <argument name="css_class" xsi:type="string">overview</argument>
+            <argument name="at_label" translate="true" xsi:type="string">Overview</argument>
+            <argument name="title" translate="true" xsi:type="string">Overview</argument>
+            <argument name="add_attribute" xsi:type="string">itemprop="description"</argument>
+        </arguments>
+	</referenceBlock>
+	<referenceBlock name="product.info.addto" as="addto" />
+	<move element="product.info.addto" destination="product.info" after="-" />
+	<referenceContainer name="product.info.social">
+		<block class="Magento\Catalog\Block\Product\View" name="product.info.social.links" as="social" template="product/view/social.phtml" after="-" />
+	</referenceContainer>
+	<referenceContainer name="product.info">
+		<container name="product.info.staticblock" label="Product Static Block" htmlTag="div" htmlClass="product-info-staticblock" before="-" />							
+	</referenceContainer>
+	<referenceContainer name="content">
+		<container name="product.main.content" htmlTag="div" htmlClass="product-main-content" before='-'></container>					
+	</referenceContainer>
+	<referenceContainer name="product.main.content">
+		<container htmlTag="div" htmlClass="row">
+		<container name="product.info.left" label="Product Content Left" htmlTag="div" htmlClass="product-info-left col-sm-19" />
+		<container name="product.info.right" label="Product Content Right" htmlTag="div" htmlClass="product-info-right col-sm-5" />
+		</container>
+	</referenceContainer>
+	<move element="product.info.media" destination="product.info.left" before='-'/>
+	<move element="product.info.main" destination="product.info.left" />
+    </body>
+</page>

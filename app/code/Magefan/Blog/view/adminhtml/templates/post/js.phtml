@@ -1,0 +1,12 @@
+<?php $helper = $this->helper('Magefan\Blog\Helper\Wysiwyg\Images'); ?>
+<script>
+var cdzBlog = {};
+cdzBlog.onInsertUrl = '<?php echo $this->getUrl('blog/wysiwyg_images/onInsert') ?>';
+cdzBlog.mediaUrl = '<?php echo $helper->getMediaUrl() ?>';
+require([
+	"jquery",
+	"Magefan_Blog/js/browser"
+], function($){
+	
+});
+</script>

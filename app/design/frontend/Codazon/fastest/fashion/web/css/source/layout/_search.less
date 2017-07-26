@@ -1,0 +1,29 @@
+///SmartSearch
+.c-smartsearch .col-8-8{
+	width:100% !important;
+}
+.c-smartsearch .c-smartsearch__price{
+	clear:both;
+}
+.c-smartsearch__wrapper{
+	left:0 !important;
+	top:41px !important;
+	width:100% !important;
+	.c-smartsearch__title.h4{
+		text-transform:capitalize;
+		.lib-css(font, @f_h5);
+		.abs-link(@main_productname_text, @main_hover_text)
+	}
+	.c-smartsearch__price{
+		> span > span{font-weight:600}
+	}
+}
+.sticky-menu.active #search_autocomplete{
+	width:280px !important;
+	right:0 !important;
+	left:auto !important;
+	.rtl-layout &{
+		right:0 !important;
+		left:auto !important;
+	}
+}

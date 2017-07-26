@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+		<add id="Codazon_Options::Codazon_Options" title="Codazon" module="Codazon_ThemeOptions" sortOrder="20" resource="Codazon_Options::Codazon_Options"/>     
+			<add id="Codazon_Options::themes_options" title="Themes Options" module="Codazon_ThemeOptions" sortOrder="8" parent="Codazon_Options::Codazon_Options" resource="Codazon_Options::themes_options"/>   
+			<add id="Codazon_Options::themes_install" title="Theme installer" module="Codazon_ThemeOptions" sortOrder="20" parent="Codazon_Options::themes_options" action="themeoptions/theme/install" resource="Codazon_Options::themes_options"/>
+			
+		<add id="Codazon_Options::extensions_options" title="Extensions Options" module="Codazon_ThemeOptions" sortOrder="20" parent="Codazon_Options::Codazon_Options" resource="Codazon_Options::extensions_options"/>
+			<add id="Codazon_Options::slideshow_title" title="CDZ Slideshow" module="Codazon_ThemeOptions" parent="Codazon_Options::extensions_options" sortOrder="30"  resource="Codazon_Options::slideshow_title"/>
+				<add id="Codazon_slideshow::slideshow" title="Manage Slideshows" module="Codazon_Slideshow" sortOrder="10" parent="Codazon_Options::slideshow_title" action="slideshow/slideshow/" resource="Codazon_Slideshow::slideshow"/>
+			<add id="Codazon_Options::productlabel_title" title="Product Label" module="Codazon_ThemeOptions" parent="Codazon_Options::extensions_options" sortOrder="40"  resource="Codazon_Options::productlabel_title"/>
+				<add id="Codazon_ProductLabel::productlabel" title="Manage Labels" module="Codazon_ProductLabel" sortOrder="0" parent="Codazon_Options::productlabel_title" action="productlabel/productlabel/index" resource="Codazon_ProductLabel::productlabel"/>
+			<add id="Codazon_Options::quickshop_elements" title="Quickshop" module="Codazon_ThemeOptions" parent="Codazon_Options::extensions_options" sortOrder="20"  resource="Codazon_Options::quickshop_elements"/>
+		        <add id="Codazon_Options::quickshopOptions" title="Options" module="Codazon_ThemeOptions" parent="Codazon_Options::quickshop_elements" sortOrder="10" action="adminhtml/system_config/edit/section/quickshop/" resource="Codazon_Options::quickshop_Options"/>
+			<add id="Codazon_Options::blog_title" title="Blogs" module="Codazon_Blog" parent="Codazon_Options::extensions_options" sortOrder="50"  resource="Codazon_Options::blog_title"/>
+				<add id="Codazon_Blog::post" title="Posts" module="Codazon_Blog" parent="Codazon_Options::blog_title" sortOrder="10" action="blog/post/" resource="Codazon_Blog::post"/>
+				<add id="Codazon_Blog::category" title="Categories" module="Codazon_Blog" parent="Codazon_Options::blog_title" sortOrder="20" action="blog/category/" resource="Codazon_Blog::category"/>
+				<add id="Codazon_Blog::import" title="Import" module="Codazon_Blog" parent="Codazon_Options::blog_title" sortOrder="30" action="blog/import/" resource="Codazon_Blog::import"/>
+		<add id="Codazon_MegaMenu::megamenu" title="CDZ Megamenu Drag &amp; Drop" module="Codazon_MegaMenu" sortOrder="11" resource="Codazon_MegaMenu::index" parent="Codazon_Options::Codazon_Options" />
+			<add id="Codazon_MegaMenu::manage_menus" title="Manage Megamenu" module="Codazon_MegaMenu" sortOrder="0" parent="Codazon_MegaMenu::megamenu" action="megamenu/index" resource="Codazon_MegaMenu::index" />
+			<add id="Codazon_MegaMenu::new_menu" title="Create New Megamenu" module="Codazon_MegaMenu" sortOrder="0" parent="Codazon_MegaMenu::megamenu" action="megamenu/index/new" resource="Codazon_MegaMenu::save" />
+			<!--add id="Codazon_MegaMenu::settings" title="Setting Megamenu extension" module="Codazon_MegaMenu" sortOrder="20" parent="Codazon_MegaMenu::megamenu" action="megamenu/index/new" resource="Codazon_MegaMenu::settings" /-->
+    </menu>
+</config>

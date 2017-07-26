@@ -1,0 +1,48 @@
+<?php
+	$_themeHelper = $this->helper('Codazon\ThemeOptions\Helper\Data');
+	$_mobileHelper = $this->helper('Codazon\ThemeOptions\Helper\Mobile');
+	$_fontList = $_themeHelper->getConfig('variables/font/f_google_font');
+	$_fontWeights = ':200,200italic,300,300italic,400,400italic,500,500italic,600italic,600italic,700,700italic,800,800italic,900,900italic';	
+	
+?>
+<?php 
+	$fontArr = array();
+	if ($_fontList){
+		if(is_array($_fontList)){
+			$fontArr = $_fontList;
+		}
+		else{
+			$fontArr = explode(',',$_fontList);		
+		}
+	}	
+	// font weight
+	$fontWeightOption = str_replace(' ','', $_themeHelper->getConfig('variables/font/f_google_font_weight'));
+	if ($fontWeightOption)
+		$_fontWeights = ':'.$fontWeightOption;	
+		
+    if($block->getRequest()->isSecure())
+        $google_font_link = "https://fonts.googleapis.com/css";
+    else
+        $google_font_link = "http://fonts.googleapis.com/css";
+   
+	if($fontArr){
+		foreach($fontArr as $font){
+	   		$font = trim($font);
+	  		echo  "<link href='".$google_font_link."?family=".str_replace(' ','+',$font)."$_fontWeights&amp;subset=latin,cyrillic-ext,cyrillic,greek-ext,greek,vietnamese,latin-ext' rel='stylesheet' type='text/css' />";
+		}
+	}
+	
+?>
+
+<script type="text/javascript">
+	var ThemeOptions = {
+		box_wide: <?php echo $_themeHelper->getConfig('general_section/layout/box_wide') ?>,
+		rtl_layout: <?php echo $_themeHelper->getConfig('general_section/layout/enable_rtl') ?>,
+		sticky_header: <?php echo $_themeHelper->getConfig('general_section/header/sticky_header') ?>		
+	}; 
+	<?php if($_mobileHelper->is('iOS')): ?>	
+		require(['jquery'],function ($) {
+			$('body').addClass('iMenu');
+		})	    	
+	<?php endif; ?>
+</script>

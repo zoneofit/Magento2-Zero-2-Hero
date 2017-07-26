@@ -1,0 +1,42 @@
+<?php
+	/**
+		* Copyright © 2015 Magento. All rights reserved.
+		* See COPYING.txt for license details.
+	*/
+	
+	// @codingStandardsIgnoreFile
+	
+?>
+<?php
+	/**
+		* Top menu for store
+		*
+		* @see \Magento\Theme\Block\Html\Topmenu
+	*/
+?>
+<?php $columnsLimit = $block->getColumnsLimit() ?: 0; ?>
+<?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
+
+<?php $setId	=	uniqid('cdz_leftmenu_default_'); ?>
+<div class="menu-wrapper hidden-xs">
+	<div id="menuleftText" class="all_categories">
+		<div class="menuleftText-title">
+			<div class="menuleftText"><span class="cdz-text-upercase"><?php echo __('Categories') ?></span></div>
+		</div>
+	</div>
+	<div class="menuleft">
+		<div id="menu-default" class="mega-menu cdz-menu-icon">
+			<div class="megamenu-wrapper <?php echo $setId ?>">
+				<div class="cdz_nav" id="<?php echo $setId ?>">
+					<ul class="vnav">
+						<li class=" menu-itcdz-text menu-itcdz-depth-0">
+							<ul class="cdz-catalog-navigation vertical" data-mage-init='{"cdz_menu":{"responsive":true, "expanded":true, "position":{"my":"left right","at":"left left"}}}'>
+								<?php echo $_menu ?>
+							</ul>
+						</li>
+					</ul> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,65 @@
+<?php 
+	$themes = $block->getThemes();
+	$items = [];
+	$activeTheme = '';
+	foreach($themes as $theme){
+		if($theme->getThemeId() == $block->getCurrentThemeId()){
+			$activeTheme = $theme;
+		}else{
+			$items[] = $theme;
+		}
+	}
+?>
+<ul class="themes-grid">
+	<?php if($activeTheme): ?>
+	<li class="theme-item active">
+		<a class="theme-image" href="<?php echo $block->getCustomThemeUrl($activeTheme->getThemeId()); ?>">
+            <span class="image-wrap move-long" style="background-image: url('<?php echo $block->getThemeReviewImageUrl($activeTheme); ?>');"></span>
+        </a>
+        <div class="control">
+        	<span class="theme-name"><strong><?php echo __('Activated') ?>:</strong> <?php echo $activeTheme->getThemeTitle() ?></span>
+        	<a class="btn-customize" href="#customize_form"><span><span><?php echo __('Customize') ?></span></span></a>
+        </div>
+	</li>
+	<?php endif ?>
+	<li>
+		<ul>
+			<?php foreach($themes as $theme): ?>
+			<?php
+				$title = $theme->getThemeTitle();
+				$tmp = explode(' - ',$title);
+				$title = $tmp[1];
+			?>
+				<li class="theme-item">
+					<div class="theme-image" href="<?php echo $block->getCustomThemeUrl($theme->getThemeId()); ?>">
+						<span class="image-wrap move-long" style="background-image: url('<?php echo $block->getThemeReviewImageUrl($theme); ?>');"></span>
+						<a class="button btn-active" href="<?php echo $block->getActiveThemeUrl($theme->getThemeId()); ?>">
+				            <span>
+				                <span><?php echo __('Activate') ?></span>
+				            </span>
+				        </a>
+					</div>
+					<div class="theme-name">
+						<span class="theme-name"><?php echo $title ?></span>
+					</div>
+				</li>
+			<?php endforeach ?>
+				<li class="theme-item blank-item">
+					<div class="theme-image" href="<?php echo $block->getCustomThemeUrl($theme->getThemeId()); ?>">
+						<span class="image-wrap move-long"></span>
+					</div>
+					<div class="theme-name">
+						<span class="theme-name"><?php echo __('Coming soon') ?></span>
+					</div>
+				</li>
+		</ul>
+	</li>
+</ul>
+<?php if($activeTheme): ?>
+<div id="customize_form" class="customize-form">
+	<div class="setting-icon"></div>
+	<div class="theme-title">
+		<label><?php echo __('Current theme setting') ?>:</label><label><?php echo $activeTheme->getThemeTitle() ?></label>
+	</div>
+</div>
+<?php endif ?>

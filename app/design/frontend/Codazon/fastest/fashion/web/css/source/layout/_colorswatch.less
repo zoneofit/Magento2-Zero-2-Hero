@@ -1,0 +1,76 @@
+/* ============================================ *
+ * Codazon_Color Swatch
+ * ============================================ */
+.products-grid{
+	div[class^="swatch-opt-"] {
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		> div{
+			display:inline-block;
+			text-align: center;clear: left;width: 100%;
+		}
+	}
+}
+.swatch-attribute-options{margin:0 -10px 0 0;display:inline-block}
+.product-options-wrapper{
+	.swatch-attribute-options{
+		display:block;
+		
+	}
+	.swatch-attribute{margin:0 0 10px 0}
+}
+.product-info-main .product-options-wrapper .swatch-attribute{ margin-bottom:20px;}
+
+.swatch-attribute.size .swatch-option, 
+.swatch-attribute.manufacturer .swatch-option{
+	font-size:10px;
+	font-weight:400;
+	line-height:1.65;
+	border-radius: 30px;
+	padding: 2px;
+}
+.swatch-option{
+	height:22px;
+	&.text{
+		padding:1px 8px;
+	}
+	&.color{
+		height: 15px;
+		.abs-borderradius(100%);
+		width: 15px;
+		padding: 0;
+		min-width: inherit;
+	}
+	.rtl-layout &{
+		float:right;
+	}	
+}
+/*.modes-mode:before{.lib-css(color, @main_price_text);}*/
+div[class^="swatch-opt-"] > div{ vertical-align: top;}
+.swatch-option{
+	.lib-css(border, 1px solid @main_border);
+	.abs-scale(1);
+	.abs-transition();
+}
+
+.swatch-option.text:not(.disabled):hover, 
+.swatch-option.image:not(.disabled):hover, 
+.swatch-option.color:not(.disabled):hover{
+	.lib-css(outline, 0px solid @main_title_text);
+	.lib-css(border, 1px solid @main_title_text);
+	.abs-scale(~'1.02, 1.02');
+}
+.swatch-attribute.size .swatch-option, 
+.swatch-attribute.manufacturer .swatch-option{
+	.abs-cssall(@main_text, @main_border, @main_block_background);
+}
+
+.swatch-attribute-label{
+	font-weight:normal;
+	padding-bottom:5px;
+	display:inline-block;
+}
+.swatch-attribute-selected-option{
+	
+}

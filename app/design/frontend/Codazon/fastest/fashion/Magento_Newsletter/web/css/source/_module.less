@@ -1,0 +1,113 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//    Common
+//--------------------------------------
+
+& when (@media-common = true) {
+
+//
+//    Newsletter subscription
+//--------------------------------------
+
+.block.newsletter {
+    margin-bottom: 20px;
+    .form.subscribe {
+        display: table;
+        width: 100%;
+    }
+    .fieldset {
+        display: table-cell;
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+    }
+    .field {
+        margin: 0 0 @indent__s;
+        .control {
+            .lib-icon-font(
+                @icon-envelope,
+                @_icon-font-size: 16px,
+                @_icon-font-line-height: 40px,
+                @_icon-font-color: @form-element-input-placeholder__color,
+                @_icon-font-margin: 0 0 0 8px
+            );
+            &:before {
+                position: absolute;
+            }
+            display: block;
+			.rtl-layout &{
+				&:before {
+					margin-left:0;
+					margin-right:8px;
+				}
+			}
+        }
+    }
+     input {
+        padding-left: 35px;
+		height:41px;
+		line-height: 41px;
+		.rtl-layout &{
+			padding-right: 35px;
+			padding-left: 10px;
+		}
+    }
+	input[type="email"] {
+		.lib-css(background, #ffffff);
+		.lib-css(color, #646464);
+		
+	}
+    .title {
+        display: none;
+    }
+    .label {
+        &:extend(.abs-visually-hidden all);
+    }
+    .actions {
+        display: table-cell;
+        vertical-align: top;
+        width: 1%;
+		button{
+			padding:8px 20px;
+		}
+    }
+	.action.subscribe {
+		min-height: 41px;
+	}
+
+}
+
+}
+
+//
+//    Desktop
+//--------------------------------------
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .block.newsletter {
+        width: 100%;
+    }
+}
+
+//Custom style newsletter
+
+.newsletter-style02{
+	.block.newsletter{ 
+		margin-bottom:@indent__base;
+		input{
+			border-width:1px;
+			border-color:@main_border;
+			text-align:center;
+		}
+		.field{
+			margin-bottom:20px;
+			.control:before{display:none;}
+		}
+		.actions{
+			display:block; width:100%;
+		}
+	}
+}

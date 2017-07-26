@@ -1,0 +1,28 @@
+<?php 
+	$themes = $block->getCodazonThemes();
+	$count = 0;
+?>
+<table class="data-grid">
+	<thead>
+		<tr>
+			<th class="data-grid-th"><span><?php echo __('Theme') ?></span></td>
+			<th class="data-grid-th"><span><?php echo __('Data') ?></span></td>
+		</tr>
+	</thead>
+	<tbody>
+		<?php foreach($themes as $theme): ?>
+		<?php 
+			$count++;
+			$class = 'odd';
+			$code = str_replace('Codazon/','',$theme->getCode());
+			if($count%2 == 0){
+				$class = 'even';
+			}
+		?>
+		<tr class="<?php echo $class ?>">
+			<td><?php echo $theme->getThemeTitle(); ?></td>
+			<td><button class="button" onclick="setLocation('<?php echo $this->getUrl("themeoptions/theme/import").'?code='.$code ?>')"><span><?php echo __('Import') ?></span></button></td>
+		</tr>
+		<?php endforeach ?>
+	</tbody>
+</table>

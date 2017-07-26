@@ -1,0 +1,188 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+	    <cms_home_page>home</cms_home_page>
+		<general_section>
+			<layout>
+				<box_wide>0</box_wide>
+				<enable_rtl>0</enable_rtl>
+			</layout>
+			<header>
+				<ajaxcart_pro_desk>1</ajaxcart_pro_desk>
+				<ajaxcart_pro_mobile>1</ajaxcart_pro_mobile>
+				<default_menu>0</default_menu>
+				<sticky_header>1</sticky_header>
+			</header>
+			<category_view>
+				<!--alternative_image></alternative_image-->
+				<keep_image_ratio>1</keep_image_ratio>
+				<image_width>280</image_width>
+				<image_height>345</image_height>
+				<show_action>1</show_action>
+				<review_rating_star></review_rating_star>
+				<show_short_description></show_short_description>
+				<product_row_desk>3</product_row_desk>
+				<product_row_tablet>3</product_row_tablet>
+				<product_row_mobile>1</product_row_mobile>
+				<hover_product_effect>1</hover_product_effect>
+				<category_desktop_view>
+					<product_row_desk_1col>5</product_row_desk_1col>
+					<product_row_desk_2col>4</product_row_desk_2col>
+					<product_row_desk_3col>3</product_row_desk_3col>
+				</category_desktop_view>
+				<category_tablet_view>
+					<product_row_tablet_1col>3</product_row_tablet_1col>
+					<product_row_tablet_2col>3</product_row_tablet_2col>
+					<product_row_tablet_3col>2</product_row_tablet_3col>
+				</category_tablet_view>
+				<category_mobile_view>
+					<product_row_mobile>2</product_row_mobile>
+				</category_mobile_view>
+			</category_view>
+			<product_view>
+				<keep_image_ratio>1</keep_image_ratio>
+				<base_image_width>700</base_image_width>
+				<base_image_height>700</base_image_height>
+				<moreview_image_width>88</moreview_image_width>
+				<moreview_image_height>110</moreview_image_height>
+				<moreview_thumb_style>vertical</moreview_thumb_style>
+				<disable_product_zoom>0</disable_product_zoom>
+				<product_tabs>1</product_tabs>
+			</product_view>
+			<!--customtabs_product_view>
+				<show_custom_tabs></show_custom_tabs>
+				<disable_product_zoom></disable_product_zoom>
+				<cms_block_tab1></cms_block_tab1>
+				<custom_tabs_title></custom_tabs_title>
+				<static_block_id1></static_block_id1>
+				<cms_block_tab2></cms_block_tab2>
+				<cms_block_tab3></cms_block_tab3>
+				<cms_block_tab4></cms_block_tab4>
+				<cms_block_tab5></cms_block_tab5>
+			</customtabs_product_view-->
+			<product_compare>
+				<show_compare_link_top>1</show_compare_link_top>
+			</product_compare>
+			<newsletter_popup>
+				<enable>1</enable>
+				<static_block_id>fastest-handbag-block-popup-content</static_block_id>
+				<!--popup_width>700</popup_width>
+				<popup_height>500</popup_height-->
+			</newsletter_popup>
+			<contact_us>
+				<show_google_map>1</show_google_map>
+				<address>Philadelphia, PA</address>
+				<latitude>37.4419</latitude>
+				<longitude>-122.1419</longitude>
+				<zoom>13</zoom>
+				<!--contact_info></contact_info-->
+			</contact_us>
+		</general_section>
+		<variables>
+			<font>
+				<f_google_font>Poppins</f_google_font>
+				<f_google_font_weights>200,200italic,300,300italic,400,400italic,500,500italic,600italic,600italic,700,700italic,800,800italic,900,900italic</f_google_font_weights>
+				<f_default>400 12px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</f_default>
+				<f_h1>500 24px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</f_h1>
+				<f_h2>500 20px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</f_h2>
+				<f_h3>500 18px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</f_h3>
+				<f_h4>500 16px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</f_h4>
+				<f_h5>500 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</f_h5>
+				<f_h6>500 11px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</f_h6>
+				<f_special>500 20px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</f_special>
+				<f_note>400 12px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</f_note>
+			</font>
+			<page>
+				<page_background>#f0f1f2</page_background>
+				<border_radius>0</border_radius>
+				<box_shadow>none</box_shadow>
+				<page_background_file></page_background_file>
+				<page_background_image_option>0 0 no-repeat fixed</page_background_image_option>
+			</page>
+			<header>
+				<header_background>#ffffff</header_background>
+				<header_background_file></header_background_file>
+				<header_background_image_option>0 0 no-repeat fixed</header_background_image_option>
+				<header_top_background>#fefefe</header_top_background>
+				<header_text>#bab9ba</header_text>
+				<header_hover_text>#f3bf85</header_hover_text>
+				<header_border>#eeeeee</header_border>
+				<header_cart_background>#fafafa</header_cart_background>
+				<header_text_cart>#bab9ba</header_text_cart>
+				<header_search_text>#bab9ba</header_search_text>
+				<header_search_background>#fafafa</header_search_background>
+				<header_drop_text>#bab9ba</header_drop_text>
+				<header_drop_background>#ffffff</header_drop_background>
+			</header>
+			<menu>
+				<menu_background>#ffffff</menu_background>
+				<menu_hover_background>#ffffff</menu_hover_background>
+				<menu_text>#797d89</menu_text>
+				<menu_hover_text>#f3bf85</menu_hover_text>
+				<menu_border>#797d89</menu_border>
+				<menu_font>500 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</menu_font>
+				<vermenu_background>#fafafa</vermenu_background>
+				<vermenu_hover_background>#f3bf85</vermenu_hover_background>
+				<vermenu_text>#444444</vermenu_text>
+				<vermenu_hover_text>#ffffff</vermenu_hover_text>
+				<vermenu_border>#ebebeb</vermenu_border>
+				<vermenu_font>500 12px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</vermenu_font>
+				<menu_drop_background>#ffffff</menu_drop_background>
+				<menu_drop_text_title>#333333</menu_drop_text_title>
+				<menu_drop_text>#797d89</menu_drop_text>
+				<menu_drop_hover_text>#f3bf85</menu_drop_hover_text>
+				<menu_drop_border>#ffffff</menu_drop_border>
+				<menu_drop_font>400 12px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</menu_drop_font>
+			</menu>
+			<main>
+				<main_background>#f0f1f2</main_background>
+				<main_block_background>#ffffff</main_block_background>
+				<main_block_title_background>#ffffff</main_block_title_background>
+				<main_block_text_background>#121212</main_block_text_background>
+				<main_text>#a1a1a1</main_text>
+				<main_hover_text>#f3bf85</main_hover_text>
+				<main_title_text>#121212</main_title_text>
+				<main_alink_text>#797d89</main_alink_text>
+				<main_note_text>#797d89</main_note_text>
+				<main_productname_text>#797d89</main_productname_text>
+				<main_price_text>#797d89</main_price_text>
+				<main_hover_text_box>#ffffff</main_hover_text_box>
+				<main_border>#e0e0e0</main_border>
+				<main_title_border>#d5d5d5</main_title_border>
+				<main_tab_background>#f0f1f2</main_tab_background>
+				<main_tab_hover_background>#f0f1f2</main_tab_hover_background>
+				<main_tab_text>#d5d5d5</main_tab_text>
+				<main_tab_hover_text>#797d89</main_tab_hover_text>
+				<main_tab_border>#797d89</main_tab_border>
+			</main>
+			<footer>
+				<footer_background>#212121</footer_background>
+				<footer_background_file></footer_background_file>
+				<footer_background_image_option>0 0 no-repeat fixed</footer_background_image_option>
+				<footer_top_background>#212121</footer_top_background>
+				<footer_bottom_background>#212121</footer_bottom_background>
+				<footer_text>#929194</footer_text>
+				<footer_title_text>#ffffff</footer_title_text>
+				<footer_hover_text>#f8b5ad</footer_hover_text>
+				<footer_border>#cfcfcf</footer_border>
+			</footer>
+			<button>
+				<btn_default_background>#ffffff</btn_default_background>
+				<btn_default_text>#797d89</btn_default_text>
+				<btn_default_border>#797d89</btn_default_border>
+				<btn_default_font>400 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</btn_default_font>
+				<btn_primary_background>#f8b5ad</btn_primary_background>
+				<btn_primary_text>#ffffff</btn_primary_text>
+				<btn_primary_border>#f8b5ad</btn_primary_border>
+				<btn_primary_font>400 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</btn_primary_font>
+				<btn_productitem_background>#ffffff</btn_productitem_background>
+				<btn_productitem_text>#f8b5ad</btn_productitem_text>
+				<btn_productitem_border>#f8b5ad</btn_productitem_border>
+				<btn_productitem_font>400 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</btn_productitem_font>
+				<btn_hover_background>#f8b5ad</btn_hover_background>
+				<btn_hover_text>#ffffff</btn_hover_text>
+				<btn_hover_border>#f8b5ad</btn_hover_border>
+				<btn_hover_font>400 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif</btn_hover_font>
+			</button>
+		</variables>
+	</default>
+</config>

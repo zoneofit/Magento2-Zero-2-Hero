@@ -1,0 +1,23 @@
+<?php $helper = $this->helper('Codazon\ProductLabel\Helper\Wysiwyg\Images'); ?>
+<script type="text/javascript">
+var productLabel = {};
+productLabel.onInsertUrl = '<?php echo $this->getUrl('productlabel/wysiwyg_images/onInsert') ?>';
+productLabel.mediaUrl = '<?php echo $helper->getMediaUrl() ?>';
+require([
+	"jquery",
+	"Codazon_ProductLabel/js/browser"
+], function($){
+	window.clearValue = function(obj,id){
+		var thumb = '<?php echo $this->getAssetRepo()->getUrl('Codazon_ProductLabel/images/placeholder_thumbnail.jpg') ?>';
+		var $input = $('#'+id);
+		$input.val('');
+		var $attachImage = $input.parent().find('.attached_image');
+		$attachImage.attr('href',thumb);
+		$attachImage.find('img:first').attr('src',thumb);
+		return false;
+	}
+});
+</script>
+<style type="text/css">
+button.clear-img{float: left; font-size: 160%; border: none; padding: 1px 10px;}
+</style>

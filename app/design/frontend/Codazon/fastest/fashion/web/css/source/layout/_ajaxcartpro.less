@@ -1,0 +1,39 @@
+/* ============================================ *
+ * Codazon_AjaxCartPro
+ * ============================================ */
+.cart-footer .cart-qty{
+	.abs-cssall(@main_hover_text_box, @main_hover_text, @main_hover_text, @f_h6);
+	.footer-cart-summary .summary-content .price{
+		.lib-css(color, @main_hover_text);
+	}
+}
+.rtl-layout{
+	.footer-cart-summary{
+		float:right;
+	}
+	.footer-cart-additional{
+		float:left;
+	}
+	.cart-items{
+		float:right;
+		.item{
+			float:right;
+			.hover-sec{
+				left:auto;
+				right:100%;
+				.product.actions{
+					float:left;
+				}
+				.details-qty{
+					float:right;
+				}
+			}
+		}
+	}
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	.rtl-layout .cart-qty {
+		right: 10px;
+		left: auto;
+	}
+}

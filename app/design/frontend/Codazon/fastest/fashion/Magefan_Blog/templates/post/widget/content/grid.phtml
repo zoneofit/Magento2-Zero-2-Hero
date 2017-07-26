@@ -1,0 +1,47 @@
+<?php
+$posts = $block->getPostCollection();
+$descLength = $block->getDescLength();
+$showSlider = $block->getShowSlider();
+$height = 280;//$block->getThumbHeight();
+$width = 380;//$block->getThumbWidth();
+$helper = $this->helper('Magefan\Blog\Helper\Image');
+?>
+
+<?php if( count($posts) > 0 ): ?>
+<div class="cdz_wapper-blog">
+	<div class="row">
+        <div class="col-sm-24">
+            <div class="cdz-block-title">
+	            <p class="b-title h1"><span><?php echo $block->getTitle() ?></span></p>
+            </div>
+        </div>
+    </div>
+	<?php $i = 0 ?>
+	<div class="post-items <?php echo ($showSlider)?'cdz-post-slider':''; ?>">
+	<?php foreach($posts as $item): ?>
+	<?php
+		$url = $item->getPostUrl();
+		$desc = $item->getMetaDescription();
+		if(strlen($desc)> $descLength ) { 
+			$strCutDesc = substr($desc, 0, $descLength);
+			$desc = substr($strCutDesc, 0, strrpos($strCutDesc, ' ')).'&hellip;';
+		}
+		$desc = $this->stripTags($desc,null,true);
+	?>
+		<div class="<?php echo ($showSlider)?'col-sm-24':'col-sm-8'; ?> post-item">
+			<div class="cdz-blog-top">
+				<a href="<?php echo $url ?>">                
+					<img class="img-responsive" width="<?php echo $width ?>" height="<?php echo $height ?>" src="<?php echo $helper->init($item->getPostImage())->resize($width,$height); ?>" alt="<?php echo $item->getTitle() ?>" />
+				</a>
+				<div class="blog-date"><span><?php echo $block->getPostedOn($item,'F d, Y'); ?></span></div>
+			</div>
+			<div class="cdz-blog-bottom">
+				<h5 class="blog-title"><a href="<?php echo $url ?>"><?php echo $item->getTitle() ?></a></h5>
+				<div class="blog-desc"><?php echo $desc ?></div>
+				<p class="blog-text-link"><a class="btn-link" href="<?php echo $url ?>"><span><?php echo __('Read more') ?></span></a></p>
+			</div>
+		</div>
+	<?php endforeach ?>
+	</div>
+</div>
+<?php endif ?>

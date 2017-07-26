@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="blog_posts_list" class="Magefan\Blog\Block\Widget\PostList" is_email_compatible="true"
+            placeholder_image="Magento_CatalogWidget::images/products_list.png" ttl="86400">
+        <label translate="true">Magefan Blog Posts List</label>
+        <description translate="true">List of Blog Posts</description>
+        <parameters>
+            <parameter name="title" xsi:type="text" required="false" visible="true">
+                <label translate="true">Title</label>
+            </parameter>
+			<parameter name="categories" source_model="Magefan\Blog\Model\Categories" xsi:type="multiselect" required="false" visible="true">
+				<label translate="true">Categories</label>
+			</parameter>
+			<parameter name="order_by" xsi:type="select" required="true" visible="true">
+                <label translate="true">Order by</label>
+                <options>
+                    <option name="title" value="title" selected="true">
+                        <label translate="true">Name</label>
+                    </option>
+                    <option name="post_id" value="post_id">
+                        <label translate="true">ID</label>
+                    </option>
+					<option name="publish_time" value="publish_time">
+                        <label translate="true">Publish Time</label>
+                    </option>
+                </options>
+            </parameter>
+			<parameter name="order" xsi:type="select" required="true" visible="true">
+                <label translate="true">Order</label>
+                <options>
+                    <option name="asc" value="asc" selected="true">
+                        <label translate="true">ASC</label>
+                    </option>
+                    <option name="desc" value="desc">
+                        <label translate="true">DESC</label>
+                    </option>
+                </options>
+            </parameter>
+			<parameter name="post_count" xsi:type="text" required="true" visible="true">
+				<label translate="true">Post Count</label>
+			</parameter>
+			<parameter name="show_in_front" source_model="Magefan\Blog\Model\Show" xsi:type="multiselect" required="false" visible="true">
+				<label translate="true">Show in Frontend</label>
+			</parameter>
+			<parameter name="desc_length" xsi:type="text" required="false" visible="true">
+                <label translate="true">Description Length</label>
+            </parameter>
+			<parameter name="show_slider" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Show As Slider</label>
+            </parameter>
+			<parameter name="thumb_width" xsi:type="text" required="true" visible="true">
+                <label translate="true">Thumbnail Width</label>
+                <value>150</value>
+            </parameter>
+            <parameter name="thumb_height" xsi:type="text" required="true" visible="true">
+                <label translate="true">Thumbnail Height</label>
+                <value>150</value>
+            </parameter>
+			<parameter name="post_template" xsi:type="select" required="true" visible="true">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="default" value="post/widget/content/grid.phtml" selected="true">
+                        <label translate="true">Post Grid Template</label>
+                    </option>
+                    <option name="item1" value="custom">
+                        <label translate="true">Custom Template</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="custom_template" xsi:type="text" required="true" visible="true">
+                <label translate="true">Custom template</label>
+                <depends>
+                    <parameter name="post_template" value="custom" />
+                </depends>
+                <value></value>
+            </parameter>
+		</parameters>
+        <containers>
+            <container name="content">
+                <template name="grid" value="default" />
+            </container>
+            <container name="content.top">
+                <template name="grid" value="default" />
+            </container>
+            <container name="content.bottom">
+                <template name="grid" value="default" />
+            </container>
+        </containers>
+    </widget>
+</widgets>

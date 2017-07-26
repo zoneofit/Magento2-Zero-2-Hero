@@ -1,0 +1,271 @@
+/* ============================================ *
+ * Codazon_TabProducts
+ * ============================================ */
+@tab-control__height: 40px;
+@tab-control__padding-top: 10px;
+@tab-control__padding-right: 10px;
+@tab-control__border-width: 1px;
+
+//  Current tab
+@tab-control__background-color: @main_tab_background;
+@tab-control__color: @main_tab_text;
+
+@tab-control__hover__background-color: @main_tab_hover_background;
+@tab-control__hover__color: @main_tab_hover_text;
+
+
+@tab-control__active__background-color: @main_tab_hover_background;
+@tab-control__active__color: @main_tab_hover_text;
+
+
+@tab-content__background-color: @tab-control__active__background-color;
+@tab-content__border-top-status: false;
+@tab-content__border: @tab-control__border-width solid @main_tab_border;
+@tab-content__margin-top: @tab-control__height + @tab-control__border-width + @tab-control__padding-top + @tab-control__padding-bottom;
+@tab-content__padding-top: @tab-control__padding-top;
+@tab-content__padding-right: 0;
+@tab-content__padding-bottom: @tab-content__padding-top;
+@tab-content__padding-left: @tab-content__padding-right;
+
+
+@tab-content__margin-top: @tab-control__height - 1;
+//
+//    Common
+//--------------------------------------
+.mobile-showtab(){
+	> .item.title {
+		> .switch {
+			.lib-css(font, @f_h5);
+			.lib-css(border, @tab-content__border);
+			.lib-css(background, @main_tab_background);
+			margin-bottom:5px;
+			.abs-transition();
+			&:hover{
+				.abs-cssall(@btn_hover_text, @btn_hover_border, @btn_hover_background);
+			}	
+		}
+		&.active{
+			> .switch{ 
+				.abs-cssall(@btn_hover_text, @btn_hover_border, @btn_hover_background);
+			}
+		}
+	}
+	> .item.content{
+		margin-top:-6px;
+		padding-left:0;
+		padding-right:0;
+		padding-top:20px;
+		.lib-css(background, transparent);
+		.products{
+			//margin:0;
+		}
+		.owl-carousel .owl-stage-outer .product-item{
+			margin-bottom:0;
+		}	
+		.block{ margin-bottom:0;}
+	}
+}
+
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	.product.data.items,
+	.tabs-list.product.data.items{
+		.mobile-showtab();
+		margin-left:0;
+		margin-right:0;
+		border:0;
+	}
+}
+
+//Tab desktop
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	//Detail
+	/*.quickshop-tabs,*/
+	.product.info.detailed{
+		.product.data.items{
+			> .item.title {
+				> .switch {
+					background:transparent;
+					&:hover{
+						.abs-cssall(@main_tab_hover_text, @main_tab_hover_text, transparent);
+						&:before{
+							.abs-transform(~'scale(1, 1)');
+						}
+					}
+				}
+				&.active{
+					> .switch{ 
+						background:transparent;
+						
+					}
+				}
+			}
+			> .item.content{
+				border-top-width:1px;
+			}
+		}
+	}
+	.quickshop-tabs{
+		.product.data.items{
+			> .item.content{
+				border-top-width:0px;
+				padding-top:0;
+				margin-top:0;
+			}
+		}
+	}
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	.product.data.items{
+		display:inline-block;
+		width:100%;
+		vertical-align:top;
+		text-align:center;
+		> .item.title {
+			float:none;
+			display:inline-block;
+			vertical-align:top;
+			> .switch {
+				.lib-css(font, @f_h5);
+				text-transform:uppercase;
+				position:relative;
+				border-width:0;
+				//border-bottom-width:1px;
+				//border-bottom-style: solid;
+				&:before{
+					content:'';
+					bottom:0;
+					width:100%;
+					background:@main_tab_hover_text;
+					height:4px;
+					position:absolute;
+					left:0;
+					bottom:0;
+					.abs-transform(~'scale(0, 0)');
+					.abs-transition(~'all 300ms ease');
+				}
+				.abs-transition();
+				&:hover{
+					.abs-cssall(@main_tab_hover_text, @main_tab_hover_text, @main_tab_hover_background);
+					//border-bottom-width:0px;
+					&:before{
+						.abs-transform(~'scale(1, 1)');
+					}
+				}
+			}
+			&.active{
+				> .switch{ 
+					font-weight:700;
+					//.lib-css(background, @tab-control__hover__background-color);
+					.abs-cssall(@main_tab_hover_text, @main_tab_hover_text, @main_tab_hover_background);
+					//border-bottom-width:0px;
+					&:before{
+						.abs-transform(~'scale(1, 1)');
+					}
+					
+				}
+			}
+		}
+		> .item.content{
+			text-align:left;
+			.lib-css(background, transparent);
+			padding:20px 0 0;
+			border-width:0;
+			.rtl-layout &{
+				text-align:right;
+				margin-left:0;
+				margin-right:-100%;
+				float:left;
+			}
+		}
+	}
+	
+	
+	
+	.tabs-list{
+		&.product.data.items{
+			min-height:400px;
+			display:inline-block;
+			width:100%;
+			vertical-align:top;
+			text-align:center;
+			> .item.title {
+				float:none;
+				display:inline-block;
+				vertical-align:top;
+				> .switch {
+					border-width:0;
+					.abs-transition();
+					&:before{
+						display:none;
+					}
+				}
+			}
+			> .item.content{
+				border-top-width:0;
+			}
+		}
+	}
+	.tabs-list-sty02{
+		&:extend(.tabs-list all);
+		&.product.data.items{
+			> .item.title {
+				> .switch {
+					.lib-css(border, 1px solid);
+					.abs-borderradius(30px);
+					.abs-cssall(@main_tab_text, transparent, transparent, @f_h5);
+					min-width:126px;
+					padding:5px 10px;
+					line-height:25px;
+					height:35px;
+					&:hover{
+						.abs-cssall(@main_tab_hover_text, @main_tab_hover_text, transparent);
+					}
+				}
+				&.active{
+					> .switch{ 
+						font-weight:700;
+						.abs-cssall(@main_tab_hover_text, @main_tab_hover_text, transparent);
+						&:hover{
+							
+						}
+					}
+				}
+			}
+		}		
+	}
+	.tabs-list-sty03{
+		&:extend(.tabs-list all);
+		&.product.data.items{
+			float:left;
+			.rtl-layout &{
+				float:right;
+				> .item.title {
+					float:right;
+				}
+			}
+			> .item.title {
+				float:left;
+				> .switch{
+					.lib-css(font, @f_h3);
+					padding:15px 20px;
+					//line-height:25px;
+					height:50px;	
+				}
+			}
+			> .item.content{
+				border-top-width:1px;
+				padding-top:0;
+				margin-top:50px;
+			}
+		}
+	}
+}
+
+//RTL//
+body.rtl-layout{
+	.product.data.items .item.title a:after{
+		left: 10px;
+		right:auto;
+	}
+}

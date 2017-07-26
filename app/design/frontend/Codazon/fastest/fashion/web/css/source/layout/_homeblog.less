@@ -1,0 +1,251 @@
+/* ============================================ *
+ * Codazon_Blog
+ * ============================================ */
+.cdz_wapper-blog01{
+	.owl-carousel .owl-nav{
+		left:0;
+		top:-20px;
+		right:0;
+	}
+	.post-item{
+		.lib-css(background-color, @main_block_background);
+	}
+	.blog-title{ 
+		margin:(@indent__s + 5px) 0 @indent__s; 
+		.lib-css(font, @f_h5);
+		a{
+			.abs-link(@main_productname_text, @main_hover_text);
+			.lib-css(font, @f_h5);
+		}
+	}
+	.blog-text-link a{
+		display:inline-block;
+		margin-top:@indent__s;
+		position:relative; 
+		&.btn-link{
+			margin-bottom:10px;
+		}
+		&:before{
+			.abs-iconfont('\f101', 12px); 
+			margin-right:@indent__xs;
+		}
+		.rtl-layout &{
+			&:before{
+				display:none;
+			}
+			&:after{
+				.abs-iconfont('\f100', 12px); 
+				margin-right:@indent__xs;
+			}
+		}
+		
+	}
+	.cdz-blog-bottom{ padding:0 20px; overflow:hidden}
+	.blog-desc{
+		.abs-csscf(@main_note_text, @f_note);
+	}
+	.cdz-blog-top{
+		position:relative;
+		overflow:hidden;
+		.blog-date{
+			position:absolute; bottom:10px; left:10px; background:#fff;
+			.lib-css(color, #333333);
+			padding:7px 10px;
+			.abs-csscf(@main_note_text, @f_note);
+			float:left;
+			
+			&:before{
+				.abs-iconfont('\f073', 16px);
+				margin-right:@indent__xs;
+			}
+			.rtl-layout &{
+				float:right;
+				left:auto;
+				right:10px;
+				&:before{
+					margin-right:0;
+					margin-left:@indent__xs;
+				}
+			}
+		}
+		
+		a img{
+			.abs-scale(1);
+			.abs-transition();
+		}
+		&:hover a img{
+			.abs-scale(~'1.05, 1.05');
+		}
+	}
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+///Home Blog Handbag
+.cdz_wapper-blog02{
+	.post-item{
+		.lib-css(background-color, @main_block_background);
+	}
+	.cdz-blog-bottom{
+		padding:@indent__base @indent__s @indent__s;
+	}
+	.blog-desc{
+		.abs-csscf(@main_note_text, @f_note);
+		margin:0 0 @indent__base; 
+	}
+	.blog-title{ 
+		margin:0 0 @indent__base; 
+		.lib-css(font, @f_h5);
+		text-transform:uppercase;
+		a{
+			.abs-link(@main_productname_text, @main_hover_text);
+			.lib-css(font, @f_h5);
+		}
+	}
+	.blog-text-link{
+		text-align:center;
+	}
+	.cdz-blog-top{
+		position:relative;
+		overflow:hidden;
+		.blog-date{
+			position:absolute; top:0; right:0; background:#f8b5ad;
+			padding:7px 10px;
+			.abs-csscf(#ffffff, @f_note);
+			float:left;
+			.rtl-layout &{
+				float:right;
+				left:auto;
+				right:0;
+			}
+		}
+		
+		a img{
+			.abs-scale(1);
+			.abs-transition();
+		}
+		&:hover a img{
+			.abs-scale(~'1.05, 1.05');
+		}
+	}
+	
+	.owl-carousel{
+		padding-top:0;
+		.owl-nav{
+			position:static;
+		}
+		.owl-nav [class*='owl-']{
+			left:0;
+			top: calc(~'50% - 20px');
+			position:absolute;
+			.abs-scale(~'0, 0');
+			.abs-transition();
+			//.abs-cssall(@main_text, transparent, transparent);
+			&.owl-next{
+				right:0;
+				left:auto;
+			}
+			&:hover{
+				//.abs-cssall(@btn_primary_text, @btn_primary_border, @btn_primary_background);
+				
+			}
+			.rtl-layout &{
+				left:auto;
+				right:0;
+				&.owl-next{
+					left:0;
+					right:auto;
+				}
+			}
+		}
+		&:hover{
+			.owl-nav [class*='owl-']{
+				.abs-scale(~'1, 1');
+			}
+		}
+	}
+}
+
+//Home sportswear
+.cdz_wapper-blog03{
+	.lib-css(background, @main_block_background);
+	.post-items{
+		padding:20px;
+	}
+	.blog-title{ 
+		margin:(@indent__s + 5px) 0 @indent__s; 
+		.lib-css(font, @f_h5);
+		a{
+			.abs-link(@main_productname_text, @main_hover_text);
+			.lib-css(font, @f_h5);
+		}
+	}
+	.blog-text-link a{
+		display:inline-block;
+		margin-top:@indent__s;
+		position:relative; 
+	}
+	.cdz-blog-bottom{ padding:0; overflow:hidden}
+	.blog-desc{
+		.abs-csscf(@main_note_text, @f_note);
+	}
+	.cdz-blog-top{
+		position:relative;
+		overflow:hidden;
+		.blog-date{
+			position:absolute; bottom:10px; left:10px; background:#fff;
+			.lib-css(color, #333333);
+			padding:7px 10px;
+			.abs-csscf(@main_note_text, @f_note);
+			float:left;
+			&:before{
+				.abs-iconfont('\f073', 16px);
+				margin-right:@indent__xs;
+			}
+			.rtl-layout &{
+				float:right;
+				left:auto;
+				right:10px;
+				&:before{
+					margin-right:0;
+					margin-left:@indent__xs;
+				}
+			}
+		}
+		
+		a img{
+			.abs-scale(1);
+			.abs-transition();
+		}
+		&:hover a img{
+			.abs-scale(~'1.05, 1.05');
+		}
+	}
+}
+
+
+//Home outdoor
+.cdz_wapper-blog04{	
+	.owl-carousel .owl-nav{
+		right:-5px;
+		top:-79px;
+	}
+	.cdz-block-title .b-title{
+		background-color:transparent;
+		color:@main_productname_text;
+	}
+	.cdz-blog-top{
+		background: #f1f1f1;
+		padding: 20px;
+	}
+	.blog-title{ 
+		margin:@indent__s 0; 
+		.lib-css(font, @f_h5);
+		a{
+			.abs-link(@main_productname_text, @main_hover_text);
+			.lib-css(font, @f_h5);
+			font-weight:600;
+		}
+	}
+}

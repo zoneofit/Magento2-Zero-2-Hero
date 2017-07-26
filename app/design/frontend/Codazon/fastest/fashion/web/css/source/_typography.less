@@ -1,0 +1,213 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//    Common
+//--------------------------------------
+.lib-font-face(
+    @family-name: @font-family-name__base,
+    @font-path: '@{baseDir}fonts/opensans/light/opensans-300',
+    @font-weight: 300,
+    @font-style: normal
+);
+
+.lib-font-face(
+    @family-name: @font-family-name__base,
+    @font-path: '@{baseDir}fonts/opensans/regular/opensans-400',
+    @font-weight: 400,
+    @font-style: normal
+);
+
+.lib-font-face(
+    @family-name: @font-family-name__base,
+    @font-path: '@{baseDir}fonts/opensans/semibold/opensans-600',
+    @font-weight: 600,
+    @font-style: normal
+);
+
+.lib-font-face(
+    @family-name: @font-family-name__base,
+    @font-path: '@{baseDir}fonts/opensans/bold/opensans-700',
+    @font-weight: 700,
+    @font-style: normal
+);
+& when (@media-common = true) {
+	.items {
+		.lib-list-reset-styles();
+	}
+
+}
+////////////////////////////////////////////////////
+& when (@media-common = true) {
+    body {
+		.abs-colorfont(@main_text, @f_default);
+		.lib-form-element-all() {
+			input[type="text"],
+			input[type="password"],
+			input[type="url"],
+			input[type="tel"],
+			input[type="search"],
+			input[type="number"],
+			input[type="datetime"],
+			input[type="email"] {
+				
+				.lib-form-element-input(@_type: input-text);
+				.abs-csscf(@main_text, @f_default);
+				
+			}
+		}
+		input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"]{
+			height:40px;
+			.abs-cssall(@main_text, @main_border, @main_block_background, @f_default);
+			//.abs-borderradius(@border-radius);
+		}
+		textarea{ .abs-cssall(@main_text, @main_border, @main_block_background, @f_default);}
+		._keyfocus *,
+		input:not([disabled]),
+		textarea:not([disabled]),
+		select:not([disabled]) {
+			&:focus {
+				.lib-css(box-shadow, 0 1px 3px #e1e1e1);
+			}
+		}
+		input, textarea, select{
+			//.abs-borderradius(@border-radius);
+		}
+    }
+	
+	h1, .h1{ 
+		.lib-css(font, @f_h1);
+		.lib-css(color, @main_title_text);
+		.lib-css(margin, 0 0 @indent__base);
+	}
+	h2, .h2{ 
+		.lib-css(font, @f_h2);
+		.lib-css(margin, 0 0 @indent__base);
+	}
+	h3, .h3{ 
+		.lib-css(font, @f_h3);
+		.lib-css(margin, 0 0 @indent__base);
+	}
+	h4, .h4{ 
+		.lib-css(font, @f_h4);
+		.lib-css(margin, 0 0 @indent__s);
+	}
+	h5, .h5{ 
+		.lib-css(font, @f_h5);
+		.lib-css(margin, 0 0 @indent__s);
+	}
+	h6, .h6{ 
+		.lib-css(font, @f_h6);
+		.lib-css(margin, 0 0 @indent__s);
+	}
+	
+	a{ .abs-link()}
+	.text-small{font-size:90%}
+	.text-center{ text-align:center}
+	.text-uppercase{text-transform:uppercase}
+	
+	.header{
+		a{ .abs-link(@header_text, @header_hover_text)}
+	}
+	body{
+		overflow-x:hidden;
+		background:@page_background url(@page_background_file) @page_background_image_option;
+	}
+	.page-header{
+		background:@header_background url(@header_background_file) @header_background_image_option;
+	}
+	.page-main{
+		/*background:@main_background url(@main_background_file) @main_background_image_option;*/
+	}
+	.page-footer{
+		background:@footer_background url(@footer_background_file) @footer_background_image_option;
+	}
+	.space-s{
+			.lib-css(margin-bottom, @space-s);
+	}
+	.space-base{
+		.lib-css(margin-bottom, @space-base);
+	}
+	.space-md{
+		.lib-css(margin-bottom, @space-md);
+	}
+	.space-lg{
+		.lib-css(margin-bottom, @space-lg);
+	}
+	.maxwidth{
+		max-width:1200px;
+		//padding-left: @layout-indent__width;
+        //padding-right: @layout-indent__width;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+	}
+	.no-padding{padding:0 !important}
+	.no-margin{padding:0 !important}
+	.page-title-wrapper{
+		text-transform:uppercase;
+		.cms-index-index &{
+			display:none;
+		}
+	}
+	.page-main{
+		padding-top:20px;
+		.cms-index-index &{
+			padding-top:0;
+		}
+	}
+
+	
+
+	.cms-index-index .columns .column.main{padding-bottom:0}
+
+	/*
+	.block:not(.block-static-block) .block-content{padding:20px 0 0}
+	.minicart-wrapper .action.showcart .counter.qty{font-size:12px}
+	*/
+
+
+	/////Ajaxt Cart
+	#ajaxloading_container {
+		position: relative;
+		padding: 20px;
+		text-align: center;
+		border: 10px solid #a1a1a1;
+		background-color: white;
+		z-index: 99999;
+		max-height: 660px;
+	}
+	#ajaxloading_container {
+		min-width: 350px;
+		max-width: 500px;
+		z-index: 9999;
+		display: none;
+		position: fixed;
+		top: 0px;
+	}
+	#bg_fade {
+		background-color: #000;
+		left: 0px;
+		margin: 0px;
+		padding: 0px;
+		position: fixed;
+		top: 0px;
+		visibility: hidden;
+		width: 100%;
+		z-index: 998;
+		height: 1000px;
+		opacity:0.5;
+	}
+	
+}
+/////////////Mobile////////////////
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	.space-lg{
+		margin-bottom:@indent__l;
+	}
+	.space-xs{
+		margin-bottom:@space-mobile;
+	}
+}

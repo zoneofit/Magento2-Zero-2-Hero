@@ -1,0 +1,168 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Luma theme variables
+//  _____________________________________________
+
+//
+//  Typography
+//  ---------------------------------------------
+
+//  Fonts
+@font-family-name__base: 'Poppins';
+@font-family__base: @font-family-name__base, @font-family__sans-serif;
+
+//  Colors nesting
+@page__background-color: @page_background;
+@copyright__background-color: @color-gray56;
+
+//
+//  Icons
+//  ---------------------------------------------
+
+@icon-success: '\e60e';
+@icon-error: '\e61f';
+@icon-edit: '\e601';
+@icon-print: '\e624';
+@icon-star-empty: '\e625';
+@icon-download: '\e626';
+@icon-private: '\e629';
+@icon-present: '\e62a';
+@icon-gift-registry: '\e62b';
+
+@icon-calendar__font-size: 23px;
+
+//
+//  Sidebar
+//  ---------------------------------------------
+
+@sidebar__background-color: @color-white-smoke;  // Used in cart sidebar, Checkout sidebar, Tier Prices, My account navigation, Rating block background
+
+
+
+
+/* ============================================ *
+ * Codazon_Theme_Var
+ * ============================================ */
+//Font
+@f_default:~'400 12px/1.55 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+@f_h1:~'500 24px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+@f_h2:~'500 20px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+@f_h3:~'500 18px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+@f_h4:~'500 16px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+@f_h5:~'400 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+@f_h6:~'500 11px/1.55 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+@f_special: ~'500 20px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+@f_note:~'400 12px/1.55 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+
+// Border Radius - Box Shadow
+@border_radius: 0;
+@box_shadow: 1px 3px 1px rgba(50, 50, 50, 0.04);
+
+
+//Page
+@page_background:#c20000;
+@page_background_file:~'../images/background/bkg-page.png';
+@page_background_image_option:~'0 0 no-repeat';
+
+//Header
+@header_background: #2a292d;
+@header_background_file:'';
+@header_background_image_option:~'0 0 no-repeat fixed';
+@header_top_background: #393737;
+@header_text:#8b8b8b;
+@header_hover_text:#c20000;
+@header_border: #d2d4d4;
+
+@header_cart_background:#393737;
+@header_text_cart:#ffffff;
+@header_search_text:#999999;
+@header_search_background:#f6f6f6;
+
+@header_drop_text:#999999;
+@header_drop_background:#ffffff;
+
+//Menu
+@menu_background:#c20000;
+@menu_hover_background:#ae0000;
+@menu_text:#ffffff;
+@menu_hover_text:#ffffff;
+@menu_border:#ffffff;
+@menu_font: ~'500 16px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+
+//Vertical Menu
+@vermenu_background:#fafafa;
+@vermenu_hover_background:#c20000;
+@vermenu_text:#444444;
+@vermenu_hover_text:#ffffff;
+@vermenu_border:#ebebeb;
+@vermenu_font: ~'500 12px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+
+@menu_drop_background:#ffffff;
+@menu_drop_text_title: #000000;
+@menu_drop_text:#444444;
+@menu_drop_hover_text:#c20000;
+@menu_drop_border:#dfdfdf;
+@menu_drop_font: ~'400 12px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+
+//Main Content
+@main_background:#c20000;
+@main_block_background:#ffffff;
+@main_block_title_background:#ae0000;
+@main_block_text_background:#ffffff;
+@main_text:#000000;
+@main_hover_text:#c20000;
+@main_title_text:#000000;
+@main_alink_text:#a1a1a1;
+@main_note_text:#a1a1a1;
+@main_productname_text:#282828;
+@main_price_text:#000000;
+@main_hover_text_box:#ffffff;
+@main_border:#d3ced2;
+@main_title_border:#d3ced2;
+
+
+
+@main_tab_background:#d3ced2;
+@main_tab_hover_background:#c20000;
+@main_tab_text:#ffffff;
+@main_tab_hover_text:#ffffff;
+@main_tab_border:#d3ced2;
+
+
+//Footer
+@footer_background: rgba(255, 255, 255, 0);
+@footer_background_file: ~'../images/background/bkg-footer.jpg';
+@footer_background_image_option:~'0 0 no-repeat';
+@footer_top_background: rgba(71, 67, 81, 0.2);
+@footer_bottom_background: rgba(71, 67, 81, 0.2);
+@footer_text:#777777;
+@footer_title_text:#ffffff;
+@footer_hover_text:#c20000;
+@footer_border:#777777;
+
+//Button
+@btn_default_background: #c20000;
+@btn_default_text: #ffffff;
+@btn_default_border: #c20000;
+@btn_default_font: ~'500 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+
+@btn_primary_background: #c20000;
+@btn_primary_text: #ffffff;
+@btn_primary_border: #c20000;
+@btn_primary_font: ~'500 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+
+
+@btn_productitem_background: #c20000;
+@btn_productitem_text: #ffffff;
+@btn_productitem_border: #c20000;
+@btn_productitem_font: ~'500 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+
+@btn_hover_background: #ffffff;
+@btn_hover_text: #c20000;
+@btn_hover_border: #c20000;
+@btn_hover_font: ~'500 14px/1.35 Poppins, Helvetica Neue, Verdana, Arial, sans-serif';
+

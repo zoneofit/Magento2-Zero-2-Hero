@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>    	
+        <title>Contact Us</title>
+    </head>
+    <body>
+	  <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument name="title" translate="true" xsi:type="string">Contact Us</argument>
+            </action>
+        </referenceBlock>      
+        <referenceBlock name="content">
+        	  <block class="Magento\Framework\View\Element\Template" name="contact.map" before="-" template="Magento_Contact::store_map.phtml">
+            </block>
+        </referenceBlock>
+		<referenceContainer name="content">
+            <container name="content.contact" htmlTag="div" htmlClass="row">
+				<container name="content.left" htmlTag="div" htmlClass="col-sm-12">
+					 <block class="Magento\Contact\Block\ContactForm" name="contactForm" template="Magento_Contact::form.phtml">
+						<container name="form.additional.info" label="Form Additional Info"/>
+					</block>
+				</container>
+				<container name="content.right" htmlTag="div" htmlClass="col-sm-12">
+					<block class="Magento\Framework\View\Element\Template" name="contact.map" before="-" template="Magento_Contact::store_map.phtml">
+					</block>
+				</container>
+				
+			</container>
+        </referenceContainer>
+    </body>
+</page>

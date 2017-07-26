@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<quickshop>
+			<general>
+				<active>1</active>
+				<label>Quick Shop</label>
+				<additional_tab_display>1</additional_tab_display>
+				<review_tab_display>1</review_tab_display>
+				<auto_add_buttons>1</auto_add_buttons>
+				<item_class><![CDATA[.product-item]]></item_class>
+				<target><![CDATA[.product-item-info]]></target>
+			</general>
+		</quickshop>
+	</default>
+</config>

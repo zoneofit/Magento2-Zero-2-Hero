@@ -1,0 +1,104 @@
+/* ============================================ *
+ * Codazon_Footer
+ * ============================================ */
+@footer__background: @footer_background;
+@footer-top__background: @footer_top_background;
+@footer-bottom__background: @footer_bottom_background;
+@footer__text: @footer_text;
+@footer-title__text: @footer_title_text;
+@footer__hover__text: @footer_hover_text;
+@footer__border: @footer_border;
+
+.page-footer{
+	.lib-css(background, @footer__background);
+	.lib-css(color, @footer__text);
+	a{
+		.abs-link(@footer__text, @footer__hover__text);
+	}
+	ul, li{.lib-list-reset-styles();}
+	
+	/*.top-footer-wrapper{
+		.lib-css(background-color, @footer-top__background);
+	}
+	.footer-container-wrapper{
+		padding-top:@indent__m * 2; 
+		padding-bottom:@indent__l; 
+	}
+	.footer-content-top{ 
+		padding-top:@indent__l; 
+		padding-bottom:@indent__l; 
+		.block-static-block.widget{
+			margin-bottom:0;
+		}
+	}
+	
+	*/
+	.footer-content-top{ 
+		padding-top:@indent__xl; 
+		padding-bottom:@indent__l; 
+		.block-static-block.widget{
+			margin-bottom:0;
+		}
+	}
+	.footer-logo-wrapper{
+		text-align:center;
+	}
+	.bottom-footer-wrapper{
+		text-align:center;
+		.lib-css(background, @footer-bottom__background);
+		padding:@indent__l 0;
+		overflow:hidden;
+		.block-static-block.widget{
+			margin-bottom:0;
+		}
+	}
+	.footer.content .links{
+		width:100%;
+		margin:0 0 @indent__s;
+		li{
+			text-transform:uppercase;
+			display:inline-block; margin: 0  @indent__base;
+			a{
+				.lib-css(font, @f_h5);
+				.abs-link(@footer-title__text, @footer__hover__text);
+			}
+		}
+	}
+	.footer-social{
+		margin:0; 
+		padding-top:@indent__l;
+		padding-bottom:@indent__l;
+		a{
+			display:inline-block; vertical-align:top; width:40px; height:40px; line-height:40px; text-align:center; margin: 10px @indent__base 15px;
+			.abs-transition();
+			.lib-css(border, 0px solid @footer__border);
+			.abs-cssall(@footer__text, @footer__border, transparent);
+			position:relative;
+			&:before{
+				content:'';
+				.lib-css(border, 1px solid @footer__border);
+				position:absolute; top:0; left:0;
+				width:100%;
+				height:100%;
+				.abs-transform(~'rotate(45deg)');
+			}
+			span{ font-size:0;
+				&:before{ font-size:14px;}
+			}
+			&:hover{
+				//.abs-cssall(@footer-title__text, @footer__hover__text, @footer__hover__text);
+				.lib-css(color, @footer__hover__text);
+				&:before{
+					border-color:@footer__hover__text;
+				}
+				
+			}
+		}
+	}
+	
+	.copyright{ .lib-css(font, @f_h5);}
+	address{margin-bottom:@indent__s; margin-top:@indent__s;}
+	
+	.footer-custom-block{ float:right;}
+}
+

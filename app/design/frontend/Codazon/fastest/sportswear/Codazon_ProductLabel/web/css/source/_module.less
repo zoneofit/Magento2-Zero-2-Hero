@@ -1,0 +1,24 @@
+ul.cdz-product-labels {z-index: 10; position: absolute;
+    top: 0;
+    right: 0; margin:0; padding:0;}
+ul.cdz-product-labels li.label-item {list-style: none; color: #FFF; display: table; 
+text-transform: uppercase; 
+    margin-bottom: 0px;
+    padding: 9px 5px;
+    font-size: 9px;
+    width: auto;
+    height: auto; position:relative;}
+ul.cdz-product-labels li.label-item:before {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-width: 47px 0 0 47px;
+    border-style: solid;
+    border-color: #17c7be transparent;
+}	
+ul.cdz-product-labels li.label-item .label-content{display: table-cell; vertical-align: middle; text-align: center; position: relative;}
+ul.cdz-product-labels li.label-item.sale:before{border-color: #C97178 transparent;}
+
+.products-list ul.cdz-product-labels{ left:0; right:auto;}
+.products-list ul.cdz-product-labels li.label-item:before{ left:0; right:auto; border-width: 0 0 47px 47px; border-color: transparent #17c7be;}

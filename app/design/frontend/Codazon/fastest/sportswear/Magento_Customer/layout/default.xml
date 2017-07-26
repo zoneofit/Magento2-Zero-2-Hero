@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>    	
+        <move element="authorization-link-login" destination="header.wrapper.right" after="minicart"/>
+        <move element="customer" destination="authorization-link-login" />
+        <referenceBlock name="customer">
+        	<block class="Magento\Customer\Block\Account\AuthorizationLink" name="log.out.link" template="account/link/authorization.phtml" after="my-account-link" />							
+        </referenceBlock>
+        <move element="my-account-link" destination="customer" before="log.out.link" />
+        <referenceBlock name="register-link" display="false" />
+        
+        <referenceBlock name="authorization-link-login" display="true" template="account/link/custom_authorization.phtml" />
+    </body>
+</page>

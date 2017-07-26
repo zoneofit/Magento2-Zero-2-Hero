@@ -1,0 +1,119 @@
+<?php if($_slideShow = $block->getSlideshowData()): ?>
+<?php 
+$_slideshowHelper = $this->helper('Codazon\Slideshow\Helper\Data');
+$_helperImage = $this->helper('Codazon\Slideshow\Helper\Image');
+$_images = $_slideshowHelper->decodeJson($_slideShow['content']);
+$_parameters = $_slideshowHelper->decodeJson($_slideShow['parameters']);
+$classid = md5(json_encode($block->getData()));
+$width = $_parameters['width'] ? $_parameters['width'] : 1280;
+$height = $_parameters['height'] ? $_parameters['height'] : 500;
+?>
+<?php if($_images): ?>
+<?php $_firstImage = current($_images); ?>
+<div class="cdz-slideshow">        
+        <div class="slider-wrapper theme-default loading" style="min-height:<?php echo $height ?>px">
+        	 <div class="slider-item f-image">
+                        <?php if($_firstImage['link']): ?>
+                        <a href="<?php echo $_firstImage['link'] ?>">
+                        <?php endif; ?>                            
+                            <img src="<?php echo $_helperImage->init($_firstImage['file'])->resize($width,$height); ?>"                              
+                            alt="<?php echo $_firstImage['link'] ?>" title="<?php echo $_firstImage['link'] ?>" />                           
+                        <?php if($_firstImage['link']): ?>
+                        </a>
+                        <?php endif; ?>
+                        <div class="cdz-slideshow-description">                            
+                                <div class="cdz-owlcarousel-des">
+                                    <?php echo $_slideshowHelper->filterTemplate($_firstImage['caption']) ?>
+                                </div>                            
+                        </div>
+            </div>
+            <div class="owl-carousel owl-theme <?php echo $classid ?>">
+                <?php $i=0; foreach ($_images as $key => $_image): ?>                
+                    <?php if($_image['disabled'] == 0): ?>
+                    <div class="slider-item">
+                        <?php if($_image['link']): ?>
+                        <a href="<?php echo $_image['link'] ?>">
+                        <?php endif; ?>                                                   
+                            <img 
+                            <?php if($_parameters['lazyLoad'] && $i!=0): ?>                             
+                            src="<?php echo $_helperImage->init($_firstImage['file'])->resize($width,$height); ?>" class="owl-lazy" data-src='<?php echo $_helperImage->init($_image['file'])->resize($width,$height); ?>'                             
+                            <?php else: ?> 
+                             src='<?php echo $_helperImage->init($_image['file'])->resize($width,$height); ?>'
+                             <?php endif; ?> 
+                             <?php if ($_parameters['controlNavThumbs']): ?> data-hash="<?php echo $classid.$key ?>" <?php endif; ?> alt="<?php echo $_image['link'] ?>" title="<?php echo $_image['link'] ?>" 
+                            
+                            />
+                           
+                        <?php if($_image['link']): ?>
+                        </a>
+                        <?php endif; ?>
+                        <div class="cdz-slideshow-description">                            
+                                <div class="<?php echo $_image['transition'] ?> cdz-owlcarousel-des">
+                                    <?php echo $_slideshowHelper->filterTemplate($_image['caption']) ?>
+                                </div>                            
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                    
+                <?php $i++;endforeach; ?>
+                
+            </div>
+            <?php if($_parameters['controlNavThumbs'] == 1): ?>
+                <?php
+                    $thumgWidth = $_parameters['thumbWidth'] ? $_parameters['thumbWidth'] : 100;
+                    $thumbHeight = $_parameters['thumbHeight'] ? $_parameters['thumbHeight'] : 100;
+                ?>                                               
+                <?php foreach ($_images as $key => $_image): ?>
+                    <?php if($_image['disabled'] == 0): ?>
+                        <a class="slider-thumbnail" href="#<?php echo $classid.$key ?>">
+                            <img src="<?php echo $_helperImage->init($_image['file'])->resize($thumbWidth,$thumbHeight); ?>" />
+                        </a>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+             <?php endif; ?>
+        </div>
+
+</div>    
+
+    <script type="text/javascript">
+    require(['jquery','owlSlider','domReady!'],function($){
+    	var owl = $('.<?php echo $classid ?>');    	
+    	if(owl.length){
+    		owl.on('initialized.owl.carousel', function(e) {	        	
+	        	var parentDiv = $(this).parent();		        	
+	        	if(parentDiv.hasClass('loading')) 
+	        	{
+	        		parentDiv.removeClass('loading');
+	        		parentDiv.removeAttr('style');
+	        	}        
+	        	var firstImage = parentDiv.find('div.f-image'); 
+	        	firstImage.fadeTo('fast',0);
+	        	firstImage.remove();
+	        	
+			});
+	        owl.owlCarousel({
+	            animateOut: "<?php echo $_parameters['animateOut'] ?>",
+	            animateIn: "<?php echo $_parameters['animateIn'] ?>",
+	            items: 1,
+	            loop: <?php echo ($_parameters['loop'] == 0) ? 'false' : 'true' ?>,
+	            center: true,
+	            //rewind: false,
+	
+	            startPosition: <?php echo $_parameters['startPosition'] ? $_parameters['startPosition'] : '0' ?>,
+	            rtl: ThemeOptions.rtl_layout == 1 ? true : false,                                   
+	
+	            autoplay : <?php echo ($_parameters['autoplay'] == 0) ? 'false' : 'true' ?>,
+	            
+	            autoplayHoverPause : <?php echo ($_parameters['autoplayHoverPause'] == 0) ? 'false' : 'true' ?>,
+	            autoplaySpeed: <?php echo ($_parameters['autoplaySpeed'] == 0) ? 'false' : 'true' ?>,
+	            nav: <?php echo ($_parameters['nav'] == 0) ? 'false' : 'true' ?>,
+	            dots: <?php echo ($_parameters['dots'] == 0) ? 'false' : 'true' ?>,
+	            lazyLoad: <?php echo ($_parameters['lazyLoad'] == 0) ? 'false' : 'true' ?>,
+	            URLhashListener: <?php echo ($_parameters['controlNavThumbs'] == 0) ? 'false' : 'true' ?>,
+	                        
+	        });	        	     
+    	}
+    });           
+    </script>
+    <?php endif; ?>
+<?php endif; ?>

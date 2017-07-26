@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+   
+    <update handle="editor"/>
+     <head>
+        <css src="jquery/fileUploader/css/jquery.fileupload-ui.css"/>   
+        <css src="Codazon_Slideshow::css/styles.css"/>        
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Codazon\Slideshow\Block\Adminhtml\Slideshow\Edit" name="cdz_slideshow_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Codazon\Slideshow\Block\Adminhtml\Slideshow\Edit\Tabs" name="cdz_slideshow_edit_tabs">
+                <block class="Codazon\Slideshow\Block\Adminhtml\Slideshow\Edit\Tab\Main" name="cdz_slideshow_edit_tab_main"/>
+                <block class="Codazon\Slideshow\Block\Adminhtml\Slideshow\Edit\Tab\Content" name="cdz_slideshow_edit_tab_content"/>
+                <block class="Codazon\Slideshow\Block\Adminhtml\Slideshow\Edit\Tab\Parameters" name="cdz_slideshow_edit_tab_parameters"/>               
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">main_section</argument>
+                    <argument name="block" xsi:type="string">cdz_slideshow_edit_tab_main</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">content_section</argument>
+                    <argument name="block" xsi:type="string">cdz_slideshow_edit_tab_content</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">design_section</argument>
+                    <argument name="block" xsi:type="string">cdz_slideshow_edit_tab_parameters</argument>
+                </action>                
+            </block>
+        </referenceContainer>
+    </body>
+</page>

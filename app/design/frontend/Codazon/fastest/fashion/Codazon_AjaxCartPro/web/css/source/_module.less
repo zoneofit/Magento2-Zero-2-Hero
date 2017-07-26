@@ -1,0 +1,282 @@
+/* ============================================ *
+ * Codazon_AjaxCartPro
+ * ============================================ */
+.cart-footer{
+	position: fixed; 
+	bottom:0;
+	width: 100%; 
+	z-index: 100;
+	left:0;
+}
+.footer-mini-cart {
+	background: #fff; 
+	padding: 0; 
+	overflow: hidden; 
+	position:relative;
+	&:before{
+		content:'';
+		position:absolute;
+		width:100%;
+		top:-3px;
+		left:0;
+		height:3px;
+		box-shadow:0 2px 3px #e1e1e1;
+	}
+}
+.cart-qty {
+	position: absolute; 
+	background: #fc7070;
+	color: #fff;
+	top: -33px;
+	font-size:85%;
+	text-transform:uppercase;
+	padding: 10px 20px 7px; 
+	z-index: 200; 
+	cursor: pointer; 
+	z-index:0;
+	&:after{
+		display: inline-block;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		content: '\f106';
+		font-size: 20px;
+		float: right;
+		margin-top: -4px;
+		-moz-transition: all 500ms ease;
+		-webkit-transition: all 500ms ease;
+		-o-transition: all 500ms ease;
+		transition: all 500ms ease;
+		-moz-backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		margin-left: 5px;
+		
+	}
+	&.active:after{
+		    -moz-transform: rotate(180deg);
+			-o-transform: rotate(180deg);
+			transform: rotate(180deg);
+	}
+}
+
+.cart-items {
+	list-style: none;
+	//overflow:hidden;
+	float:left;
+	.item {
+		margin-right: 10px; 
+		position: relative; 
+		float: left;
+		.product {
+			float: left; position: relative; width: 65px; padding:10px 0; height:85px;
+			img{
+				width:65px !important;
+				height:65px !important;
+			}
+		}
+		span.item-qty {
+			position: absolute; 
+			top: 10px; 
+			right: 5px; 
+			z-index: 100; 
+			background: #fc7070;
+			color: #fff;
+			display: block; 
+			border-radius: 100%; 
+			width: 17px; 
+			height: 17px; 
+			line-height: 18px;
+			text-align: center; 
+			font-size:85%;
+		}
+		.hover-sec{
+			position:absolute; left:100%;
+			float:left; height: 85px; padding:23px 0; background: #F4F4F4; width: 0;visibility: hidden;
+			overflow:hidden;
+			.abs-opacity(0);
+			filter: alpha(opacity=0);
+			.abs-transition();
+			.abs-transition(~'opacity .4s ease, transform .4s ease, visibility .4s linear 0s');
+			.abs-transform(~'translateX(-30px)');
+			z-index:1;
+			.details-qty{
+				float:left;
+				.label{display:none}
+				input{width:50px;}
+				button{
+					position: absolute;
+					top: 23px;
+					right: 0;
+					z-index: 3;
+				}
+			}
+			.product.actions {
+				width:auto;
+				padding:0;
+				float:right;
+				.primary a,
+				.secondary a{
+					.lib-icon-font(
+					@icon-edit,
+					@_icon-font-size: 16px,
+					@_icon-font-line-height: 18px,
+					@_icon-font-text-hide: true,
+					@_icon-font-color: @minicart-icons-color,
+					@_icon-font-color-hover: @primary__color,
+					@_icon-font-color-active: @minicart-icons-color
+					);
+				}
+				.secondary a{
+					.lib-icon-font-symbol(
+					@_icon-font-content: @icon-trash
+					);
+				}
+			}
+		}
+		.show-options.hover-sec{
+			width: 100px; padding: 23px 10px; .abs-opacity(1);
+			filter: alpha(opacity=100);
+			.abs-transform(~'translateX(0)');
+			visibility: inherit;
+		}
+		.edit-icon{
+			cursor: pointer;
+			position: absolute;
+			bottom: 5px;
+			right: 5px;
+			font-size:0;
+			width:17px;
+			height:17px;
+			text-align:center;
+			color:#ffffff;
+			//border:1px solid #282828;
+			background:#282828;
+			.abs-borderradius(3px);
+			&:before{
+				display: inline-block;
+				font-family: FontAwesome;
+				font-style: normal;
+				font-weight: normal;
+				line-height: 17px;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				content: '\f040';
+				font-size: 11px;
+				-moz-transition: all 500ms ease;
+				-webkit-transition: all 500ms ease;
+				-o-transition: all 500ms ease;
+				transition: all 500ms ease;
+				-moz-backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+			}
+		}
+	}
+}
+.footer-cart-additional{ float:right;}
+.summary-content > .row > .col-xs-12{
+	text-align:right;
+	&:first-child{
+		text-align:left
+	}
+}
+.footer-cart-summary {
+	float: left;
+    width: 320px;
+    padding: 24px 20px 17px;
+    border-left: 1px solid #e1e1e1;
+    height: 85px;
+	.summary.title{
+		display:none;
+	}
+	.summary-content{
+		font-size:14px;
+		.price{ color:#fc7070}
+	}
+}
+.cart-footer .footer-cart-actions {
+	float: right;
+    padding: 23px 20px 19px;
+    border-left: 1px solid #e1e1e1;
+    height: 85px;
+	.action.primary {
+		&:before{
+			display: inline-block;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			content: '\f00c';
+			font-size: 18px;
+			-moz-transition: all 500ms ease;
+			-webkit-transition: all 500ms ease;
+			-o-transition: all 500ms ease;
+			transition: all 500ms ease;
+			-moz-backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			margin-right: 5px;
+		}
+	}
+}
+//Mobile
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	.cart-qty{
+		.abs-borderradius(50%);
+		top: -63px;
+		left: 10px;
+		padding:0;
+		width:50px;
+		height:50px;
+		line-height:50px;
+		text-align:center;
+		
+		.abs-transition();
+		&.active{
+			top:-50px;
+			.abs-borderradius(0);
+			&:after{
+				content:'\f00d';
+				-moz-transform: rotate(0);
+				-o-transform: rotate(0);
+				transform: rotate(0);
+			}
+		}
+		&:after{
+			float:none;
+			line-height:50px;
+			margin:0;
+			content:'\f291';
+		}
+		span{
+			display:none;
+		}
+	}
+	.footer-cart-additional{
+		clear:both; width:100%;
+		.footer-cart-summary{
+			width:100%;
+			clear:both;
+			border:0;
+			.row .cdz-sm-12{
+				text-align:right;
+				&:first-child{text-align:left}
+			}
+			.cdz-sm-12{float:left; width:50%;}
+		}
+		.footer-cart-actions{
+			width:100%;
+			clear:both;
+			border:0;
+			border-top: 1px solid #e1e1e1;
+			.action.primary{width:100%;}
+		}
+		
+	}
+}

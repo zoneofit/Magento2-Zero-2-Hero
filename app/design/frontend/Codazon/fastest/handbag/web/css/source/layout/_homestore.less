@@ -1,0 +1,23 @@
+//
+//    Desktop
+//--------------------------------------
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+	.block-static-block.widget, 
+	.block-cms-link.widget{ margin-bottom:@space-base;}
+	.cdz-slideshow{ margin-bottom:@space-lg;}
+}
+
+///Slider brand
+.cdz-brand-slider-wrap{
+	.lib-css(background-color, @main_block_background);
+	padding:20px;
+	.cdz-banners-item{
+		border-width:0;
+	}
+}
+
+.product-item-name{
+	.lib-css(font, @f_default);
+}
+
+.sticky-menu .cdz-main-menu .cdz-horizontal-menu li.level0.parent:hover:after{display:none;}

@@ -1,0 +1,10 @@
+.admin__menu .level-0.item-codazon-options  > a:before{
+	content:'';
+	background:url(img/codazon-logo.png) no-repeat center center;
+}
+.admin__menu .level-0.item-codazon-options._active > a:before, 
+.admin__menu .level-0.item-codazon-options:hover > a:before{
+	content:'';
+	background:url(img/codazon-logo.png) no-repeat center center;
+}
+.admin__menu .submenu .item-fastest-options a{text-transform:capitalize}

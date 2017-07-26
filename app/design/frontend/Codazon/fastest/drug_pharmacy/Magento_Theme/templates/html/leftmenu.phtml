@@ -1,0 +1,127 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @see \Magento\Theme\Block\Html\Topmenu
+ */
+?>
+<?php $columnsLimit = $block->getColumnsLimit() ?: 0; ?>
+<?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
+<?php $_visibleMenuCount = $block->getData("visible_item") ? $block->getData("visible_item") : 10 ?>
+<?php 
+	$_themeHelper = $this->helper('Codazon\ThemeOptions\Helper\Data');
+	$_mobileHelper = $this->helper('Codazon\ThemeOptions\Helper\Mobile'); 	
+?>
+
+<nav class="navigation" id="left-nav" role="navigation">
+	<div class="menu-title"> <?php /* @escapeNotVerified */  echo __('All Categories') ?></div>
+	
+    <ul class="left-menu" data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'
+    <?php echo (!$_themeHelper->isHomePage() || ($_mobileHelper->isMobile() && !$_mobileHelper->isTablet())) ? "style='display:none !important'" : ""?>
+    >
+        <?php /* @escapeNotVerified */ echo $_menu; ?>
+    </ul>
+</nav>
+<script type="text/javascript">
+require(['jquery','mage/translate'],function($){
+	if($('nav').length )
+	{		
+		function addMoreCategoriesLink() {
+			var visibleCount = <?php echo $_visibleMenuCount ?>;
+			if($("ul.left-menu li.level-top").length > visibleCount){
+				$("ul.left-menu li.level-top").each(function(index,key){
+					if (index >= visibleCount-1)
+					{
+						$(this).addClass("more_menu");
+						$(this).hide();			
+					}
+				
+				});
+				var more = "<li class='more-categories'><a href='#'><span>"+$.mage.__('More Categories')+"</span></a></li>";
+				$("ul.left-menu").append(more);
+				$(".more-categories").click(function() {
+				  $(".more_menu").stop().slideToggle();
+				  if ($(".more-categories").hasClass("clicked")) {
+				      $(".more-categories").removeClass("clicked");
+				  } else $(".more-categories").addClass("clicked");
+				  return false;
+			    });
+		    }
+		}	
+										
+		function clickMenu() {
+			if($('nav').length)
+			{									
+				$('nav').unbind();				
+		    	$('nav div.menu-title').click(function () {					
+		    		$('#left-nav').toggleClass('active');
+		    		$('ul.left-menu', $(this).parent()).slideToggle(100);
+		    	})
+		    }		
+		}
+		
+		function hoverMenu() {			
+			$('nav').hover(function () {
+	    	 		$('ul.left-menu', this).removeAttr('style');
+				    $('ul.left-menu', this).stop().slideDown(100);
+				  },
+				  function () {
+				  	$('ul.left-menu', this).css('display','none !important');
+				    $('ul.left-menu', this).stop().slideUp(100);
+				  }
+			  );			
+		}
+		
+		
+	    <?php if($_mobileHelper->isMobile() && !$_mobileHelper->isTablet()): ?>
+				setTimeout(function(){
+				    	clickMenu();
+				},500);
+
+	    <?php elseif($_mobileHelper->isTablet()): ?>
+	    	<?php if(!$_themeHelper->isHomePage()): ?>
+	    		clickMenu();
+	    	<?php endif; ?>
+	    <?php else: ?>	    	
+	    	<?php if(!$_themeHelper->isHomePage()): ?>
+				hoverMenu();
+			<?php else: ?>						
+				$(window).resize(function () {
+			    	if(typeof timeResize != 'undefined'){
+				        clearTimeout(timeResize);
+				    }
+				    var timeResize = setTimeout(function(){			        
+						var windowWidth = window.innerWidth;																
+						if(windowWidth < 768){							
+							$('nav ul.left-menu').hide();							
+							hoverMenu();
+						}
+						else{							
+							$('nav ul.left-menu').removeAttr('style');
+							$('nav').unbind();
+						}
+				    },250);	
+		    	});    	 
+			<?php endif; ?>
+	    <?php endif; ?>
+    	$(document).ready(function () {
+    		addMoreCategoriesLink();
+    		var windowWidth = window.innerWidth;																
+			if(windowWidth < 768){							
+				$('nav ul.left-menu').hide();							
+				hoverMenu();
+			}	
+    	})
+	    
+	}
+});
+</script>

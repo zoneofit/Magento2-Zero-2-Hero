@@ -1,0 +1,91 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<type name="Codazon\ThemeOptions\Framework\App\Config\ScopePool">
+        <arguments>
+            <argument name="readerPool" xsi:type="object">Codazon\ThemeOptions\Model\Config\Reader\ReaderPool\Proxy</argument>
+        	<argument name="cache" xsi:type="object">Magento\Framework\App\Cache\Type\Config</argument>
+        </arguments>
+    </type>
+    <type name="Codazon\ThemeOptions\Model\Config\Reader\ReaderPool">
+        <arguments>
+            <argument name="readers" xsi:type="array">
+                <item name="default" xsi:type="object">Codazon\ThemeOptions\Model\Config\Reader\DefaultReader</item>
+                <item name="website" xsi:type="object">Codazon\ThemeOptions\Model\Config\Reader\Website</item>
+                <item name="websites" xsi:type="object">Codazon\ThemeOptions\Model\Config\Reader\Website</item>
+                <item name="store" xsi:type="object">Codazon\ThemeOptions\Model\Config\Reader\Store</item>
+                <item name="stores" xsi:type="object">Codazon\ThemeOptions\Model\Config\Reader\Store</item>
+            </argument>
+        </arguments>
+    </type>
+    <preference for="Codazon\ThemeOptions\Framework\App\Config\Scope\ReaderPoolInterface" type="Codazon\ThemeOptions\Model\Config\Reader\ReaderPool"/>
+    <type name="Codazon\ThemeOptions\Model\Config\Reader\Website">
+        <arguments>
+            <argument name="scopePool" xsi:type="object">Codazon\ThemeOptions\Framework\App\Config\ScopePool\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Codazon\ThemeOptions\Model\Config\Reader\Store">
+        <arguments>
+            <argument name="scopePool" xsi:type="object">Codazon\ThemeOptions\Framework\App\Config\ScopePool\Proxy</argument>
+        	<argument name="storeManager" xsi:type="object">Magento\Store\Model\StoreManagerInterface\Proxy</argument>
+        </arguments>
+    </type>
+    
+    <type name="Magento\Framework\View\Asset\Repository">
+        <plugin name="codazon_options_framework_view_asset_repository"
+                type="Codazon\ThemeOptions\Framework\View\Asset\Repository\Plugin"
+                sortOrder="10"
+                disabled="true"/>
+    </type>
+    <type name="Magento\Framework\View\Asset\File\FallbackContextFactory">
+    	<plugin name="codazon_options_framework_view_asset_file_fallbackcontextfactory"
+                type="Codazon\ThemeOptions\Framework\View\Asset\File\FallbackContextFactory\Plugin"
+                sortOrder="10"
+                disabled="true"/>
+    </type>
+    <type name="Magento\Framework\View\Asset\Source">
+    	<plugin name="codazon_options_framework_view_asset_source"
+                type="Codazon\ThemeOptions\Framework\View\Asset\Source\Plugin"
+                sortOrder="10"
+                disabled="false"/>
+    </type>
+    <type name="Magento\Backend\Model\Menu\Builder">
+    	<plugin name="codazon_backend_model_menu_builder"
+    		type="Codazon\ThemeOptions\Backend\Model\Menu\Builder\Plugin"
+    		sortOrder="10"
+    		disabled="false"/>
+    </type>
+    <!-- theme options -->
+    <!-- fix choose wrong cms home page -->
+    <type name="Magento\Cms\Controller\Index\Index">
+    	<plugin name="codazon_cms_controller_index_index"
+    		type="Codazon\ThemeOptions\Cms\Controller\Index\Index\Plugin"
+    		sortOrder="10"
+    		disabled="false"/>
+    </type>
+    <!-- show hide block -->
+    <type name="Magento\Framework\App\Action\Action">
+    	<plugin name="codazon_framework_app_view"
+    		type="Codazon\ThemeOptions\Framework\App\Action\Action\Plugin"
+    		sortOrder="10"
+    		disabled="false"/>
+    </type>
+    <type name="Magento\Framework\App\View">
+    	<plugin name="codazon_framework_app_view"
+    		type="Codazon\ThemeOptions\Framework\App\View\Plugin"
+    		sortOrder="10"
+    		disabled="false"/>
+    </type>
+    <!-- catalog image -->
+    <type name="Magento\Catalog\Helper\Image">
+    	<plugin name="codazon_product_image_plugin"
+    		type="Codazon\ThemeOptions\Catalog\Helper\Image\Plugin"
+    		sortOrder="10"
+    		disabled="false"/>
+    </type>
+    <!-- product options -->
+    <type name="Magento\Framework\Config\View">
+    	<plugin name="codazon_framework_config_view"
+    		type="Codazon\ThemeOptions\Framework\Config\View\Plugin"
+    		sortOrder="10"
+    		disabled="false"/>
+    </type>
+</config>

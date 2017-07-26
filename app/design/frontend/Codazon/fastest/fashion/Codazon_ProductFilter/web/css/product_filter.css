@@ -1,0 +1,6 @@
+/* ----isotope---- */
+.page-layout-1column .block.widget .products-grid .isotope .product-item.width-1, .isotope .width-1{width: 20%; overflow:hidden; margin: 0; padding:0 5px 5px 0;}
+.page-layout-1column .block.widget .products-grid .isotope .product-item.width-1.width-2, .isotope .width-1.width-2{width: 40%;margin-left:0%}
+/* ----end isotope---- */
+.cdz-banners-item {text-align: center;}
+.owl-carousel .owl-item .cdz-banners-item img.img-responsive, .cdz-banners-item img.img-responsive{width: auto; max-width: 100%;display: inline-block;}

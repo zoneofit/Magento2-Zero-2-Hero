@@ -1,0 +1,35 @@
+<?php	
+    $_helper = $this->helper('Codazon\ThemeOptions\Helper\Twitter');
+    $_username = $_helper->getScreenName();
+   
+    $_numbertweets = 2;
+    $_tweets = $block->getTweetsByUsername($_username, $_numbertweets);    
+    $_showlinks  = array('link','mention','hash_tag');
+?>
+<?php if(count($_tweets) > 0 && !(array_key_exists("media",$_tweets))): ?>
+<ul id="twitter-list">
+    <?php foreach ($_tweets as $tweet): ?>
+        <li class="status-item">
+        	<span class="tweet-content"><?php echo $_helper->parseJsonTweetToHtml($tweet,$_showlinks) ?></span>
+        	<div class="name-time">&nbsp;</div>
+        	<div class="date-time">
+        		 <a target="_blank" href="https://twitter.com/<?php echo $tweet['user']['name'] ?>/status/<?php echo $tweet['id_str'] ?>"><?php echo $_helper->formatDate($tweet['created_at'], 'F d, Y'); ?></a> 
+        	</div>
+        	<div class="user">
+        		<span> by </span> 
+        		<a href="https://twitter.com/<?php echo $_username ?>" target="_blank"><?php echo $tweet['user']['name'] ?></a>
+        	</div>        	
+        </li>
+    <?php endforeach ?>
+</ul>
+    
+    <a href="https://twitter.com/<?php echo $_username ?>" class="twitter-follow-button pull-right" data-show-count="false">Follow @<?php echo $_username ?></a>
+    <script type="text/javascript">window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
+    
+<?php elseif (!isset($_tweets["errors"])):?>
+    <p class="note-msg"><?php echo __('There are no tweets.') ?></p>
+
+<?php else: ?>
+    <?php $_error = $_tweets["errors"][0]; ?>
+    <p class="note-msg"><?php echo $_error["message"] ?></p>
+<?php endif; ?>

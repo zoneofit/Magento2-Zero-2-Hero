@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+	<referenceContainer name="header.wrapper.content">
+		<container name="" htmlClass="header content" htmlTag="div">
+			<container name="" htmlClass="row" htmlTag="div">
+				<container htmlClass="col-sm-10 col-md-7" htmlTag="div">
+					<container name="header.wrapper.left" htmlClass="header-wrapper-left" htmlTag="div" >
+						<container name="logo.left" htmlClass="logo-left" htmlTag="div" />
+						</container>
+				</container>
+				<container htmlClass="col-sm-8 col-md-10" htmlTag="div">
+					<container name="header.wrapper.center" htmlClass="header-wrapper-center" htmlTag="div" />
+				</container>
+				<container htmlClass="col-sm-6 col-md-7" htmlTag="div">
+					<container name="header.wrapper.right" htmlClass="header-wrapper-right" htmlTag="div" />
+				</container>
+			</container>
+		</container>
+	</referenceContainer>
+	<referenceContainer name="header.wrapper.bottom" htmlTag="div" htmlClass="header-wrapper-bottom" after="-">
+		<container name="header.bottom.content" htmlTag="div" htmlClass="header content" before="-" label="Header Bottom Content" >
+			<container htmlClass="row" htmlTag="div">
+				<container htmlClass="col-sm-6" htmlTag="div">
+					<container name="header.bottom.left" htmlClass="header-bottom-left" label="Header Bottom Left" htmlTag="div">
+						<container label="Left Navigation" name="left.menu" as="leftmenu" htmlTag="div" htmlClass="cdz-main-menu left-navigation" before="-" />								 					 				
+				</container>
+				</container>
+				<container htmlClass="col-sm-14 col-md-14" htmlTag="div">
+					<container name="header.bottom.center" htmlClass="header-bottom-center" htmlTag="div" >
+						<container name="main.menu" htmlTag="div" htmlClass="header-main-menu" after="-" />
+						<container name="menu.container" htmlTag="div" htmlClass="menu-container" label="Header Main Menu" />
+					</container>
+				</container>
+				<container htmlClass="col-sm-4 col-md-4" htmlTag="div">
+					<container name="header.bottom.right" htmlClass="header-bottom-right pull-right" label="Header Bottom Right" htmlTag="div" >
+						
+					</container>
+				</container>
+			</container>				
+		</container>
+	</referenceContainer>
+	<referenceContainer name="columns.top">
+		 
+	</referenceContainer>
+	
+	<referenceContainer name="header.container" htmlClass="page-header">
+		<container label="Header Before Slideshow" name="header.before.slidershow" htmlTag="div" htmlClass="before-slideshow-area" before="-">
+			<container name="header.box" htmlClass="box-header" htmlTag="div" before="-">
+				<container name="panel.wrapper.top" htmlClass="panel wrapper" htmlTag="div" before="-">
+				</container>					
+			</container>
+		</container>			
+	</referenceContainer>
+	<!--<move element="header.panel" destination="panel.wrapper.top" />
+	<move element="header.links" destination="header.panel.right" />
+	<move element="store_switcher" destination="header.panel.left" before="-" />
+	<move element="store_language" destination="header.panel.left" after="store_switcher" />
+	<move element="currency" destination="header.panel.left" after="-" />-->
+	<move element="logo" destination="logo.left" />
+	<move element="minicart" destination="header.wrapper.right" />
+	</body>
+</page>
